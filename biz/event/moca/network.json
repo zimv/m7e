@@ -1,0 +1,16 @@
+[
+  {
+    "chainID": 42,
+    "chainName": "Kovan",
+    "contractAddress": "0x27D921082E4F893fBBF1416b455b95764EBc017b",
+    "type": "nft4metaverse",
+    "fromBlock": 26631733
+  },
+  {
+    "chainID": 42,
+    "chainName": "Kovan",
+    "contractAddress": "0x5B821bc171e8181f1dCdCCC91125eAF84a9b550d",
+    "type": "der",
+    "fromBlock": 26631742
+  }
+]
