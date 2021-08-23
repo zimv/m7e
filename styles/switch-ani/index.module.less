@@ -1,0 +1,123 @@
+.blockWrap{
+  width: calc(100vw);
+  height: calc(100vh);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.blockWrapPage{
+  .page{
+    .blockWrap;
+    z-index: 95;
+    transition: ease .5s;
+    opacity: 0;
+    text-align: center;
+    font-size: 66px;
+    color: #fff;
+    &.show{
+      opacity: 1;
+    }
+  }
+}
+.block1,.blockBlack,.block2,.block3,.block4,.block5{
+  transition: ease .5s;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform-origin: top right;
+  display: inline-block;
+  position: relative;
+  &.tab{
+    z-index: 100;
+  }
+  &.activeTab{
+    z-index: 90;
+  }
+  &.con{
+    z-index: 90;
+  }
+  &.activeStyle{
+    border: 1px solid #000;
+    z-index: 200;
+  }
+}
+.block1{
+  background: #A06CD5;
+  width: 20%;
+  height: 20%;
+  z-index: 10;
+  float: left;
+  /*translate移动到右上角0 0点位置. width: 5% height:2%, block1:scaleX=5/oldWidth=5/40,scaleY=2/oldHeight=2/20*/
+  &.tab{
+    transform: translate3d(calc(400% - 5vw * 4), 0, 0) scale3d(.25, .1, 1);
+  }
+  &.activeTab{
+    transform-origin: top left;
+    transform: translate3d(0, 0, 0) scale3d(500%, 500%, 1);
+  }
+}
+.blockBlack{
+  background: #000000;
+  width: 64%;
+  height: 100%;
+  float: right;
+  &.blockBlackNone{
+    background: none;
+  }
+}
+.block2{
+  background: #79E252;
+  width: 16%;
+  height: 36%;
+  float: right;
+  &.tab{
+    transform: translate3d(calc(400% - 5vw * 3), 0, 0) scale3d(.3125, .055555, 1);
+  }
+  &.activeTab{
+    transform-origin: top left;
+    transform: translate3d(-125%, 0, 0) scale3d(625%, 277.77%, 1);
+  }
+}
+.block3{
+  background: #F8F32B;
+  width: 20%;
+  height: 8%;
+  float: left;
+  &.tab{
+    transform: translate3d(calc(400% - 5vw * 2), -250%, 0) scale3d(.25, .25, 1);
+    border-bottom: 0;
+  }
+  &.activeTab{
+    transform-origin: top left;
+    transform: translate3d(0, -250%, 0) scale3d(500%, 1250%, 1);
+    border-bottom: 0;
+  }
+  border-bottom: 4px solid #000000;
+}
+.block4{
+  background: #bd6d15;
+  width: 20%;
+  height: 8%;
+  float: left;
+  &.tab{
+    transform: translate3d(calc(400% - 5vw * 1), -350%, 0) scale3d(.25, .25, 1);
+    border-top: 0;
+  }
+  &.activeTab{
+    transform-origin: top left;
+    transform: translate3d(0, -350%, 0) scale3d(500%, 1250%, 1);
+    border-top: 0;
+  }
+  border-top: 4px solid #000000;
+}
+.block5{
+  background: #A06CD5;
+  width: 36%;
+  height: 64%;
+  float: left;
+  &.tab{
+    transform: translate3d(177.777%, -56.25%, 0) scale3d(.138888, .03125, 1);
+  }
+  &.activeTab{
+    transform-origin: top left;
+    transform: translate3d(0, -56.25%, 0) scale3d(500%, 156.25%, 1);
+  }
+}
