@@ -122,19 +122,44 @@ function SwitchAni() {
 
         {tab ? (
           <div className={styles.blockWrapPage}>
-            <div className={classnames(styles.page, activeTab === 'block1' ? styles.show : '')}>
+            <div
+              className={classnames({
+                [styles.page]: true,
+                [styles.show]: activeTab === 'block1',
+              })}
+            >
               page1 main page
             </div>
-            <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
+            <div
+              className={classnames({
+                [styles.page]: true,
+                [styles.show]: activeTab === 'block2',
+              })}
+            >
               page2 main page
             </div>
-            <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
+            <div
+              className={classnames({
+                [styles.page]: true,
+                [styles.show]: activeTab === 'block3',
+              })}
+            >
               page3 main page
             </div>
-            <div className={classnames(styles.page, activeTab === 'block4' ? styles.show : '')}>
+            <div
+              className={classnames({
+                [styles.page]: true,
+                [styles.show]: activeTab === 'block4',
+              })}
+            >
               page4 main page
             </div>
-            <div className={classnames(styles.page, activeTab === 'block5' ? styles.show : '')}>
+            <div
+              className={classnames({
+                [styles.page]: true,
+                [styles.show]: activeTab === 'block5',
+              })}
+            >
               page5 main page
             </div>
           </div>
