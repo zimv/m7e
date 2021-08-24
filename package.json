@@ -15,12 +15,6 @@
     "lint:prettier": "prettier --check --end-of-line auto",
     "lint:style": "stylelint --fix --syntax css"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
     "*.{js,jsx,less,md,json}": [
@@ -39,6 +33,7 @@
     "@react-aria/button": "^3.3.2",
     "@react-aria/dialog": "^3.1.3",
     "@react-aria/focus": "^3.4.0",
+    "@react-aria/interactions": "^3.5.1",
     "@react-aria/overlays": "^3.7.1",
     "@react-stately/overlays": "^3.1.2",
     "@tryghost/content-api": "^1.5.10",
@@ -66,6 +61,7 @@
     "react-lines-ellipsis": "^0.15.0",
     "react-modal": "^3.14.3",
     "react-player": "^2.9.0",
+    "react-responsive-carousel": "^3.2.21",
     "react-social-plugins": "^2.1.0",
     "react-twitter-widgets": "^1.10.0",
     "rekv": "^1.2.2",
@@ -82,6 +78,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-angular": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@svgr/webpack": "^5.5.0",
     "@types/node": "^15.12.2",
     "@types/react": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^4.10.0",
