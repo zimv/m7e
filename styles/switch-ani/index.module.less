@@ -1,19 +1,32 @@
 .blockWrap{
-  width: calc(100vw);
-  height: calc(100vh);
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: fixed;
   left: 0;
   top: 0;
+  .back{
+    color: #fff;
+    font-weight: 30px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    z-index: 1000;
+    cursor: pointer;
+  }
 }
 .blockWrapPage{
+  .blockWrap;
+  position: absolute;
+  z-index: 85;
   .page{
     .blockWrap;
-    z-index: 95;
+    position: absolute;
     transition: ease .5s;
     opacity: 0;
     text-align: center;
     font-size: 66px;
     color: #fff;
+    background: transparent;
     &.show{
       opacity: 1;
     }
@@ -25,29 +38,52 @@
   transform-origin: top right;
   display: inline-block;
   position: relative;
+  cursor: pointer;
   &.tab{
     z-index: 100;
+    .mini{
+      display: none;
+    }
   }
   &.activeTab{
-    z-index: 90;
+    z-index: 80!important;
+    .mini{
+      display: none;
+    }
   }
   &.con{
     z-index: 90;
   }
-  &.activeStyle{
-    border: 1px solid #000;
+  &.tab.activeStyle{
+    background: linear-gradient(90deg,  #F8F32B 0%, #e91e1e 33%, #5a11a5 66%, #79E252 100%);
+    background-position: 100% 0;
+    animation: bgSize 3s infinite linear alternate;
     z-index: 200;
+  }
+  @keyframes bgSize {
+    0% {
+        background-size: 300% 100%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+  }
+}
+.blockBlack{
+  cursor: default;
+  .mini{
+    color: #fff;
   }
 }
 .block1{
   background: #A06CD5;
   width: 20%;
   height: 20%;
-  z-index: 10;
   float: left;
   /*translate移动到右上角0 0点位置. width: 5% height:2%, block1:scaleX=5/oldWidth=5/40,scaleY=2/oldHeight=2/20*/
   &.tab{
-    transform: translate3d(calc(400% - 5vw * 4), 0, 0) scale3d(.25, .1, 1);
+    background: #8339d0;
+    transform: translate3d(calc(400% - 5vw * 4 - 5vw), calc(1vw), 0) scale3d(.25, .1, 1);
   }
   &.activeTab{
     transform-origin: top left;
@@ -69,7 +105,8 @@
   height: 36%;
   float: right;
   &.tab{
-    transform: translate3d(calc(400% - 5vw * 3), 0, 0) scale3d(.3125, .055555, 1);
+    background: #41ce0d;
+    transform: translate3d(calc(400% - 5vw * 3 - 4vw), calc(1vw), 0) scale3d(.3125, .055555, 1);
   }
   &.activeTab{
     transform-origin: top left;
@@ -82,7 +119,8 @@
   height: 8%;
   float: left;
   &.tab{
-    transform: translate3d(calc(400% - 5vw * 2), -250%, 0) scale3d(.25, .25, 1);
+    background: #d8d30a;
+    transform: translate3d(calc(400% - 5vw * 2 - 3vw), calc(-250% + 1vw), 0) scale3d(.25, .25, 1);
     border-bottom: 0;
   }
   &.activeTab{
@@ -98,7 +136,8 @@
   height: 8%;
   float: left;
   &.tab{
-    transform: translate3d(calc(400% - 5vw * 1), -350%, 0) scale3d(.25, .25, 1);
+    background: #b96100;
+    transform: translate3d(calc(400% - 5vw * 1 - 2vw), calc(-350% + 1vw), 0) scale3d(.25, .25, 1);
     border-top: 0;
   }
   &.activeTab{
@@ -114,7 +153,8 @@
   height: 64%;
   float: left;
   &.tab{
-    transform: translate3d(177.777%, -56.25%, 0) scale3d(.138888, .03125, 1);
+    background: #8339d0;
+    transform: translate3d(calc(177.777% - 1vw), calc(-56.25% + 1vw), 0) scale3d(.138888, .03125, 1);
   }
   &.activeTab{
     transform-origin: top left;
