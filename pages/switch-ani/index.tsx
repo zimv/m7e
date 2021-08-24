@@ -1,31 +1,11 @@
 
-import {useEffect,useState} from 'react';
+import {useState} from 'react';
 import classnames from 'classnames';
-import 'tailwindcss/tailwind.css';
-
 import styles from '../../styles/switch-ani/index.module.less';
 
 function SwitchAni() {
   const [tab, setTab] = useState(false);
   const [activeTab, setActiveTab] = useState('');
-  useEffect(()=>{
-    // setTimeout(()=>{
-    //   setTab(true)
-    //   setActiveTab('block1')
-    // }, 2000)
-    // setTimeout(()=>{
-    //   setActiveTab('block2')
-    // }, 3500)
-    // setTimeout(()=>{
-    //   setActiveTab('block3')
-    // }, 5000)
-    // setTimeout(()=>{
-    //   setActiveTab('block4')
-    // }, 6500)
-    // setTimeout(()=>{
-    //   setActiveTab('block5')
-    // }, 8000)
-  }, [])
   const getStyle = (block) => {
     if(block === 'blockBlack' && activeTab !== '') return styles.blockBlackNone;
     if(activeTab === block) return styles.activeTab;
@@ -36,12 +16,12 @@ function SwitchAni() {
     <>
       <div className={styles.blockWrap}>
         {tab ? <div className={styles.back} onClick={()=>{setTab(false);setActiveTab('')}}>Back</div> :''}
-        <div className={classnames(styles.block1, tab ? styles.tab : '', activeTab==='block1' ? styles.activeStyle : '')} onClick={setActiveTab.bind(this, 'block1')}></div>
+        <div className={classnames({[styles.block1]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block1'})} onClick={setActiveTab.bind(this, 'block1')}></div>
         <div className={classnames(styles.blockBlack, styles.blockBlackNone)}></div>
-        <div className={classnames(styles.block2, tab ? styles.tab : '', activeTab==='block2' ? styles.activeStyle : '')} onClick={setActiveTab.bind(this, 'block2')}></div>
-        <div className={classnames(styles.block3, tab ? styles.tab : '', activeTab==='block3' ? styles.activeStyle : '')} onClick={setActiveTab.bind(this, 'block3')}></div>
-        <div className={classnames(styles.block4, tab ? styles.tab : '', activeTab==='block4' ? styles.activeStyle : '')} onClick={setActiveTab.bind(this, 'block4')}></div>
-        <div className={classnames(styles.block5, tab ? styles.tab : '', activeTab==='block5' ? styles.activeStyle : '')} onClick={setActiveTab.bind(this, 'block5')}></div>
+        <div className={classnames({[styles.block2]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block2'})} onClick={setActiveTab.bind(this, 'block2')}></div>
+        <div className={classnames({[styles.block3]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block3'})} onClick={setActiveTab.bind(this, 'block3')}></div>
+        <div className={classnames({[styles.block4]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block4'})} onClick={setActiveTab.bind(this, 'block4')}></div>
+        <div className={classnames({[styles.block5]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block5'})} onClick={setActiveTab.bind(this, 'block5')}></div>
 
         <div className={styles.blockWrap}>
           <div className={classnames(styles.block1, getStyle('block1'), styles.con)} onClick={()=>{setTab(true);setActiveTab('block1')}}>
