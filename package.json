@@ -15,6 +15,12 @@
     "lint:prettier": "prettier --check --end-of-line auto",
     "lint:style": "stylelint --fix --syntax css"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
     "*.{js,jsx,less,md,json}": [
