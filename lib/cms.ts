@@ -33,8 +33,5 @@ class ContentAPI {
   }
 }
 
-const contentApi = new ContentAPI(
-  process.env.GHOST_CMS_URL,
-  process.env.GHOST_CONTENT_API_KEY,
-);
+const contentApi = new ContentAPI(process.env.GHOST_CMS_URL, process.env.GHOST_CONTENT_API_KEY);
 export default contentApi;
