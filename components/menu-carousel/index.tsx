@@ -5,15 +5,20 @@ import { Carousel } from 'react-responsive-carousel';
 import { ArrowLeftOutlined,  ArrowRightOutlined} from '@ant-design/icons';
 import styles from './styles.module.css';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface CarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
-  children? :React.ReactChild[];
+  children :React.ReactChild[];
+}
+
+interface CarouselItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+  children :React.ReactNode;
 }
 
 export default function MenuCarousel({
   className,
   children,
-}: Props) {
+}: CarouselProps) {
   const cls = classnames(styles['menu-carousel'], className);
 
   const arrowStyles: CSSProperties = {
@@ -51,7 +56,7 @@ export default function MenuCarousel({
 
 export function CarouselItem({
  children
-}: Props){
+}: CarouselItemProps){
   return <>{children}</>
 }
 
