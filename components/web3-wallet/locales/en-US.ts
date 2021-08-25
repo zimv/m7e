@@ -4,5 +4,5 @@ export default {
   'wallet-collect.notice.metamask.network': 'Please switch right network',
 
   'wallet-collect.connect': 'Collect',
-  'wallet-collect.change': 'Change Wallet'
+  'wallet-collect.change': 'Change Wallet',
 };

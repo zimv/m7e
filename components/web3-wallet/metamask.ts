@@ -24,7 +24,7 @@ export const handleConnect = async (network): Promise<string | void> => {
     message.info(t('notice.metamask.install'));
     throw new Error('MetaMask is not installed');
   }
-  
+
   if (window.ethereum) {
     return await getAccount(network);
   }
@@ -129,4 +129,3 @@ export const checkWallet = async (): Promise<void> => {
     message.info(t('notice.metamask.lock'));
   }
 };
-
