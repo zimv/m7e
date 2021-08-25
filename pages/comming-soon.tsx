@@ -3,7 +3,7 @@ import Page from '../components/page';
 import Layout from '../components/layout';
 import H1 from '../components/h1';
 import { SITE_NAME, META_DESCRIPTION } from '../common/const';
-import styles from '../styles/index.module.css';
+import styles from '../styles/index.module.less';
 
 export default function Home({ posts }) {
   const meta = {
