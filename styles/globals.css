@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+
 html,
 body {
   padding: 0;
@@ -24,8 +26,8 @@ a {
 
 .fixed-center {
   position: fixed;
-  left: 0;
   right: 0;
+  left: 0;
 }
 
 @media screen and (min-width: 1280px) {

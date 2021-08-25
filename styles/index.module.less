@@ -1,0 +1,327 @@
+.bg {
+  background: #2a2b44;
+}
+
+.container {
+  min-height: calc(100vh - 90px);
+}
+
+.title-box {
+  padding-top: 80px;
+}
+
+.header {
+  background-image: linear-gradient(135deg, #2365f0, #793aff 52%, #ff712c);
+}
+
+.nav1 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 32rem;
+  font-family: 'Kumar One', cursive;
+}
+
+.nav2 {
+  color: #000;
+  font-weight: 500;
+  font-size: 32rem;
+  font-family: 'Kumar One', cursive;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10rem;
+  margin-left: 38rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 36rem;
+  font-family: 'Kumar One', cursive;
+  line-height: 64rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 82rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 28rem;
+  font-family: 'Kumar One', cursive;
+  line-height: 49rem;
+}
+
+.menu-sub-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20rem;
+  margin-left: 177rem;
+  color: #fff;
+  font-size: 24rem;
+  line-height: 28rem;
+}
+
+.home-button {
+  width: 184rem;
+  height: 62rem;
+  color: #fff;
+  font-size: 24rem;
+  font-family: 'Kumar One', cursive;
+  line-height: 62rem;
+  text-align: center;
+  border: 2px solid #f8f32b;
+  border-radius: 40rem;
+}
+
+.home-top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 19rem 24rem;
+}
+
+.home-middle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 24rem;
+}
+
+.home-bottom {
+  width: 100%;
+  height: 368rem;
+}
+
+.home-text1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 24rem;
+  font-family: 'Kumar One', cursive;
+  line-height: 42rem;
+}
+
+.home-text2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 24rem;
+  line-height: 28rem;
+}
+
+.home-text3 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 64rem;
+  font-family: 'Kumar One', cursive;
+  line-height: 114rem;
+}
+
+.home-text4 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 24rem;
+  font-family: 'Kumar One', cursive;
+  line-height: 42rem;
+}
+
+.home-text5 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 24rem;
+  line-height: 42rem;
+}
+
+.flower1 {
+  position: absolute;
+  top: 10rem;
+  left: 162rem;
+  width: 44rem;
+  height: 44rem;
+}
+
+.flower2 {
+  position: absolute;
+  right: 410rem;
+  bottom: 44rem;
+  width: 44rem;
+  height: 44rem;
+}
+
+.ball {
+  position: absolute;
+  right: -800rem;
+  bottom: -340rem;
+  width: 1760rem;
+  height: 1100rem;
+}
+
+/*switch-ani*/
+.blockWrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  .back {
+    color: #fff;
+    font-weight: 30px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+}
+.blockWrapPage {
+  .blockWrap;
+  position: absolute;
+  z-index: 85;
+  .page {
+    .blockWrap;
+    position: absolute;
+    transition: ease 0.5s;
+    opacity: 0;
+    text-align: center;
+    font-size: 66px;
+    color: #fff;
+    background: transparent;
+    &.show {
+      opacity: 1;
+    }
+  }
+}
+.block1,
+.blockBlack,
+.block2,
+.block3,
+.block4,
+.block5 {
+  transition: ease 0.5s;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform-origin: top right;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  &.tab {
+    z-index: 100;
+    .mini {
+      display: none;
+    }
+  }
+  &.activeTab {
+    z-index: 80 !important;
+    .mini {
+      display: none;
+    }
+  }
+  &.con {
+    z-index: 90;
+  }
+  &.tab.activeStyle {
+    background: linear-gradient(90deg, #f8f32b 0%, #e91e1e 33%, #5a11a5 66%, #79e252 100%);
+    background-position: 100% 0;
+    animation: bgSize 3s infinite linear alternate;
+    z-index: 200;
+  }
+  @keyframes bgSize {
+    0% {
+      background-size: 300% 100%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+}
+.blockBlack {
+  cursor: default;
+  .mini {
+    color: #fff;
+  }
+}
+.block1 {
+  background: #a06cd5;
+  width: 20%;
+  height: 20%;
+  float: left;
+  /*translate移动到右上角0 0点位置. width: 5% height:2%, block1:scaleX=5/oldWidth=5/40,scaleY=2/oldHeight=2/20*/
+  &.tab {
+    background: #8339d0;
+    transform: translate3d(calc(400% - 5vw * 4 - 5vw), calc(1vw), 0) scale3d(0.25, 0.1, 1);
+  }
+  &.activeTab {
+    transform-origin: top left;
+    transform: translate3d(0, 0, 0) scale3d(500%, 500%, 1);
+  }
+}
+.blockBlack {
+  background: #000000;
+  width: 64%;
+  height: 100%;
+  float: right;
+  &.blockBlackNone {
+    background: none;
+  }
+}
+.block2 {
+  background: #79e252;
+  width: 16%;
+  height: 36%;
+  float: right;
+  &.tab {
+    background: #41ce0d;
+    transform: translate3d(calc(400% - 5vw * 3 - 4vw), calc(1vw), 0) scale3d(0.3125, 0.055555, 1);
+  }
+  &.activeTab {
+    transform-origin: top left;
+    transform: translate3d(-125%, 0, 0) scale3d(625%, 277.77%, 1);
+  }
+}
+.block3 {
+  background: #f8f32b;
+  width: 20%;
+  height: 8%;
+  float: left;
+  &.tab {
+    background: #d8d30a;
+    transform: translate3d(calc(400% - 5vw * 2 - 3vw), calc(-250% + 1vw), 0) scale3d(0.25, 0.25, 1);
+    border-bottom: 0;
+  }
+  &.activeTab {
+    transform-origin: top left;
+    transform: translate3d(0, -250%, 0) scale3d(500%, 1250%, 1);
+    border-bottom: 0;
+  }
+  border-bottom: 4px solid #000000;
+}
+.block4 {
+  background: #bd6d15;
+  width: 20%;
+  height: 8%;
+  float: left;
+  &.tab {
+    background: #b96100;
+    transform: translate3d(calc(400% - 5vw * 1 - 2vw), calc(-350% + 1vw), 0) scale3d(0.25, 0.25, 1);
+    border-top: 0;
+  }
+  &.activeTab {
+    transform-origin: top left;
+    transform: translate3d(0, -350%, 0) scale3d(500%, 1250%, 1);
+    border-top: 0;
+  }
+  border-top: 4px solid #000000;
+}
+.block5 {
+  background: #a06cd5;
+  width: 36%;
+  height: 64%;
+  float: left;
+  &.tab {
+    background: #8339d0;
+    transform: translate3d(calc(177.777% - 1vw), calc(-56.25% + 1vw), 0)
+      scale3d(0.138888, 0.03125, 1);
+  }
+  &.activeTab {
+    transform-origin: top left;
+    transform: translate3d(0, -56.25%, 0) scale3d(500%, 156.25%, 1);
+  }
+}
