@@ -42,6 +42,16 @@ export default function Home() {
   const Text3 = <span className={styles.nav2}>Speakers</span>;
   const Text4 = <span className={styles.nav2}>Partners</span>;
 
+  const menuItem = <div>
+    <div className={styles['menu-title']}>9.9</div>
+    <div className={styles['menu-item']}>14:00 MOCA Exhibition</div>
+    <div className={styles['menu-sub-item']}>元宇宙展览开幕</div>
+    <div className={styles['menu-item']}>16:00 Party</div>
+    <div className={styles['menu-sub-item']}>电音派对</div>
+    <div className={styles['menu-item']}>19:00 Forum</div>
+    <div className={styles['menu-sub-item']}>论坛</div>
+  </div>
+
   return (
     <Page meta={meta} className={styles.bg}>
       <div className={styles.blockWrap}>
@@ -100,7 +110,10 @@ export default function Home() {
           </div>
           <div className={classnames(styles.block5, getStyle('block5'), styles.con)} onClick={()=>{setTab(true);setActiveTab('block5')}}>
             <div className={styles.mini} style={{width: '100%', height: '100%'}}>
-              <Menu />
+              <Menu>
+                <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
+                <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
+              </Menu>
             </div>
           </div>
         </div>

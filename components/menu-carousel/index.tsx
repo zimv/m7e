@@ -7,10 +7,12 @@ import styles from './styles.module.css';
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
+  children? :React.ReactChild[];
 }
 
 export default function MenuCarousel({
   className,
+  children,
 }: Props) {
   const cls = classnames(styles['menu-carousel'], className);
 
@@ -41,34 +43,16 @@ export default function MenuCarousel({
               <ArrowRightOutlined style={{ fontSize: '28rem', color: '#FFFFFF' }} />
           </div>
       )}
-    > 
-      <div>
-        <div className={styles['menu-title']}>9.9</div>
-        <div className={styles['menu-item']}>14:00 MOCA Exhibition</div>
-        <div className={styles['menu-sub-item']}>元宇宙展览开幕</div>
-        <div className={styles['menu-item']}>16:00 Party</div>
-        <div className={styles['menu-sub-item']}>电音派对</div>
-        <div className={styles['menu-item']}>19:00 Forum</div>
-        <div className={styles['menu-sub-item']}>论坛</div>
-      </div>
-      <div>
-            <div className={styles['menu-title']}>9.9</div>
-            <div className={styles['menu-item']}>14:00 MOCA Exhibition</div>
-            <div className={styles['menu-sub-item']}>元宇宙展览开幕</div>
-            <div className={styles['menu-item']}>16:00 Party</div>
-            <div className={styles['menu-sub-item']}>电音派对</div>
-            <div className={styles['menu-item']}>19:00 Forum</div>
-            <div className={styles['menu-sub-item']}>论坛</div>
-        </div>
-      <div>
-            <div className={styles['menu-title']}>9.9</div>
-            <div className={styles['menu-item']}>14:00 MOCA Exhibition</div>
-            <div className={styles['menu-sub-item']}>元宇宙展览开幕</div>
-            <div className={styles['menu-item']}>16:00 Party</div>
-            <div className={styles['menu-sub-item']}>电音派对</div>
-            <div className={styles['menu-item']}>19:00 Forum</div>
-            <div className={styles['menu-sub-item']}>论坛</div>
-        </div>
+    >
+      {children}
     </Carousel>
   );
 }
+
+export function CarouselItem({
+ children
+}: Props){
+  return <>{children}</>
+}
+
+MenuCarousel.CarouselItem = CarouselItem;
