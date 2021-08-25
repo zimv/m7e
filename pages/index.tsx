@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames';
 import { useTranslations } from 'next-intl';
 import Page from '../components/page';
@@ -21,11 +21,11 @@ export default function Home() {
   const [tab, setTab] = useState(false);
   const [activeTab, setActiveTab] = useState('');
   const getStyle = (block) => {
-    if(block === 'blockBlack' && activeTab !== '') return styles.blockBlackNone;
-    if(activeTab === block) return styles.activeTab;
-    if(tab) return styles.tab;
+    if (block === 'blockBlack' && activeTab !== '') return styles.blockBlackNone;
+    if (activeTab === block) return styles.activeTab;
+    if (tab) return styles.tab;
     return '';
-  }
+  };
   const meta = {
     title: `${tNavigation('home')} - ${SITE_NAME}`,
     description: META_DESCRIPTION,
@@ -42,35 +42,102 @@ export default function Home() {
   const Text3 = <span className={styles.nav2}>Speakers</span>;
   const Text4 = <span className={styles.nav2}>Partners</span>;
 
-  const menuItem = <div>
-    <div className={styles['menu-title']}>9.9</div>
-    <div className={styles['menu-item']}>14:00 MOCA Exhibition</div>
-    <div className={styles['menu-sub-item']}>元宇宙展览开幕</div>
-    <div className={styles['menu-item']}>16:00 Party</div>
-    <div className={styles['menu-sub-item']}>电音派对</div>
-    <div className={styles['menu-item']}>19:00 Forum</div>
-    <div className={styles['menu-sub-item']}>论坛</div>
-  </div>
+  const menuItem = (
+    <div>
+      <div className={styles['menu-title']}>9.9</div>
+      <div className={styles['menu-item']}>14:00 MOCA Exhibition</div>
+      <div className={styles['menu-sub-item']}>元宇宙展览开幕</div>
+      <div className={styles['menu-item']}>16:00 Party</div>
+      <div className={styles['menu-sub-item']}>电音派对</div>
+      <div className={styles['menu-item']}>19:00 Forum</div>
+      <div className={styles['menu-sub-item']}>论坛</div>
+    </div>
+  );
 
   return (
     <Page meta={meta} className={styles.bg}>
       <div className={styles.blockWrap}>
-        {tab ? <div className={styles.back} onClick={()=>{setTab(false);setActiveTab('')}}>Back</div> :''}
-        <div className={classnames({[styles.block1]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block1'})} onClick={setActiveTab.bind(this, 'block1')}></div>
+        {tab ? (
+          <div
+            className={styles.back}
+            onClick={() => {
+              setTab(false);
+              setActiveTab('');
+            }}
+          >
+            Back
+          </div>
+        ) : (
+          ''
+        )}
+        <div
+          className={classnames({
+            [styles.block1]: true,
+            [styles.tab]: tab,
+            [styles.activeStyle]: activeTab === 'block1',
+          })}
+          onClick={setActiveTab.bind(this, 'block1')}
+        ></div>
         <div className={classnames(styles.blockBlack, styles.blockBlackNone)}></div>
-        <div className={classnames({[styles.block2]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block2'})} onClick={setActiveTab.bind(this, 'block2')}></div>
-        <div className={classnames({[styles.block3]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block3'})} onClick={setActiveTab.bind(this, 'block3')}></div>
-        <div className={classnames({[styles.block4]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block4'})} onClick={setActiveTab.bind(this, 'block4')}></div>
-        <div className={classnames({[styles.block5]: true, [styles.tab]: tab, [styles.activeStyle]: activeTab==='block5'})} onClick={setActiveTab.bind(this, 'block5')}></div>
+        <div
+          className={classnames({
+            [styles.block2]: true,
+            [styles.tab]: tab,
+            [styles.activeStyle]: activeTab === 'block2',
+          })}
+          onClick={setActiveTab.bind(this, 'block2')}
+        ></div>
+        <div
+          className={classnames({
+            [styles.block3]: true,
+            [styles.tab]: tab,
+            [styles.activeStyle]: activeTab === 'block3',
+          })}
+          onClick={setActiveTab.bind(this, 'block3')}
+        ></div>
+        <div
+          className={classnames({
+            [styles.block4]: true,
+            [styles.tab]: tab,
+            [styles.activeStyle]: activeTab === 'block4',
+          })}
+          onClick={setActiveTab.bind(this, 'block4')}
+        ></div>
+        <div
+          className={classnames({
+            [styles.block5]: true,
+            [styles.tab]: tab,
+            [styles.activeStyle]: activeTab === 'block5',
+          })}
+          onClick={setActiveTab.bind(this, 'block5')}
+        ></div>
 
         <div className={styles.blockWrap}>
-          <div className={classnames(styles.block1, getStyle('block1'), styles.con)} onClick={()=>{setTab(true);setActiveTab('block1')}}>
-            <div className={styles.mini} style={{width: '100%', height: '100%'}}>
-              <NavBox textComponent={Text1} iconComponent={<Icon3 width='120rem' height='120rem'/>} />
+          <div
+            className={classnames(styles.block1, getStyle('block1'), styles.con)}
+            onClick={() => {
+              setTab(true);
+              setActiveTab('block1');
+            }}
+          >
+            <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
+              <NavBox
+                textComponent={Text1}
+                iconComponent={<Icon3 width="120rem" height="120rem" />}
+              />
             </div>
           </div>
           <div className={classnames(styles.blockBlack, getStyle('blockBlack'))}>
-            <div className={styles.mini} style={{width: '100%', height: '100%', display: 'flex', flexDirection: 'column', position: 'relative'}}>
+            <div
+              className={styles.mini}
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                position: 'relative',
+              }}
+            >
               <div className="flex flex-col justify-between flex-grow">
                 <div className={styles['home-top']}>
                   <div className={styles['home-button']}>China NFT</div>
@@ -93,23 +160,56 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className={classnames(styles.block2, getStyle('block2'), styles.con)} onClick={()=>{setTab(true);setActiveTab('block2')}}>
-            <div className={styles.mini} style={{width: '100%', height: '100%'}}>
-              <NavBox textComponent={Text2} iconComponent={<Icon2 width='150rem' height='160rem'/>} />
+          <div
+            className={classnames(styles.block2, getStyle('block2'), styles.con)}
+            onClick={() => {
+              setTab(true);
+              setActiveTab('block2');
+            }}
+          >
+            <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
+              <NavBox
+                textComponent={Text2}
+                iconComponent={<Icon2 width="150rem" height="160rem" />}
+              />
             </div>
           </div>
-          <div className={classnames(styles.block3, getStyle('block3'), styles.con)} onClick={()=>{setTab(true);setActiveTab('block3')}}>
-            <div className={styles.mini} style={{width: '100%', height: '100%'}}>
-              <NavBox textComponent={Text3} iconComponent={<Icon4 width='40rem' height='40rem'/>} />
+          <div
+            className={classnames(styles.block3, getStyle('block3'), styles.con)}
+            onClick={() => {
+              setTab(true);
+              setActiveTab('block3');
+            }}
+          >
+            <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
+              <NavBox
+                textComponent={Text3}
+                iconComponent={<Icon4 width="40rem" height="40rem" />}
+              />
             </div>
           </div>
-          <div className={classnames(styles.block4, getStyle('block4'), styles.con)} onClick={()=>{setTab(true);setActiveTab('block4')}}>
-            <div className={styles.mini} style={{width: '100%', height: '100%'}}>
-              <NavBox textComponent={Text4} iconComponent={<Icon1 width='50rem' height='50rem'/>} />
+          <div
+            className={classnames(styles.block4, getStyle('block4'), styles.con)}
+            onClick={() => {
+              setTab(true);
+              setActiveTab('block4');
+            }}
+          >
+            <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
+              <NavBox
+                textComponent={Text4}
+                iconComponent={<Icon1 width="50rem" height="50rem" />}
+              />
             </div>
           </div>
-          <div className={classnames(styles.block5, getStyle('block5'), styles.con)} onClick={()=>{setTab(true);setActiveTab('block5')}}>
-            <div className={styles.mini} style={{width: '100%', height: '100%'}}>
+          <div
+            className={classnames(styles.block5, getStyle('block5'), styles.con)}
+            onClick={() => {
+              setTab(true);
+              setActiveTab('block5');
+            }}
+          >
+            <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <Menu>
                 <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
@@ -118,35 +218,39 @@ export default function Home() {
           </div>
         </div>
 
-        {tab ? <div className={styles.blockWrapPage}>
-          <div className={classnames(styles.page,  activeTab==='block1' ? styles.show : '')}>
-            page1 main page
+        {tab ? (
+          <div className={styles.blockWrapPage}>
+            <div className={classnames(styles.page, activeTab === 'block1' ? styles.show : '')}>
+              page1 main page
+            </div>
+            <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
+              page2 main page
+            </div>
+            <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
+              page3 main page
+            </div>
+            <div className={classnames(styles.page, activeTab === 'block4' ? styles.show : '')}>
+              page4 main page
+            </div>
+            <div className={classnames(styles.page, activeTab === 'block5' ? styles.show : '')}>
+              page5 main page
+            </div>
           </div>
-          <div className={classnames(styles.page,  activeTab==='block2' ? styles.show : '')}>
-            page2 main page
-          </div>
-          <div className={classnames(styles.page,  activeTab==='block3' ? styles.show : '')}>
-            page3 main page
-          </div>
-          <div className={classnames(styles.page,  activeTab==='block4' ? styles.show : '')}>
-            page4 main page
-          </div>
-          <div className={classnames(styles.page,  activeTab==='block5' ? styles.show : '')}>
-            page5 main page
-          </div>
-        </div> : ''}
+        ) : (
+          ''
+        )}
       </div>
 
       <div className="flex">
-          <div className="flex-col">
-            <div
-              className="flex"
-              style={{ width: '528rem', height: '476rem', background: '#A06CD5' }}
-            >
-              <NavBox textComponent={Text2} iconComponent={<Icon2 />} />
-            </div>
+        <div className="flex-col">
+          <div
+            className="flex"
+            style={{ width: '528rem', height: '476rem', background: '#A06CD5' }}
+          >
+            <NavBox textComponent={Text2} iconComponent={<Icon2 />} />
           </div>
         </div>
+      </div>
     </Page>
   );
 }
