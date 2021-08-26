@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import { useTranslations } from 'next-intl';
 import Page from '../components/page';
@@ -20,6 +20,8 @@ import styles from '../styles/index.module.less';
 export default function Home() {
   const tNavigation = useTranslations('navigation');
 
+  const [isMobile, setMobile] = useState(false);
+  const [mobileStyle, setMobileStyle] = useState(false);
   const [tab, setTab] = useState(false);
   const [activeTab, setActiveTab] = useState('');
   const getStyle = (block) => {
@@ -28,6 +30,24 @@ export default function Home() {
     if (tab) return styles.tab;
     return '';
   };
+
+  useEffect(() => {
+    const mobile = window.document.body.clientWidth < 640;
+    setMobile(mobile);
+    setMobileStyle(mobile);
+    // if mobile tab:true
+    setTab(mobile);
+  }, []);
+
+  const setActiveFun = (block) => {
+    if (isMobile) {
+      setActiveTab(block);
+      setMobileStyle(false);
+    } else {
+      setActiveTab(block);
+    }
+  };
+  console.log(tab);
   const meta = {
     title: `${tNavigation('home')} - ${SITE_NAME}`,
     description: META_DESCRIPTION,
@@ -57,8 +77,13 @@ export default function Home() {
           <div
             className={styles.back}
             onClick={() => {
-              setTab(false);
-              setActiveTab('');
+              if (isMobile) {
+                setMobileStyle(true);
+                setActiveTab('');
+              } else {
+                setTab(false);
+                setActiveTab('');
+              }
             }}
           >
             Back
@@ -72,7 +97,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block1',
           })}
-          onClick={setActiveTab.bind(this, 'block1')}
+          onClick={() => setActiveFun('block1')}
         ></div>
         <div className={classnames(styles.blockBlack, styles.blockBlackNone)}></div>
         <div
@@ -81,7 +106,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block2',
           })}
-          onClick={setActiveTab.bind(this, 'block2')}
+          onClick={() => setActiveFun('block2')}
         ></div>
         <div
           className={classnames({
@@ -89,7 +114,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block3',
           })}
-          onClick={setActiveTab.bind(this, 'block3')}
+          onClick={() => setActiveFun('block3')}
         ></div>
         <div
           className={classnames({
@@ -97,7 +122,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block4',
           })}
-          onClick={setActiveTab.bind(this, 'block4')}
+          onClick={() => setActiveFun('block4')}
         ></div>
         <div
           className={classnames({
@@ -105,7 +130,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block5',
           })}
-          onClick={setActiveTab.bind(this, 'block5')}
+          onClick={() => setActiveFun('block5')}
         ></div>
 
         <div className={styles.blockWrap}>
@@ -123,7 +148,13 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className={classnames(styles.blockBlack, getStyle('blockBlack'))}>
+          <div
+            className={classnames(
+              styles.blockBlack,
+              getStyle('blockBlack'),
+              mobileStyle ? styles.mobile : '',
+            )}
+          >
             <div
               className={styles.mini}
               style={{
