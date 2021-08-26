@@ -31,19 +31,19 @@ export default function Home() {
     return '';
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     const mobile = window.document.body.clientWidth < 640;
     setMobile(mobile);
     setMobileStyle(mobile);
     // if mobile tab:true
     setTab(mobile);
-  }, [])
+  }, []);
 
   const setActiveFun = (block) => {
-    if(isMobile){
+    if (isMobile) {
       setActiveTab(block);
       setMobileStyle(false);
-    }else{
+    } else {
       setActiveTab(block);
     }
   };
@@ -77,10 +77,10 @@ export default function Home() {
           <div
             className={styles.back}
             onClick={() => {
-              if(isMobile){
+              if (isMobile) {
                 setMobileStyle(true);
                 setActiveTab('');
-              }else{
+              } else {
                 setTab(false);
                 setActiveTab('');
               }
@@ -97,7 +97,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block1',
           })}
-          onClick={()=>setActiveFun('block1')}
+          onClick={() => setActiveFun('block1')}
         ></div>
         <div className={classnames(styles.blockBlack, styles.blockBlackNone)}></div>
         <div
@@ -106,7 +106,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block2',
           })}
-          onClick={()=>setActiveFun('block2')}
+          onClick={() => setActiveFun('block2')}
         ></div>
         <div
           className={classnames({
@@ -114,7 +114,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block3',
           })}
-          onClick={()=>setActiveFun('block3')}
+          onClick={() => setActiveFun('block3')}
         ></div>
         <div
           className={classnames({
@@ -122,7 +122,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block4',
           })}
-          onClick={()=>setActiveFun('block4')}
+          onClick={() => setActiveFun('block4')}
         ></div>
         <div
           className={classnames({
@@ -130,7 +130,7 @@ export default function Home() {
             [styles.tab]: tab,
             [styles.activeStyle]: activeTab === 'block5',
           })}
-          onClick={()=>setActiveFun('block5')}
+          onClick={() => setActiveFun('block5')}
         ></div>
 
         <div className={styles.blockWrap}>
@@ -148,7 +148,13 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className={classnames(styles.blockBlack, getStyle('blockBlack'), mobileStyle ? styles.mobile : '')}>
+          <div
+            className={classnames(
+              styles.blockBlack,
+              getStyle('blockBlack'),
+              mobileStyle ? styles.mobile : '',
+            )}
+          >
             <div
               className={styles.mini}
               style={{

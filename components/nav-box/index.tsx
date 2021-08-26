@@ -10,24 +10,13 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
   iconComponent?: React.ReactNode;
 }
 
-export default function NavBox({
-  className,
-  textComponent,
-  iconComponent,
-  ...props
-}: Props) {
-  const {hoverProps, isHovered} = useHover({});
+export default function NavBox({ className, textComponent, iconComponent, ...props }: Props) {
+  const { hoverProps, isHovered } = useHover({});
   const cls = classnames(styles['nav-box'], className);
 
   return (
-    <div 
-      {...props}
-      {...hoverProps} 
-      className={cls}
-    >
-      {
-        iconComponent && !isHovered ? iconComponent : textComponent
-      }
+    <div {...props} {...hoverProps} className={cls}>
+      {iconComponent && !isHovered ? iconComponent : textComponent}
     </div>
   );
 }
