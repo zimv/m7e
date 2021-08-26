@@ -1,0 +1,79 @@
+.speaker-card {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 28px;
+}
+
+.bg1 {
+  position: relative;
+  width: 290px;
+  height: 166px;
+  .bg1-img {
+    margin-left: -20px;
+  }
+  .avatar-box {
+    position: absolute;
+    top: 16px;
+    left: 66px;
+    width: 100px;
+    height: 100px;
+    .avatar {
+      border-radius: 68px;
+    }
+  }
+}
+
+.bg2 {
+  position: relative;
+  width: 80px;
+  height: 166px;
+  margin-left: 16px;
+}
+
+.bottom {
+  display: flex;
+  margin-top: 6px;
+  border: 2px #fff;
+  border-style: solid none none none;
+
+  .block {
+    width: 49px;
+    height: 19px;
+    background-color: #ffff;
+  }
+
+  .title {
+    margin: 4px 32px 0 16px;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Kumar One', cursive;
+  }
+}
+
+@media (max-width: 640px) {
+  .bg1 {
+    position: relative;
+    width: 261px;
+    height: 149.4px;
+    .bg1-img {
+      margin-left: -20px;
+    }
+    .avatar-box {
+      position: absolute;
+      top: 14px;
+      left: 59px;
+      width: 90px;
+      height: 90px;
+      .avatar {
+        border-radius: 68px;
+      }
+    }
+  }
+
+  .bg2 {
+    position: relative;
+    width: 63px;
+    height: 149.4px;
+    margin-left: 16px;
+  }
+}
