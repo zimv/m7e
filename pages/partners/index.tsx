@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import PageTitle from '../../components/page-title';
 import PartnerCard from '../../components/partner-card';
@@ -8,14 +8,19 @@ import bg1 from '../../public/images/bg1.png';
 import styles from './index.module.less';
 
 export default function partnersPartners() {
+  const [pbCls, setPbCls] = useState('');
+  useEffect(() => {
+    const newPbCls = classnames(
+      window.screen.width > window.screen.height ? 'w-full' : 'h-full',
+      'absolute',
+    );
+    setPbCls(newPbCls);
+  }, []);
   const cls = classnames('flex justify-between items-center flex-wrap', styles.container);
-  const pgCls = classnames(
-    window.screen.width > window.screen.height ? 'w-full' : 'h-full',
-    'absolute',
-  );
+
   return (
     <div className="relative flex justify-center items-center w-screen min-h-screen bg-black">
-      <PartersBG className={pgCls} />
+      <PartersBG className={pbCls} />
       <PageTitle title="Partners" />
       <div className={cls}>
         <PartnerCard logo={bg1} link={''} name="logo" />
