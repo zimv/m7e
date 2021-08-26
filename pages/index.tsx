@@ -4,6 +4,8 @@ import { useTranslations } from 'next-intl';
 import Page from '../components/page';
 import NavBox from '../components/nav-box';
 import Menu from '../components/menu-carousel';
+import Partners from './partners';
+import Speakers from './speakers';
 import { SITE_NAME, META_DESCRIPTION } from '../common/const';
 import Icon1 from '../public/images/icon_1.svg';
 import Icon2 from '../public/images/icon_2.svg';
@@ -30,12 +32,6 @@ export default function Home() {
     title: `${tNavigation('home')} - ${SITE_NAME}`,
     description: META_DESCRIPTION,
   };
-
-  const cls = classnames(
-    'main-content flex justify-center items-center	 w-full h-full',
-    'pb-8',
-    styles.container,
-  );
 
   const Text1 = <span className={styles.nav1}>Videos</span>;
   const Text2 = <span className={styles.nav1}>MOCA Exhibition</span>;
@@ -227,10 +223,10 @@ export default function Home() {
               page2 main page
             </div>
             <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
-              page3 main page
+              <Speakers />
             </div>
             <div className={classnames(styles.page, activeTab === 'block4' ? styles.show : '')}>
-              page4 main page
+              <Partners />
             </div>
             <div className={classnames(styles.page, activeTab === 'block5' ? styles.show : '')}>
               page5 main page
