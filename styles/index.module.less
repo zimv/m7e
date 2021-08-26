@@ -253,13 +253,12 @@
   height: 20%;
   background: #a06cd5;
 
-  /* translate移动到右上角0 0点位置. width: 5% height:2%, block1:scaleX=5/oldWidth=5/40,scaleY=2/oldHeight=2/20 */
   &.tab {
     background: #8339d0;
     transform: translate3d(calc(400% - 5vw * 4 - 5vw), calc(1vw), 0) scale3d(0.25, 0.1, 1);
   }
   &.activeTab {
-    transform: translate3d(0, 0, 0) scale3d(500%, 500%, 1);
+    transform: translate3d(0, 0, 0) scale3d(5, 5, 1);
     transform-origin: top left;
   }
 }
@@ -274,7 +273,7 @@
     transform: translate3d(calc(400% - 5vw * 3 - 4vw), calc(1vw), 0) scale3d(0.3125, 0.055555, 1);
   }
   &.activeTab {
-    transform: translate3d(-125%, 0, 0) scale3d(625%, 277.77%, 1);
+    transform: translate3d(-125%, 0, 0) scale3d(6.25, 2.7777, 1);
     transform-origin: top left;
   }
 }
@@ -291,7 +290,7 @@
   }
   &.activeTab {
     border-bottom: 0;
-    transform: translate3d(0, -250%, 0) scale3d(500%, 1250%, 1);
+    transform: translate3d(0, -250%, 0) scale3d(5, 12.5, 1);
     transform-origin: top left;
   }
 }
@@ -308,7 +307,7 @@
   }
   &.activeTab {
     border-top: 0;
-    transform: translate3d(0, -350%, 0) scale3d(500%, 1250%, 1);
+    transform: translate3d(0, -350%, 0) scale3d(5, 12.5, 1);
     transform-origin: top left;
   }
 }
@@ -323,7 +322,7 @@
       scale3d(0.138888, 0.03125, 1);
   }
   &.activeTab {
-    transform: translate3d(0, -56.25%, 0) scale3d(500%, 156.25%, 1);
+    transform: translate3d(0, -56.25%, 0) scale3d(5, 1.5625, 1);
     transform-origin: top left;
   }
 }
