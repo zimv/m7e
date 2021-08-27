@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Page from '../components/page';
 import NavBox from '../components/nav-box';
 import Menu from '../components/menu-carousel';
+import Moca from '../components/Moca';
 import Partners from './partners';
 import Speakers from './speakers';
 import { SITE_NAME, META_DESCRIPTION } from '../common/const';
@@ -251,7 +252,7 @@ export default function Home() {
               page1 main page
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
-              page2 main page
+              <Moca />
             </div>
             <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
               <Speakers />
