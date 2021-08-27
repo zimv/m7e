@@ -61,25 +61,48 @@
   line-height: 28rem;
 }
 
-.home-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 184rem;
-  height: 62rem;
-  color: #fff;
-  font-size: 24rem;
-  font-family: 'Kumar One', cursive;
-  text-align: center;
-  border: 2px solid #f8f32b;
-  border-radius: 40rem;
-}
-
 .home-top {
   position: relative;
   display: flex;
   justify-content: space-between;
   margin: 19rem 24rem;
+
+  .home-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 184rem;
+    height: 62rem;
+    color: #fff;
+    font-size: 24rem;
+    font-family: 'Kumar One', cursive;
+    text-align: center;
+    border: 2px solid #f8f32b;
+    border-radius: 40rem;
+  }
+
+  .home-text1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 24rem;
+    font-family: 'Kumar One', cursive;
+    line-height: 42px;
+  }
+
+  .home-text2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 24rem;
+    line-height: 28px;
+  }
+
+  .flower1 {
+    position: absolute;
+    top: 10rem;
+    left: 162rem;
+    width: 44rem;
+    height: 44rem;
+  }
 }
 
 .home-middle {
@@ -88,73 +111,144 @@
   flex-direction: column;
   align-items: flex-end;
   margin: 24rem;
+  .home-text3 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 64rem;
+    font-family: 'Kumar One', cursive;
+    line-height: 114px;
+  }
+
+  .home-text4 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 24rem;
+    font-family: 'Kumar One', cursive;
+    line-height: 42px;
+  }
+
+  .home-text5 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 24rem;
+    line-height: 42px;
+  }
+
+  .flower2 {
+    position: absolute;
+    right: 410rem;
+    bottom: 22.5%;
+    width: 44rem;
+    height: 44rem;
+  }
 }
 
 .home-bottom {
   width: 100%;
   height: 42%;
+  .ball {
+    position: absolute;
+    right: -800rem;
+    bottom: -340rem;
+    width: 1760rem;
+    height: 1100rem;
+  }
 }
 
-.home-text1 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 24rem;
-  font-family: 'Kumar One', cursive;
-  line-height: 42px;
-}
+@media (max-width: 640px) {
+  .home-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 10px 0 10px;
 
-.home-text2 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 24rem;
-  line-height: 28px;
-}
+    .home-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 40px;
+      color: #fff;
+      font-size: 12px;
+      font-family: 'Kumar One', cursive;
+      text-align: center;
+      border: 2px solid #f8f32b;
+      border-radius: 40px;
+    }
 
-.home-text3 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 64rem;
-  font-family: 'Kumar One', cursive;
-  line-height: 114px;
-}
+    .home-text1 {
+      color: #fff;
+      font-weight: 400;
+      font-size: 14px;
+      font-family: 'Kumar One', cursive;
+      line-height: 42px;
+    }
 
-.home-text4 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 24rem;
-  font-family: 'Kumar One', cursive;
-  line-height: 42px;
-}
+    .home-text2 {
+      color: #fff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 28px;
+    }
 
-.home-text5 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 24rem;
-  line-height: 42px;
-}
+    .flower1 {
+      position: absolute;
+      top: 80px;
+      left: 96px;
+      width: 36px;
+      height: 36px;
+    }
+  }
 
-.flower1 {
-  position: absolute;
-  top: 10rem;
-  left: 162rem;
-  width: 44rem;
-  height: 44rem;
-}
+  .home-middle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 10px;
+    .home-text3 {
+      color: #fff;
+      font-weight: 400;
+      font-size: 24px;
+      font-family: 'Kumar One', cursive;
+      line-height: 76px;
+    }
 
-.flower2 {
-  position: absolute;
-  right: 410rem;
-  bottom: 22.5%;
-  width: 44rem;
-  height: 44rem;
-}
+    .home-text4 {
+      color: #fff;
+      font-weight: 400;
+      font-size: 14px;
+      font-family: 'Kumar One', cursive;
+      line-height: 28px;
+    }
 
-.ball {
-  position: absolute;
-  right: -800rem;
-  bottom: -340rem;
-  width: 1760rem;
-  height: 1100rem;
+    .home-text5 {
+      color: #fff;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 28px;
+    }
+
+    .flower2 {
+      position: absolute;
+      right: 246px;
+      bottom: 28px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .home-bottom {
+    width: 100%;
+    height: 42%;
+    .ball {
+      position: absolute;
+      right: -340px;
+      bottom: -58px;
+      width: 740px;
+      height: 500px;
+    }
+  }
 }
 
 /* switch-ani */
@@ -170,7 +264,6 @@
     left: 30px;
     z-index: 1000;
     color: #fff;
-    font-weight: 30px;
     cursor: pointer;
   }
 }
