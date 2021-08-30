@@ -1,5 +1,5 @@
 .moca-card {
-  display: flex;
+  display: inline-block;
   width: 290px;
   min-height: 386px;
   flex-direction: column;
@@ -13,11 +13,16 @@
     height: 32px;
     line-height: 32px;
     color: #000;
+    padding-right: 9px;
     .like {
       font-size: 16px;
+      vertical-align: middle;
     }
     .num {
+      margin-left: 2px;
+      font-family: 'Ginebra';
       font-size: 16px;
+      vertical-align: middle;
     }
   }
   .body {
@@ -30,6 +35,14 @@
       flex: 0 0 auto;
       width: 29px;
       height: 100%;
+      font-size: 14px;
+      .name {
+        width: 262px;
+        text-align: right;
+        padding-right: 20px;
+        transform-origin: top left;
+        transform: rotate(-90deg) translate(-100%, 3px);
+      }
     }
     .prod {
       display: flex;
