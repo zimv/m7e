@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const mobile = window.document.body.clientWidth < 640;
+    const mobile = (window.innerWidth || document.body.clientWidth) < 640;
     setMobile(mobile);
     setMobileStyle(mobile);
     // if mobile tab:true
@@ -52,6 +52,15 @@ export default function Home() {
   const meta = {
     title: `${tNavigation('home')} - ${SITE_NAME}`,
     description: META_DESCRIPTION,
+  };
+  const backCall = () => {
+    if (isMobile) {
+      setMobileStyle(true);
+      setActiveTab('');
+    } else {
+      setTab(false);
+      setActiveTab('');
+    }
   };
 
   const Text1 = <span className={styles.nav1}>Videos</span>;
@@ -75,18 +84,7 @@ export default function Home() {
     <Page meta={meta} className={styles.bg}>
       <div className={styles.blockWrap}>
         {tab ? (
-          <div
-            className={styles.back}
-            onClick={() => {
-              if (isMobile) {
-                setMobileStyle(true);
-                setActiveTab('');
-              } else {
-                setTab(false);
-                setActiveTab('');
-              }
-            }}
-          >
+          <div className={styles.back} onClick={backCall}>
             Back
           </div>
         ) : (
@@ -252,7 +250,7 @@ export default function Home() {
               page1 main page
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
-              <Moca />
+              <Moca backCall={backCall} />
             </div>
             <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
               <Speakers />

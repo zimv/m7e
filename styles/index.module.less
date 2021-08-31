@@ -274,6 +274,7 @@
     .blockWrap;
 
     position: absolute;
+    z-index: -1;
     color: #fff;
     font-size: 66px;
     text-align: center;
@@ -281,6 +282,7 @@
     opacity: 0;
     transition: ease 0.5s;
     &.show {
+      z-index: 1;
       opacity: 1;
     }
   }
