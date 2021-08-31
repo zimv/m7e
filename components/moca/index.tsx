@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
-import {Input} from 'antd';
+import { Input } from 'antd';
 import MocaCard from '../moca-card';
 import avatar1 from '../../public/images/avatar1.png';
 
@@ -53,7 +53,9 @@ export default function Moca({ backCall }) {
             </div>
             <div className={styles.back} onClick={backCall}>
               <span className={styles.name}>metaverse exhibition</span>
-              <div className={styles.ic}><img src="/images/arrow.png"></img></div>
+              <div className={styles.ic}>
+                <img src="/images/arrow.png"></img>
+              </div>
             </div>
           </div>
           <div className={styles.list}>
@@ -73,7 +75,7 @@ export default function Moca({ backCall }) {
 
             <div className={styles.iptBox}>
               <Input className={styles.ipt}></Input>
-              <img src="/images/input_icon.png" className={styles.ic}/>
+              <img src="/images/input_icon.png" className={styles.ic} />
             </div>
           </div>
         </div>
