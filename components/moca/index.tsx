@@ -43,7 +43,7 @@ export default function Moca({ backCall }) {
   }, []);
   const lists = generText();
   return (
-    <div className="flex w-screen min-h-screen bg-black overflow-scroll justify-center">
+    <div className="flex w-screen min-h-screen bg-black justify-center">
       <div className={styles.box}>
         <div className={cls}>
           <div className={styles.head}>
