@@ -9,7 +9,7 @@ import styles from './index.module.less';
 export default function Speakers() {
   const cls = classnames('flex justify-between items-center flex-wrap', styles.container);
   return (
-    <div className="flex justify-center items-center w-screen min-h-screen bg-black overflow-scroll">
+    <div className="relative flex justify-center items-center w-screen h-screen bg-black">
       <PageTitle title="Speakers" />
       <div className={cls}>
         <SpeakerCard avatar={avatar1} name="Max Mara" description="CTO" />
