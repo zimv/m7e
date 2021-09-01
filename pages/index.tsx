@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import Page from '../components/page';
 import NavBox from '../components/nav-box';
 import Menu from '../components/menu-carousel';
-import Moca from '../components/Moca';
+import Moca from '../components/moca';
 import Partners from './partners';
 import Speakers from './speakers';
 import { SITE_NAME, META_DESCRIPTION } from '../common/const';

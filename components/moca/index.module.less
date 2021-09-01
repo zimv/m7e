@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Ginebra';
+  src: url('/fonts/ginebra_font.ttf');
+}
 .box {
   width: 100%;
   max-width: 1400px;
@@ -33,11 +37,24 @@
       .name {
         margin-right: 3px;
       }
+      .ic {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background: url(/images/arrow_bg.png) 0;
+        border-radius: 50%;
+        img {
+          width: 12px;
+          height: 12px;
+          display: inline-block;
+        }
+      }
     }
   }
   .list {
     width: 100%;
-    height: calc(100vh - 160px - 20px);
+    height: calc(100vh - 160px - 40px);
     overflow-y: auto;
     &::-webkit-scrollbar,
     &::-webkit-scrollbar-thumb,
@@ -62,5 +79,28 @@
 @media (max-width: 640px) {
   .container {
     justify-content: center;
+  }
+}
+.iptBox {
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  width: 210px;
+  height: 45px;
+  line-height: 0;
+  .ipt {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid #8d53f6;
+    background: #eae3f1;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .ic {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: -20px;
+    top: 0;
   }
 }

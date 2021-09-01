@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
-import Image from 'next/image';
+import { Input } from 'antd';
 import MocaCard from '../moca-card';
 import avatar1 from '../../public/images/avatar1.png';
 
@@ -22,7 +22,7 @@ const generText = () => {
 };
 export default function Moca({ backCall }) {
   const cls = classnames('flex justify-evenly items-center flex-wrap', styles.container);
-  const con = classnames('flex justify-evenly items-center flex-wrap', styles.con);
+  const con = classnames('flex justify-center items-center flex-wrap', styles.con);
   const [line, setLine] = useState(0);
   const [wid, setWid] = useState(0);
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function Moca({ backCall }) {
   }, []);
   const lists = generText();
   return (
-    <div className="flex w-screen min-h-screen bg-black overflow-scroll">
+    <div className="flex w-screen min-h-screen bg-black justify-center">
       <div className={styles.box}>
         <div className={cls}>
           <div className={styles.head}>
@@ -53,7 +53,9 @@ export default function Moca({ backCall }) {
             </div>
             <div className={styles.back} onClick={backCall}>
               <span className={styles.name}>metaverse exhibition</span>
-              <Image width="25px" height="25px" src={avatar1} alt="back" />
+              <div className={styles.ic}>
+                <img src="/images/arrow.png"></img>
+              </div>
             </div>
           </div>
           <div className={styles.list}>
@@ -69,6 +71,11 @@ export default function Moca({ backCall }) {
               {lists.map((item) => {
                 return <MocaCard avatar={avatar1} name="Max Mara" text={item.text} />;
               })}
+            </div>
+
+            <div className={styles.iptBox}>
+              <Input className={styles.ipt}></Input>
+              <img src="/images/input_icon.png" className={styles.ic} />
             </div>
           </div>
         </div>

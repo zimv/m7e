@@ -15,7 +15,7 @@ export default function MocaCard({ avatar, text, className, ...props }: Props) {
   return (
     <div {...props} className={cls}>
       <div className={styles.header}>
-        <span className={styles.like}>@</span>
+        <img src="/images/like.png" className={styles.like}></img>
         <span className={styles.num}>102</span>
       </div>
       <div className={styles.body}>
