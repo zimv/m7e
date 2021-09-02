@@ -7,6 +7,8 @@ import Menu from '../components/menu-carousel';
 import Moca from '../components/moca';
 import Partners from './partners';
 import Speakers from './speakers';
+// import Activity1 from './activity1';
+import Activity2 from './activity2';
 import { SITE_NAME, META_DESCRIPTION } from '../common/const';
 import Icon1 from '../public/images/icon_1.svg';
 import Icon2 from '../public/images/icon_2.svg';
@@ -175,9 +177,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={styles['home-middle']}>
-                  <Flower2 className={styles.flower2} />
                   <div className={styles['home-text3']}>Self Awakened</div>
-                  <div className={styles['home-text4']}>Quest for Metaverse Identity</div>
+                  <div className={styles['home-text4']}>
+                    <Flower2 className={styles.flower2} />
+                    Quest for Metaverse Identity
+                  </div>
                   <div className={styles['home-text5']}>自我的觉醒</div>
                 </div>
               </div>
@@ -247,7 +251,7 @@ export default function Home() {
         {tab ? (
           <div className={styles.blockWrapPage}>
             <div className={classnames(styles.page, activeTab === 'block1' ? styles.show : '')}>
-              page1 main page
+              <Activity2 />
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
               <Moca backCall={backCall} />
