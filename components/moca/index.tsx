@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import { Input } from 'antd';
+import BulletScreen from 'rc-bullets';
 import MocaCard from '../moca-card';
 import avatar1 from '../../public/images/avatar1.png';
 
 import styles from './index.module.less';
 
-const generText = () => {
+const generText = (n) => {
   const list = [];
-  for (let i = 0; i < 20; i = i + 1) {
+  for (let i = 0; i < n; i = i + 1) {
     list.push({
       text: `Time Currents is created amid musings: life unfolds itself in a patterned manner, yet we
       hold the power to choose how to ride waves of time. The pixels, which represent time units,
@@ -20,11 +21,78 @@ const generText = () => {
   });
   return list;
 };
+const lists = generText(20);
+
+const headUrl = 'https://zerosoul.github.io/rc-bullets/assets/img/heads/girl.jpg';
 export default function Moca({ backCall }) {
+  const wrap = classnames('flex w-screen min-h-screen bg-black justify-center', styles.wrap);
   const cls = classnames('flex justify-evenly items-center flex-wrap', styles.container);
   const con = classnames('flex justify-center items-center flex-wrap', styles.con);
   const [line, setLine] = useState(0);
   const [wid, setWid] = useState(0);
+  // 弹幕屏幕
+  const [screen, setScreen] = useState(null);
+  // 弹幕内容
+  const [bullet, setBullet] = useState('');
+  const [bulletRender, setBulletRender] = useState(0);
+
+  useEffect(() => {
+    // 给页面中某个元素初始化弹幕屏幕，一般为一个大区块。此处的配置项全局生效
+    const s = new BulletScreen('#screen', { duration: 20 });
+    setScreen(s);
+
+    // 定时获取弹幕
+    let timer = null;
+    const timeouts = [];
+    const doGet = () => {
+      generText(5).forEach((item) => {
+        const t = setTimeout(() => {
+          s.push({
+            msg: item.text,
+            head: headUrl,
+            color: '#eee',
+            size: 'small',
+            backgroundColor: 'rgba(2,2,2,.3)',
+          });
+          setBulletRender((n) => {
+            return n + 1;
+          });
+        }, Math.random() * 10000);
+        timeouts.push(t);
+      });
+    };
+    timer = setInterval(() => {
+      timeouts.forEach((item) => {
+        clearTimeout(item);
+      });
+      doGet();
+    }, 10000);
+    doGet();
+    return () => {
+      timeouts.forEach((item) => {
+        clearTimeout(item);
+      });
+      // 组件销毁时，清除定时器
+      clearInterval(timer);
+    };
+  }, []);
+  // 弹幕内容输入事件处理
+  const handleChange = ({ target: { value } }) => {
+    setBullet(value);
+  };
+  // 发送弹幕
+  const handleSend = () => {
+    if (bullet) {
+      setBullet('');
+      screen.push({
+        msg: bullet,
+        head: headUrl,
+        color: 'red',
+        size: 'small',
+        backgroundColor: 'rgba(1,2,2,.3)',
+      });
+    }
+  };
   useEffect(() => {
     const clientWidth = window.innerWidth || document.body.clientWidth;
     if (clientWidth < 600) {
@@ -41,9 +109,8 @@ export default function Moca({ backCall }) {
       setWid(1200);
     }
   }, []);
-  const lists = generText();
   return (
-    <div className="flex w-screen min-h-screen bg-black justify-center">
+    <div className={wrap} id="screen" data-bulles={bulletRender}>
       <div className={styles.box}>
         <div className={cls}>
           <div className={styles.head}>
@@ -68,14 +135,19 @@ export default function Moca({ backCall }) {
                 width: wid,
               }}
             >
-              {lists.map((item) => {
-                return <MocaCard avatar={avatar1} name="Max Mara" text={item.text} />;
+              {lists.map((item, index) => {
+                return <MocaCard avatar={avatar1} name="Max Mara" text={item.text} key={index} />;
               })}
             </div>
 
             <div className={styles.iptBox}>
-              <Input className={styles.ipt}></Input>
-              <img src="/images/input_icon.png" className={styles.ic} />
+              <Input
+                className={styles.ipt}
+                value={bullet}
+                onChange={handleChange}
+                onPressEnter={handleSend}
+              ></Input>
+              <img src="/images/input_icon.png" className={styles.ic} onClick={handleSend} />
             </div>
           </div>
         </div>
