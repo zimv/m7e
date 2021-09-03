@@ -54,7 +54,7 @@ export default function MenuCarousel({ className, children }: CarouselProps) {
 }
 
 export function CarouselItem({ children }: CarouselItemProps) {
-  return <>{children}</>;
+  return <div>{children}</div>;
 }
 
 MenuCarousel.CarouselItem = CarouselItem;
