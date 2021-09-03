@@ -7,6 +7,8 @@ import Menu from '../components/menu-carousel';
 import Moca from '../components/moca';
 import Partners from './partners';
 import Speakers from './speakers';
+import Activity1 from './activity1';
+import Activity2 from './activity2';
 import { SITE_NAME, META_DESCRIPTION } from '../common/const';
 import Icon1 from '../public/images/icon_1.svg';
 import Icon2 from '../public/images/icon_2.svg';
@@ -25,6 +27,7 @@ export default function Home() {
   const [mobileStyle, setMobileStyle] = useState(false);
   const [tab, setTab] = useState(false);
   const [activeTab, setActiveTab] = useState('');
+  const [menuLinkIndex, setMenuLinkIndex] = useState(0);
   const getStyle = (block) => {
     if (block === 'blockBlack' && activeTab !== '') return styles.blockBlackNone;
     if (activeTab === block) return styles.activeTab;
@@ -48,11 +51,12 @@ export default function Home() {
       setActiveTab(block);
     }
   };
-  console.log(tab);
+
   const meta = {
     title: `${tNavigation('home')} - ${SITE_NAME}`,
     description: META_DESCRIPTION,
   };
+
   const backCall = () => {
     if (isMobile) {
       setMobileStyle(true);
@@ -63,21 +67,46 @@ export default function Home() {
     }
   };
 
+  function menuItemClick(index) {
+    setMenuLinkIndex(index);
+    setTab(true);
+    setActiveTab('block5');
+  }
+
+  function renderMenu() {
+    let node;
+    switch (menuLinkIndex) {
+      case 0:
+        node = <Activity1 />;
+        break;
+      case 1:
+        node = <Activity2 />;
+        break;
+      default:
+        node = null;
+    }
+    return node;
+  }
+
   const Text1 = <span className={styles.nav1}>Videos</span>;
   const Text2 = <span className={styles.nav1}>MOCA Exhibition</span>;
   const Text3 = <span className={styles.nav2}>Speakers</span>;
   const Text4 = <span className={styles.nav2}>Partners</span>;
 
   const menuItem = (
-    <div>
+    <>
       <div className={styles['menu-title']}>9.9</div>
-      <div className={styles['menu-item']}>14:00 MOCA Exhibition</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        14:00 MOCA Exhibition
+      </div>
       <div className={styles['menu-sub-item']}>元宇宙展览开幕</div>
-      <div className={styles['menu-item']}>16:00 Party</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(1)}>
+        16:00 Party
+      </div>
       <div className={styles['menu-sub-item']}>电音派对</div>
       <div className={styles['menu-item']}>19:00 Forum</div>
       <div className={styles['menu-sub-item']}>论坛</div>
-    </div>
+    </>
   );
 
   return (
@@ -175,9 +204,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className={styles['home-middle']}>
-                  <Flower2 className={styles.flower2} />
                   <div className={styles['home-text3']}>Self Awakened</div>
-                  <div className={styles['home-text4']}>Quest for Metaverse Identity</div>
+                  <div className={styles['home-text4']}>
+                    <Flower2 className={styles.flower2} />
+                    Quest for Metaverse Identity
+                  </div>
                   <div className={styles['home-text5']}>自我的觉醒</div>
                 </div>
               </div>
@@ -230,10 +261,10 @@ export default function Home() {
           </div>
           <div
             className={classnames(styles.block5, getStyle('block5'), styles.con)}
-            onClick={() => {
-              setTab(true);
-              setActiveTab('block5');
-            }}
+            // onClick={() => {
+            //   setTab(true);
+            //   setActiveTab('block5');
+            // }}
           >
             <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <Menu>
@@ -247,7 +278,7 @@ export default function Home() {
         {tab ? (
           <div className={styles.blockWrapPage}>
             <div className={classnames(styles.page, activeTab === 'block1' ? styles.show : '')}>
-              page1 main page
+              main page 1
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
               <Moca backCall={backCall} />
@@ -259,7 +290,7 @@ export default function Home() {
               <Partners />
             </div>
             <div className={classnames(styles.page, activeTab === 'block5' ? styles.show : '')}>
-              page5 main page
+              {renderMenu()}
             </div>
           </div>
         ) : (
