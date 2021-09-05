@@ -1,7 +1,5 @@
 import React from 'react';
 import classnames from 'classnames';
-// import 'react-responsive-carousel/lib/styles/carousel.min.css';
-// import { Carousel } from 'react-responsive-carousel';
 import { Carousel } from 'antd';
 import ReactPlayer from 'react-player';
 import Bg1 from '../../public/images/videos_bg_1.svg';
