@@ -5,6 +5,7 @@ import Page from '../components/page';
 import NavBox from '../components/nav-box';
 import Menu from '../components/menu-carousel';
 import Moca from '../components/moca';
+import Videos from './videos';
 import Partners from './partners';
 import Speakers from './speakers';
 import Activity1 from './activity1';
@@ -195,7 +196,7 @@ export default function Home() {
             >
               <div className="flex flex-col justify-between flex-grow">
                 <div className={styles['home-top']}>
-                  <div className={styles['home-button']}>China NFT</div>
+                  <div className={styles['home-button']}>Claim NFT</div>
                   <Flower1 className={styles.flower1} />
                   <div className="flex flex-col items-end">
                     <div className={styles['home-text1']}>Shanghai Metaverse Week</div>
@@ -278,7 +279,7 @@ export default function Home() {
         {tab ? (
           <div className={styles.blockWrapPage}>
             <div className={classnames(styles.page, activeTab === 'block1' ? styles.show : '')}>
-              main page 1
+              <Videos />
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
               <Moca backCall={backCall} />
