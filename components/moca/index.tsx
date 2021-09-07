@@ -44,11 +44,13 @@ export default function Moca({ backCall }) {
     // 定时获取弹幕
     let timer = null;
     const timeouts = [];
-    const doGet = () => {
-      generText(5).forEach((item) => {
+    const doGet = async () => {
+      const history = await getHistory();
+      console.log(history)
+      history.forEach((item) => {
         const t = setTimeout(() => {
           s.push({
-            msg: item.text,
+            msg: item.msg,
             head: headUrl,
             color: '#eee',
             size: 'small',
@@ -76,6 +78,17 @@ export default function Moca({ backCall }) {
       clearInterval(timer);
     };
   }, []);
+
+  // 获取历史消息
+  const getHistory = async () => {
+    const res = await window.fetch('/api/bullet?method=history', {
+      method: 'post'
+    });
+    const data = await res.clone().json()
+    console.log(data)
+    return data.result.messages
+  };
+
   // 弹幕内容输入事件处理
   const handleChange = ({ target: { value } }) => {
     setBullet(value);
