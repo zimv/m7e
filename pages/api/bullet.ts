@@ -7,18 +7,21 @@ const admin = {
   token: null,
 };
 
+const chatChannel = process.env.chatChannel || 'tg6y5JC9Zs7rXPZ6m';
+const chatHost = process.env.chatHost || 'https://chat.nft4metaverse.io';// local: http://localhost:4222/
+
 async function addUser(name) {
   const r = await axios({
     method: 'POST',
-    url: 'http://localhost:4222/api/v1/users.create',
+    url: `${chatHost}/api/v1/users.create`,
     data: {
       bio: '',
       customFields: {},
-      email: `${name}@qqq.com`,
+      email: `${name}@qqqqq.com`,
       joinDefaultChannels: true,
       name,
       nickname: name,
-      password: '12345',
+      password: 'info@nft4metaverse.io',
       requirePasswordChange: false,
       roles: ['user'],
       sendWelcomeEmail: true,
@@ -37,7 +40,8 @@ async function addUser(name) {
 
 async function adminLogin() {
   /* eslint-disable */
-  const adminMessage = await login('zimv');
+  // nft4metaverse 用户名
+  const adminMessage = await login('nft4metaverse');
   admin.uid = adminMessage.result.id;
   admin.token = adminMessage.result.token;
   console.log('admin login success');
@@ -46,12 +50,13 @@ async function adminLogin() {
 async function login(userName) {
   const r = await axios({
     method: 'post',
-    url: 'http://localhost:4222/api/v1/method.callAnon/login',
+    url: `${chatHost}/api/v1/method.callAnon/login`,
     data: {
-      // password 12345
-      message: `{"msg":"method","method":"login","params":[{"user":{"username":"${userName}"},"password":"12345"}]}`,
+      // password info@nft4metaverse.io
+      message: `{"msg":"method","method":"login","params":[{"user":{"username":"${userName}"},"password":"info@nft4metaverse.io"}]}`,
     },
   });
+  //console.log(r)
   if (r.data && r.data.success) {
     const message = JSON.parse(r.data.message);
     // 说明没有用户
@@ -85,9 +90,9 @@ async function getHistory(channel) {
   }
   const r = await axios({
     method: 'post',
-    url: 'http://localhost:4222/api/v1/method.call/loadHistory',
+    url: `${chatHost}/api/v1/method.call/loadHistory`,
     data: {
-      message: `{"msg":"method","method":"loadHistory","params":["${channel}",null,50,{"$date":${new Date().getTime()}},false]}`,
+      message: `{"msg":"method","method":"loadHistory","params":["${channel}",null,500,{"$date":${new Date().getTime()}},false]}`,
     },
     headers:{
       'X-Auth-Token': admin.token,
@@ -99,13 +104,13 @@ async function getHistory(channel) {
 async function sendMessage(msg, headers) {
   const r = await axios({
     method: 'post',
-    url: 'http://localhost:4222/api/v1/method.call/sendMessage',
+    url: `${chatHost}/api/v1/method.call/sendMessage`,
     data: {
-      message: `{"msg":"method","method":"sendMessage","params":[{"rid":"iwasfujsYTYnbHgL5","msg":"${msg}"}]}`,
+      message: `{"msg":"method","method":"sendMessage","params":[{"rid":${chatChannel},"msg":"${msg}"}]}`,
     },
     headers,
   });
-  console.log(r);
+  //console.log(r);
 }
 
 // 当前客户端使用的api
@@ -129,8 +134,7 @@ export default async function handler(req, res) {
   }
 
   if(method === 'history'){
-    const r = await getHistory('iwasfujsYTYnbHgL5');
-    // console.log(r.data)
+    const r = await getHistory(chatChannel);
     res.status(200).json(r.data.message);
     return;
   }
@@ -145,16 +149,21 @@ export default async function handler(req, res) {
       'X-Auth-Token': token,
       'X-User-Id': uid,
     };
-    const r = await axios({
-      method: 'post',
-      url: 'http://localhost:4222/api/v1/method.call/sendMessage',
-      data: {
-        message: `{"msg":"method","method":"sendMessage","params":[{"rid":"iwasfujsYTYnbHgL5","msg":"${req.body}"}]}`,
-      },
-      headers,
-    });
-    console.log(r.data)
-    res.status(200).json(r.data.message);
+    try{
+      const r = await axios({
+        method: 'post',
+        url: `${chatHost}/api/v1/method.call/sendMessage`,
+        data: {
+          message: `{"msg":"method","method":"sendMessage","params":[{"rid":"${chatChannel}","msg":"${req.body}"}]}`,
+        },
+        headers,
+      });
+      console.log(r.data)
+      res.status(200).json('ok');
+    }catch(err){
+      // 未登录
+      res.status(200).json('401');
+    }
     return;
   }
 }

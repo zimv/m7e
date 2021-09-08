@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import classnames from 'classnames';
 import { Input } from 'antd';
 import BulletScreen from 'rc-bullets';
@@ -28,6 +28,8 @@ export default function Moca({ backCall }) {
   const wrap = classnames('flex w-screen min-h-screen bg-black justify-center', styles.wrap);
   const cls = classnames('flex justify-evenly items-center flex-wrap', styles.container);
   const con = classnames('flex justify-center items-center flex-wrap', styles.con);
+  const lastMsgId = useRef(null);
+  const historyList = useRef(null)
   const [line, setLine] = useState(0);
   const [wid, setWid] = useState(0);
   // 弹幕屏幕
@@ -46,12 +48,24 @@ export default function Moca({ backCall }) {
     const timeouts = [];
     const doGet = async () => {
       const history = await getHistory();
-      console.log(history)
-      history.forEach((item) => {
+      let currentShowList = [];
+      if(historyList.current===null) {
+        historyList.current = history;
+      }else{
+        history.find((item) => {
+          if(lastMsgId.current === item._id){
+            return true;
+          }
+          currentShowList.push(item)
+        });
+      }
+      currentShowList = currentShowList.concat(historyList.current.splice(0,2))
+
+      currentShowList.forEach((item) => {
         const t = setTimeout(() => {
           s.push({
             msg: item.msg,
-            head: headUrl,
+            //head: headUrl,
             color: '#eee',
             size: 'small',
             backgroundColor: 'rgba(2,2,2,.3)',
@@ -62,6 +76,7 @@ export default function Moca({ backCall }) {
         }, Math.random() * 10000);
         timeouts.push(t);
       });
+      lastMsgId.current = history[0]._id;
     };
     timer = setInterval(() => {
       timeouts.forEach((item) => {
@@ -81,9 +96,7 @@ export default function Moca({ backCall }) {
 
   // 获取历史消息
   const getHistory = async () => {
-    const res = await window.fetch('/api/bullet?method=history', {
-      method: 'post'
-    });
+    const res = await window.fetch('/api/bullet?method=history');
     const data = await res.clone().json()
     console.log(data)
     return data.result.messages
@@ -94,17 +107,38 @@ export default function Moca({ backCall }) {
     setBullet(value);
   };
   // 发送弹幕
-  const handleSend = () => {
+  const handleSend = async () => {
     if (bullet) {
       setBullet('');
-      screen.push({
-        msg: bullet,
-        head: headUrl,
-        color: 'red',
-        size: 'small',
-        backgroundColor: 'rgba(1,2,2,.3)',
-      });
+      // screen.push({
+      //   msg: bullet,
+      //   head: headUrl,
+      //   color: 'red',
+      //   size: 'small',
+      //   backgroundColor: 'rgba(1,2,2,.3)',
+      // });
+      const res = await sendMsg(bullet);
+      res.clone().text().then(async data=>{
+        if(data=='401') {
+          alert('请登录');
+          await login('test1');
+          await sendMsg(bullet);
+          doGet();
+        }
+      })
     }
+  };
+  // 登录
+  const login = async (address) => {
+    await window.fetch('/api/bullet?method=login&userName=' + address);
+    return true
+  };
+  // 发送消息
+  const sendMsg = async (bullet) => {
+    return window.fetch('/api/bullet?method=send', {
+      method: 'post',
+      body: bullet
+    });
   };
   useEffect(() => {
     const clientWidth = window.innerWidth || document.body.clientWidth;
