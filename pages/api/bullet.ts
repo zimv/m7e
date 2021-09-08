@@ -8,7 +8,7 @@ const admin = {
 };
 
 const chatChannel = process.env.chatChannel || 'tg6y5JC9Zs7rXPZ6m';
-const chatHost = process.env.chatHost || 'https://chat.nft4metaverse.io';// local: http://localhost:4222/
+const chatHost = process.env.chatHost || 'https://chat.nft4metaverse.io'; // local: http://localhost:4222/
 
 async function addUser(name) {
   const r = await axios({
@@ -94,12 +94,12 @@ async function getHistory(channel) {
     data: {
       message: `{"msg":"method","method":"loadHistory","params":["${channel}",null,500,{"$date":${new Date().getTime()}},false]}`,
     },
-    headers:{
+    headers: {
       'X-Auth-Token': admin.token,
       'X-User-Id': admin.uid,
     },
   });
-  return r
+  return r;
 }
 async function sendMessage(msg, headers) {
   const r = await axios({
@@ -118,7 +118,7 @@ export default async function handler(req, res) {
   const name = req.query.userName || 'test8';
   const method = req.query.method || 'test8';
 
-  if(method === 'login'){
+  if (method === 'login') {
     const r = await login(name);
     console.log(`user[${name}] login success`);
     res.setHeader('Set-Cookie', [
@@ -133,14 +133,14 @@ export default async function handler(req, res) {
     return;
   }
 
-  if(method === 'history'){
+  if (method === 'history') {
     const r = await getHistory(chatChannel);
     res.status(200).json(r.data.message);
     return;
   }
 
-  if(method === 'send'){
-    console.log(req.body)
+  if (method === 'send') {
+    console.log(req.body);
     const cookies = cookie.parse(req.headers.cookie || '');
     const uid = cookies['X-User-Id'];
     const token = cookies['X-Auth-Token'];
@@ -149,7 +149,7 @@ export default async function handler(req, res) {
       'X-Auth-Token': token,
       'X-User-Id': uid,
     };
-    try{
+    try {
       const r = await axios({
         method: 'post',
         url: `${chatHost}/api/v1/method.call/sendMessage`,
@@ -158,9 +158,9 @@ export default async function handler(req, res) {
         },
         headers,
       });
-      console.log(r.data)
+      console.log(r.data);
       res.status(200).json('ok');
-    }catch(err){
+    } catch (err) {
       // 未登录
       res.status(200).json('401');
     }
