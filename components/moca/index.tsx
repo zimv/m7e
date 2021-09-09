@@ -43,8 +43,8 @@ export default function Moca({ backCall }) {
 
   // 获取历史消息
   const getHistory = async () => {
-    const res = await window.fetch('/api/bullet?method=history');
-    const data = await res.clone().json();
+    const res = await fetch('/api/bullet?method=history');
+    const data = await res.json();
     console.log(data);
     return data.result.messages;
   };
@@ -115,12 +115,12 @@ export default function Moca({ backCall }) {
 
   // 登录
   const login = async (address) => {
-    await window.fetch(`/api/bullet?method=login&userName=${address}`);
+    await fetch(`/api/bullet?method=login&userName=${address}`);
     return true;
   };
   // 发送消息
   const sendMsg = async (msg) => {
-    return window.fetch('/api/bullet?method=send', {
+    return fetch('/api/bullet?method=send', {
       method: 'post',
       body: msg,
     });
