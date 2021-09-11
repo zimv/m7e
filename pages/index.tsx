@@ -44,11 +44,12 @@ export default function Home() {
         connect();
       }
 
+      // eslint-disable-next-line no-useless-return
       return;
     }
 
     // TODO: redirect
-
+    window.alert('Comming soon');
   }, [connect, data]);
 
   useEffect(() => {
