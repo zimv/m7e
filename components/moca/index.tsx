@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import classnames from 'classnames';
 import { Input } from 'antd';
 import BulletScreen from 'rc-bullets';
+import { useWalletProvider } from '../web3modal';
 import MocaCard from '../moca-card';
 import avatar1 from '../../public/images/avatar1.png';
 
@@ -25,6 +26,7 @@ const lists = generText(20);
 
 const headUrl = 'https://zerosoul.github.io/rc-bullets/assets/img/heads/girl.jpg';
 export default function Moca({ backCall }) {
+  const { connect, data: walletData } = useWalletProvider();
   const wrap = classnames('flex w-screen min-h-screen bg-black justify-center', styles.wrap);
   const cls = classnames('flex justify-evenly items-center flex-wrap', styles.container);
   const con = classnames('flex justify-center items-center flex-wrap', styles.con);
@@ -119,8 +121,8 @@ export default function Moca({ backCall }) {
     return true;
   };
   // 发送消息
-  const sendMsg = async (msg) => {
-    return fetch('/api/bullet?method=send', {
+  const sendMsg = async (msg, userName) => {
+    return fetch(`/api/bullet?method=send&userName=${userName}`, {
       method: 'post',
       body: msg,
     });
@@ -135,15 +137,19 @@ export default function Moca({ backCall }) {
       //   size: 'small',
       //   backgroundColor: 'rgba(1,2,2,.3)',
       // });
-      const res = await sendMsg(bullet);
+      if (!walletData.address) {
+        connect();
+        return;
+      }
+      const res = await sendMsg(bullet, walletData.address);
       res
         .clone()
         .text()
         .then(async (data) => {
           if (data === '401') {
             alert('请登录');
-            await login('test1');
-            await sendMsg(bullet);
+            await login(walletData.address);
+            await sendMsg(bullet, walletData.address);
             doGet();
           }
         });
