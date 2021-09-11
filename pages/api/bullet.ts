@@ -10,6 +10,15 @@ const admin = {
 const chatChannel = process.env.chatChannel || 'tg6y5JC9Zs7rXPZ6m';
 const chatHost = process.env.chatHost || 'https://chat.nft4metaverse.io'; // local: http://localhost:4222/
 
+export const simpleAdress = (address: string, startLength = 17, endLength = 7) => {
+  if (!address) return '';
+
+  const start = address.substring(0, startLength);
+  const end = address.substr(-endLength, endLength);
+
+  return `${start}...${end}`;
+};
+
 async function addUser(name) {
   const r = await axios({
     method: 'POST',
@@ -19,8 +28,8 @@ async function addUser(name) {
       customFields: {},
       email: `${name}@qqqqq.com`,
       joinDefaultChannels: true,
-      name,
-      nickname: name,
+      name: simpleAdress(name),
+      nickname: simpleAdress(name),
       password: 'info@nft4metaverse.io',
       requirePasswordChange: false,
       roles: ['user'],
@@ -101,18 +110,6 @@ async function getHistory(channel) {
   });
   return r;
 }
-async function sendMessage(msg, headers) {
-  const r = await axios({
-    method: 'post',
-    url: `${chatHost}/api/v1/method.call/sendMessage`,
-    data: {
-      message: `{"msg":"method","method":"sendMessage","params":[{"rid":${chatChannel},"msg":"${msg}"}]}`,
-    },
-    headers,
-  });
-  //console.log(r);
-}
-
 // 当前客户端使用的api
 export default async function handler(req, res) {
   const name = req.query.userName || 'test8';
@@ -128,6 +125,9 @@ export default async function handler(req, res) {
       `X-User-Id=${r.result.id};expires=${new Date(
         r.result.tokenExpires.$date,
       ).toUTCString()};domain=${req.headers.host.split(':')[0]};path=/`,
+      `X-User-Name=${name};expires=${new Date(r.result.tokenExpires.$date).toUTCString()};domain=${
+        req.headers.host.split(':')[0]
+      };path=/`,
     ]);
     res.status(200).json(r);
     return;
@@ -144,6 +144,13 @@ export default async function handler(req, res) {
     const cookies = cookie.parse(req.headers.cookie || '');
     const uid = cookies['X-User-Id'];
     const token = cookies['X-Auth-Token'];
+    const loginUser = cookies['X-User-Name'];
+    if (loginUser != name || !token || !uid || !loginUser) {
+      // 需要重新登录
+      res.status(200).json('401');
+      return;
+    }
+
     const headers = {
       cookie: `rc_uid=${uid};rc_token=${token}`,
       'X-Auth-Token': token,
