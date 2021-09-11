@@ -1,4 +1,6 @@
 import { NextIntlProvider } from 'next-intl';
+import Web3ModalProvider from '../components/web3modal';
+
 import 'tailwindcss/tailwind.css';
 
 import '../styles/globals.css';
@@ -26,7 +28,9 @@ function MyApp({ Component, pageProps }) {
       // in a different time zone.
       timeZone="Asia/ShangHai"
     >
-      <Component {...pageProps} />
+      <Web3ModalProvider>
+        <Component {...pageProps} />
+      </Web3ModalProvider>
     </NextIntlProvider>
   );
 }

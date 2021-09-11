@@ -5,6 +5,7 @@ import Page from '../components/page';
 import NavBox from '../components/nav-box';
 import Menu from '../components/menu-carousel';
 import Moca from '../components/moca';
+import { useWalletProvider } from '../components/web3modal';
 import Videos from './videos';
 import Partners from './partners';
 import Speakers from './speakers';
@@ -23,6 +24,7 @@ import styles from '../styles/index.module.less';
 
 export default function Home() {
   const tNavigation = useTranslations('navigation');
+  const { connect, data } = useWalletProvider();
 
   const [isMobile, setMobile] = useState(false);
   const [mobileStyle, setMobileStyle] = useState(false);
@@ -35,6 +37,19 @@ export default function Home() {
     if (tab) return styles.tab;
     return '';
   };
+
+  const onClaim = React.useCallback(() => {
+    if (!data.address) {
+      if (connect) {
+        connect();
+      }
+
+      return;
+    }
+
+    // TODO: redirect
+
+  }, [connect, data]);
 
   useEffect(() => {
     const mobile = (window.innerWidth || document.body.clientWidth) < 640;
@@ -196,7 +211,9 @@ export default function Home() {
             >
               <div className="flex flex-col justify-between flex-grow">
                 <div className={styles['home-top']}>
-                  <div className={styles['home-button']}>Claim NFT</div>
+                  <div className={styles['home-button']} onClick={onClaim}>
+                    {data.address ? 'Claim NFT' : 'Connect'}
+                  </div>
                   <Flower1 className={styles.flower1} />
                   <div className="flex flex-col items-end">
                     <div className={styles['home-text1']}>Shanghai Metaverse Week</div>
