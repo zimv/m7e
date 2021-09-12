@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import classnames from 'classnames';
-import { Input } from 'antd';
+import { Input, Spin } from 'antd';
 import BulletScreen from 'rc-bullets';
 import { useWalletProvider } from '../web3modal';
 import MocaCard from '../moca-card';
@@ -30,7 +30,9 @@ export default function Moca({ backCall }) {
   const wrap = classnames('flex w-screen min-h-screen bg-black justify-center', styles.wrap);
   const cls = classnames('flex justify-evenly items-center flex-wrap', styles.container);
   const con = classnames('flex justify-center items-center flex-wrap', styles.con);
+  const [sending, setSending] = useState(false);
   const lastMsgId = useRef(null);
+  const sendLock = useRef(false);
   const historyList = useRef(null);
   const [line, setLine] = useState(0);
   const [wid, setWid] = useState(0);
@@ -141,6 +143,9 @@ export default function Moca({ backCall }) {
         connect();
         return;
       }
+      if(sendLock.current) return;
+      sendLock.current = true;
+      setSending(true);
       const res = await sendMsg(bullet, walletData.address);
       res
         .clone()
@@ -152,6 +157,9 @@ export default function Moca({ backCall }) {
             await sendMsg(bullet, walletData.address);
             doGet();
           }
+        }).finally(()=>{
+          setSending(false);
+          sendLock.current = false;
         });
       setBullet('');
     }
@@ -204,6 +212,7 @@ export default function Moca({ backCall }) {
             </div>
 
             <div className={styles.iptBox}>
+              <Spin spinning={sending} className={styles.sending}></Spin>
               <Input
                 className={styles.ipt}
                 value={bullet}
