@@ -129,7 +129,7 @@ export default function Home() {
   return (
     <Page meta={meta} className={styles.bg}>
       <div className={styles.blockWrap}>
-        {tab ? (
+        {tab && activeTab !== '' ? (
           <div className={styles.back} onClick={backCall}>
             Back
           </div>
@@ -177,6 +177,58 @@ export default function Home() {
           })}
           onClick={() => setActiveFun('block5')}
         ></div>
+
+        {!isMobile ? (
+          <>
+            <div
+              className={classnames({
+                [styles.tag1]: true,
+                [styles.tab]: tab,
+              })}
+              onClick={() => setActiveFun('block1')}
+            >
+              VIDEO
+            </div>
+            <div
+              className={classnames({
+                [styles.tag2]: true,
+                [styles.tab]: tab,
+              })}
+              onClick={() => setActiveFun('block2')}
+            >
+              MOCA
+            </div>
+            <div
+              className={classnames({
+                [styles.tag3]: true,
+                [styles.tab]: tab,
+              })}
+              onClick={() => setActiveFun('block3')}
+            >
+              SPEAKER
+            </div>
+            <div
+              className={classnames({
+                [styles.tag4]: true,
+                [styles.tab]: tab,
+              })}
+              onClick={() => setActiveFun('block4')}
+            >
+              PARTNER
+            </div>
+            <div
+              className={classnames({
+                [styles.tag5]: true,
+                [styles.tab]: tab,
+              })}
+              onClick={() => setActiveFun('block5')}
+            >
+              MOCA
+            </div>
+          </>
+        ) : (
+          ''
+        )}
 
         <div className={styles.blockWrap}>
           <div

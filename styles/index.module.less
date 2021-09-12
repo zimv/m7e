@@ -288,6 +288,43 @@
     }
   }
 }
+.tag1,
+.tag2,
+.tag3,
+.tag4,
+.tag5 {
+  position: absolute;
+  top: calc(1vw);
+  z-index: 201;
+  display: none;
+  width: calc(5vw);
+  height: 2%;
+  font-size: 12px;
+  font-family: 'Ginebra';
+  text-align: center;
+  cursor: pointer;
+  &.tab {
+    display: block;
+  }
+}
+.tag1 {
+  right: calc(5vw * 4 + 5vw);
+  color: #fff;
+}
+.tag2 {
+  right: calc(5vw * 3 + 4vw);
+}
+.tag3 {
+  right: calc(5vw * 2 + 3vw);
+}
+.tag4 {
+  right: calc(5vw * 1 + 2vw);
+}
+.tag5 {
+  right: calc(1vw);
+  color: #fff;
+}
+
 .block1,
 .blockBlack,
 .block2,
