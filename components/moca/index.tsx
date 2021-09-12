@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import classnames from 'classnames';
-import { Input, Spin } from 'antd';
+import { Input } from 'antd';
 import BulletScreen from 'rc-bullets';
 import { useWalletProvider } from '../web3modal';
 import MocaCard from '../moca-card';
@@ -213,7 +213,7 @@ export default function Moca({ backCall }) {
             </div>
 
             <div className={styles.iptBox}>
-              <Spin spinning={sending} className={styles.sending}></Spin>
+              {sending ? <span className={styles.loading}></span> :''}
               <Input
                 className={styles.ipt}
                 value={bullet}
