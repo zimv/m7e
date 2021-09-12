@@ -213,7 +213,7 @@ export default function Moca({ backCall }) {
             </div>
 
             <div className={styles.iptBox}>
-              {sending ? <span className={styles.loading}></span> :''}
+              {sending ? <span className={styles.loading}></span> : ''}
               <Input
                 className={styles.ipt}
                 value={bullet}
