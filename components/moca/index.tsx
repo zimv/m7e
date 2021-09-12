@@ -143,7 +143,7 @@ export default function Moca({ backCall }) {
         connect();
         return;
       }
-      if(sendLock.current) return;
+      if (sendLock.current) return;
       sendLock.current = true;
       setSending(true);
       const res = await sendMsg(bullet, walletData.address);
@@ -157,7 +157,8 @@ export default function Moca({ backCall }) {
             await sendMsg(bullet, walletData.address);
             doGet();
           }
-        }).finally(()=>{
+        })
+        .finally(() => {
           setSending(false);
           sendLock.current = false;
         });
