@@ -187,7 +187,8 @@ export default function Moca({ backCall }) {
         <div className={cls}>
           <div className={styles.head}>
             <div className={styles.title}>
-              MOCA Exhibition: Self Awakened<img src="/images/Vector.png"/>
+              MOCA Exhibition: Self Awakened
+              <img src="/images/Vector.png" />
             </div>
             <div className={styles.cn}>MOCA 展：自我的觉醒</div>
             <div className={styles.back} onClick={backCall}>
@@ -212,7 +213,7 @@ export default function Moca({ backCall }) {
               })}
             </div>
 
-            <div 
+            <div
               className={classnames({
                 [styles.iptBox]: true,
                 [styles.foc]: focus,
@@ -225,8 +226,8 @@ export default function Moca({ backCall }) {
                 value={bullet}
                 onChange={handleChange}
                 onPressEnter={handleSend}
-                onFocus={()=>setFocus(true)}
-                onBlur={()=>setFocus(false)}
+                onFocus={() => setFocus(true)}
+                onBlur={() => setFocus(false)}
               ></Input>
               <img src="/images/input_icon.png" className={styles.ic} onClick={handleSend} />
             </div>

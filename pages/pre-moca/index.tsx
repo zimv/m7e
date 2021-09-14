@@ -33,13 +33,17 @@ export default function Pre() {
             <div>场 地：在元宇宙 Somnium Space 和 Decentraland 的 MOCA 展馆和上海 M50 创+空间</div>
           </div>
           <div className={styles.long}>
-            10 Asian and 10 global artists are invited to create digital artworks independently and/or in pair around the theme for exhibition and interaction and NFT sales 
+            10 Asian and 10 global artists are invited to create digital artworks independently
+            and/or in pair around the theme for exhibition and interaction and NFT sales
           </div>
           <div className={styles.long}>
-            邀请 10 位亚洲和 10 位全球艺术家围绕主题独立和/或配对创作数字艺术品进行展出和 互动和 
+            邀请 10 位亚洲和 10 位全球艺术家围绕主题独立和/或配对创作数字艺术品进行展出和 互动和
           </div>
-          
-          <div>Crypto art lovers, collectors and NFT/metaverse enthusiasts around the world are welcome to visit the exhibition</div>
+
+          <div>
+            Crypto art lovers, collectors and NFT/metaverse enthusiasts around the world are welcome
+            to visit the exhibition
+          </div>
           <div>欢迎全世界加密艺术爱好者、收藏者和 NFT/元 宇宙爱好者观展</div>
         </div>
       </div>
