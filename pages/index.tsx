@@ -11,6 +11,7 @@ import Partners from './partners';
 import Speakers from './speakers';
 import Activity1 from './activity1';
 import Activity2 from './activity2';
+import PreMoca from './pre-moca';
 import { SITE_NAME, META_DESCRIPTION } from '../common/const';
 import Icon1 from '../public/images/icon_1.svg';
 import Icon2 from '../public/images/icon_2.svg';
@@ -353,6 +354,7 @@ export default function Home() {
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
               <Moca backCall={backCall} />
+              {/* <PreMoca></PreMoca> */}
             </div>
             <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
               <Speakers />

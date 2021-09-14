@@ -33,6 +33,7 @@ export default function Moca({ backCall }) {
   const [sending, setSending] = useState(false);
   const lastMsgId = useRef(null);
   const sendLock = useRef(false);
+  const [focus, setFocus] = useState(false);
   const historyList = useRef(null);
   const [line, setLine] = useState(0);
   const [wid, setWid] = useState(0);
@@ -152,7 +153,6 @@ export default function Moca({ backCall }) {
         .text()
         .then(async (data) => {
           if (data === '401') {
-            alert('请登录');
             await login(walletData.address);
             await sendMsg(bullet, walletData.address);
             doGet();
@@ -187,9 +187,10 @@ export default function Moca({ backCall }) {
         <div className={cls}>
           <div className={styles.head}>
             <div className={styles.title}>
-              Self Awakened
-              <div className={styles.cn}>自我的觉醒</div>
+              MOCA Exhibition: Self Awakened
+              <img src="/images/Vector.png" />
             </div>
+            <div className={styles.cn}>MOCA 展：自我的觉醒</div>
             <div className={styles.back} onClick={backCall}>
               <span className={styles.name}>metaverse exhibition</span>
               <div className={styles.ic}>
@@ -212,13 +213,21 @@ export default function Moca({ backCall }) {
               })}
             </div>
 
-            <div className={styles.iptBox}>
+            <div
+              className={classnames({
+                [styles.iptBox]: true,
+                [styles.foc]: focus,
+              })}
+            >
               {sending ? <span className={styles.loading}></span> : ''}
               <Input
+                placeholder="share thoughts.."
                 className={styles.ipt}
                 value={bullet}
                 onChange={handleChange}
                 onPressEnter={handleSend}
+                onFocus={() => setFocus(true)}
+                onBlur={() => setFocus(false)}
               ></Input>
               <img src="/images/input_icon.png" className={styles.ic} onClick={handleSend} />
             </div>
