@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames';
-import { Carousel } from 'antd';
+import { Carousel, Input } from 'antd';
 import ReactPlayer from 'react-player';
 import Bg1 from '../../public/images/videos_bg_1.svg';
 import Bg2 from '../../public/images/videos_bg_2.svg';
@@ -59,7 +59,10 @@ export default function Videos() {
         </Carousel>
         <div className="flex flex-col text-left w-full">
           <div className={styles.title}>Shanghai Metaverse Week</div>
-          <div className={styles.description}>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+          <div className={styles.description}>
+            Self-sovereign identities and avatars are the prerequisites and first-class assets for
+            people to enter the metaverse to work, live and play freely in future…
+          </div>
         </div>
       </div>
     </div>

@@ -19,6 +19,7 @@ import Icon3 from '../public/images/icon_3.svg';
 import Icon4 from '../public/images/icon_4.svg';
 import Flower1 from '../public/images/flower1.svg';
 import Flower2 from '../public/images/flower2.svg';
+import HomeBg from '../public/images/homeBg.svg';
 import Ball2 from '../public/images/ball2.svg';
 
 import styles from '../styles/index.module.less';
@@ -265,6 +266,7 @@ export default function Home() {
             >
               <div className="flex flex-col justify-between flex-grow">
                 <div className={styles['home-top']}>
+                  <HomeBg className={styles.homeBg} />
                   <div className={styles['home-button']} onClick={onClaim}>
                     {data.address ? 'Claim NFT' : 'Connect'}
                   </div>
@@ -272,7 +274,7 @@ export default function Home() {
                   <div className="flex flex-col items-end">
                     <div className={styles['home-text1']}>Shanghai Metaverse Week</div>
                     <div className={styles['home-text2']}>上海元宇宙文化周</div>
-                    <div className={styles['home-text2']}>9.9 - 9.15</div>
+                    <div className={styles['home-text2']}>10.22 - 10.28</div>
                   </div>
                 </div>
                 <div className={styles['home-middle']}>
@@ -281,7 +283,6 @@ export default function Home() {
                     <Flower2 className={styles.flower2} />
                     Quest for Metaverse Identity
                   </div>
-                  <div className={styles['home-text5']}>自我的觉醒</div>
                 </div>
               </div>
               <div className={styles['home-bottom']}>
@@ -348,7 +349,11 @@ export default function Home() {
         </div>
 
         {tab ? (
-          <div className={styles.blockWrapPage}>
+          <div
+            className={classnames(
+              isMobile && activeTab === '' ? styles.blockWrapPageMobile : styles.blockWrapPage,
+            )}
+          >
             <div className={classnames(styles.page, activeTab === 'block1' ? styles.show : '')}>
               <Videos />
             </div>
