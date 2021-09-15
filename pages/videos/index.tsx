@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import { Carousel } from 'antd';
-import Bullet from '../../components/moca/Bullet';
 import ReactPlayer from 'react-player';
+import Bullet from '../../components/moca/Bullet';
 import Bg1 from '../../public/images/videos_bg_1.svg';
 import Bg2 from '../../public/images/videos_bg_2.svg';
 
@@ -67,7 +67,7 @@ export default function Videos() {
         </div>
       </div>
       <div className={styles.screen} id="video"></div>
-      <Bullet channel="video" domId="video"/>
+      <Bullet channel="video" domId="video" />
     </div>
   );
 }

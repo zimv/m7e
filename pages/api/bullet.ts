@@ -117,8 +117,8 @@ export default async function handler(req, res) {
   const method = req.query.method || 'test8';
   const channel = req.query.channel || 'test8';
   let currentChannel;
-  if(channel === 'moca') currentChannel = chatChannelMoca;
-  if(channel === 'video') currentChannel = chatChannelVideo;
+  if (channel === 'moca') currentChannel = chatChannelMoca;
+  if (channel === 'video') currentChannel = chatChannelVideo;
 
   if (method === 'login') {
     const r = await login(name);

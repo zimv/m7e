@@ -133,7 +133,7 @@ export default function Home() {
       <div className={styles.blockWrap}>
         {tab && activeTab !== '' ? (
           <div className={styles.back} onClick={backCall}>
-            <img src="/images/back-ic.png"/>
+            <img src="/images/back-ic.png" />
             Back
           </div>
         ) : (

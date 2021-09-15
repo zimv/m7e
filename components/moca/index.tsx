@@ -77,7 +77,7 @@ export default function Moca({ backCall }) {
               })}
             </div>
 
-            <Bullet channel="moca" domId="screen"/>
+            <Bullet channel="moca" domId="screen" />
           </div>
         </div>
       </div>

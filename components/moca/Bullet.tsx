@@ -7,7 +7,7 @@ import { useWalletProvider } from '../web3modal';
 import styles from './index.module.less';
 
 const headUrl = 'https://zerosoul.github.io/rc-bullets/assets/img/heads/girl.jpg';
-export default function Bullet({channel, domId}) {
+export default function Bullet({ channel, domId }) {
   const { connect, data: walletData } = useWalletProvider();
   const [sending, setSending] = useState(false);
   const lastMsgId = useRef(null);
