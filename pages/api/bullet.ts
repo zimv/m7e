@@ -7,7 +7,8 @@ const admin = {
   token: null,
 };
 
-const chatChannel = process.env.chatChannel || 'tg6y5JC9Zs7rXPZ6m';
+const chatChannelMoca = process.env.chatChannelMoca || 'tg6y5JC9Zs7rXPZ6m';
+const chatChannelVideo = process.env.chatChannelVideo || 'GAogy7wmQWMybkRAd';
 const chatHost = process.env.chatHost || 'https://chat.nft4metaverse.io'; // local: http://localhost:4222/
 
 export const simpleAdress = (address: string, startLength = 17, endLength = 7) => {
@@ -114,6 +115,10 @@ async function getHistory(channel) {
 export default async function handler(req, res) {
   const name = req.query.userName || 'test8';
   const method = req.query.method || 'test8';
+  const channel = req.query.channel || 'test8';
+  let currentChannel;
+  if(channel === 'moca') currentChannel = chatChannelMoca;
+  if(channel === 'video') currentChannel = chatChannelVideo;
 
   if (method === 'login') {
     const r = await login(name);
@@ -134,7 +139,7 @@ export default async function handler(req, res) {
   }
 
   if (method === 'history') {
-    const r = await getHistory(chatChannel);
+    const r = await getHistory(currentChannel);
     res.status(200).json(r.data.message);
     return;
   }
@@ -161,7 +166,7 @@ export default async function handler(req, res) {
         method: 'post',
         url: `${chatHost}/api/v1/method.call/sendMessage`,
         data: {
-          message: `{"msg":"method","method":"sendMessage","params":[{"rid":"${chatChannel}","msg":"${req.body}"}]}`,
+          message: `{"msg":"method","method":"sendMessage","params":[{"rid":"${currentChannel}","msg":"${req.body}"}]}`,
         },
         headers,
       });
