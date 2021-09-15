@@ -68,6 +68,12 @@
   justify-content: space-between;
   margin: 19rem 24rem;
 
+  .homeBg {
+    position: absolute;
+    top: 102rem;
+    width: 56rem;
+  }
+
   .home-button {
     display: flex;
     align-items: center;
@@ -163,6 +169,12 @@
     justify-content: space-between;
     padding: 80px 10px 0 10px;
 
+    .homeBg {
+      position: absolute;
+      top: 500rem;
+      width: 112rem;
+    }
+
     .home-button {
       display: flex;
       align-items: center;
@@ -223,17 +235,10 @@
       line-height: 28px;
     }
 
-    .home-text5 {
-      color: #fff;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 28px;
-    }
-
     .flower2 {
       position: absolute;
       right: 246px;
-      bottom: 28px;
+      bottom: 0;
       width: 36px;
       height: 36px;
     }
@@ -269,6 +274,26 @@
   }
 }
 .blockWrapPage {
+  position: absolute;
+  z-index: 85;
+  .page {
+    .blockWrap;
+
+    position: absolute;
+    z-index: -1;
+    color: #fff;
+    font-size: 66px;
+    text-align: center;
+    background: transparent;
+    opacity: 0;
+    transition: ease 0.5s;
+    &.show {
+      z-index: 1;
+      opacity: 1;
+    }
+  }
+}
+.blockWrapPageMobile {
   position: absolute;
   z-index: 85;
   pointer-events: none;
