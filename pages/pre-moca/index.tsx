@@ -37,7 +37,7 @@ export default function Pre() {
             and/or in pair around the theme for exhibition and interaction and NFT sales
           </div>
           <div className={styles.long}>
-            邀请 10 位亚洲和 10 位全球艺术家围绕主题独立和/或配对创作数字艺术品进行展出和 互动和
+            邀请 10 位亚洲和 10 位全球艺术家围绕主题独立和/或配对创作数字艺术品进行展出和互动
           </div>
 
           <div>

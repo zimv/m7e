@@ -21,7 +21,6 @@ import avatar15 from '../../public/speakers-logo/unnamed15.jpeg';
 import avatar16 from '../../public/speakers-logo/unnamed16.jpeg';
 import avatar17 from '../../public/speakers-logo/unnamed17.png';
 import avatar18 from '../../public/speakers-logo/unnamed18.jpeg';
-import avatar19 from '../../public/speakers-logo/unnamed19.png';
 
 import styles from './index.module.less';
 
@@ -50,7 +49,6 @@ export default function Speakers() {
         <SpeakerCard avatar={avatar16} name="加拿大 CXX @ 元宇宙特攻队" />
         <SpeakerCard avatar={avatar17} name="加拿大 CXX @ 元宇宙特攻队" />
         <SpeakerCard avatar={avatar18} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar19} name="加拿大 CXX @ 元宇宙特攻队" />
         <i></i>
         <i></i>
         <i></i>

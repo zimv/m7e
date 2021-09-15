@@ -133,6 +133,7 @@ export default function Home() {
       <div className={styles.blockWrap}>
         {tab && activeTab !== '' ? (
           <div className={styles.back} onClick={backCall}>
+            <img src="/images/back-ic.png" />
             Back
           </div>
         ) : (
@@ -355,11 +356,11 @@ export default function Home() {
             )}
           >
             <div className={classnames(styles.page, activeTab === 'block1' ? styles.show : '')}>
-              <Videos />
+              {activeTab === 'block1' ? <Videos /> : ''}
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
-              <Moca backCall={backCall} />
-              {/* <PreMoca></PreMoca> */}
+              {/* {activeTab === 'block2' ? <Moca backCall={backCall} />: ''} */}
+              <PreMoca></PreMoca>
             </div>
             <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
               <Speakers />
