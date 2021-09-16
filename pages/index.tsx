@@ -87,9 +87,9 @@ export default function Home() {
   };
 
   function menuItemClick(index) {
-    setMenuLinkIndex(index);
-    setTab(true);
-    setActiveTab('block5');
+    // setMenuLinkIndex(index);
+    // setTab(true);
+    // setActiveTab('block5');
   }
 
   function renderMenu() {
