@@ -87,9 +87,9 @@ export default function Home() {
   };
 
   function menuItemClick(index) {
-    setMenuLinkIndex(index);
-    setTab(true);
-    setActiveTab('block5');
+    // setMenuLinkIndex(index);
+    // setTab(true);
+    // setActiveTab('block5');
   }
 
   function renderMenu() {
@@ -112,19 +112,67 @@ export default function Home() {
   const Text3 = <span className={styles.nav2}>Speakers</span>;
   const Text4 = <span className={styles.nav2}>Partners</span>;
 
-  const menuItem = (
+  const menuItem1 = (
     <>
-      <div className={styles['menu-title']}>9.9</div>
+      <div className={styles['menu-title']}>Sept 15 ~ Oct 28</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        14:00 MOCA Exhibition
+        NFT Airdrop & Claim on M7E.SH
       </div>
-      <div className={styles['menu-sub-item']}>元宇宙展览开幕</div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(1)}>
-        16:00 Party
+    </>
+  );
+  const menuItem2 = (
+    <>
+      <div className={styles['menu-title']}>Oct 22 ~ 28</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        MOCA Exhibition in Metaverse, M7E.SH, Twittersphere and M50 Shanghai
       </div>
-      <div className={styles['menu-sub-item']}>电音派对</div>
-      <div className={styles['menu-item']}>19:00 Forum</div>
-      <div className={styles['menu-sub-item']}>论坛</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Pubs in Shanghai NFT Scavenger Hunt
+      </div>
+    </>
+  );
+  const menuItem3 = (
+    <>
+      <div className={styles['menu-title']}>Oct 22</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        9:30 ~ 16:30 ideaPod the Bund House Shanghai Opening Forum: Quest for Metaverse Identity
+      </div>
+    </>
+  );
+  const menuItem4 = (
+    <>
+      <div className={styles['menu-title']}>Oct 23</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        10:00 ~ 12:00 M50 Innovation+ Space Shanghai Harmony Meetup: When Shanghai meets Silicon
+        Valley in Metaverse
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        13:30 ~ 17:30 M50 Innovation+ Space Shanghai NFT Avatar Carnival
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        18:30 ~ 21:30 M50 Innovation+ Space Shanghai Salon: Polygon and their NFT ecosystem
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        10:00 ~ 18:00 M50 Innovation+ Space Shanghai Nash Metaverse Festival
+      </div>
+    </>
+  );
+
+  const menuItem5 = (
+    <>
+      <div className={styles['menu-title']}>Oct 24</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        18:00 ~ 22:00 ideaPod the Bund House Shanghai Metaverse Cocktail: Quest for Metaverse
+        Identity by MyCrptoProfile & Dataverse
+      </div>
+    </>
+  );
+  const menuItem6 = (
+    <>
+      <div className={styles['menu-title']}>Oct 28</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        19:00 ~ 21:00 Metaverse Closing: Electronic Music Party
+      </div>
     </>
   );
 
@@ -342,8 +390,12 @@ export default function Home() {
           >
             <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <Menu>
-                <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
-                <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
+                <Menu.CarouselItem>{menuItem1}</Menu.CarouselItem>
+                <Menu.CarouselItem>{menuItem2}</Menu.CarouselItem>
+                <Menu.CarouselItem>{menuItem3}</Menu.CarouselItem>
+                <Menu.CarouselItem>{menuItem4}</Menu.CarouselItem>
+                <Menu.CarouselItem>{menuItem5}</Menu.CarouselItem>
+                <Menu.CarouselItem>{menuItem6}</Menu.CarouselItem>
               </Menu>
             </div>
           </div>

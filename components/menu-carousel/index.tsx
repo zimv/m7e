@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
-import styles from './styles.module.css';
+import styles from './styles.module.less';
 
 interface CarouselProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -35,14 +35,14 @@ export default function MenuCarousel({ className, children }: CarouselProps) {
       showStatus={false}
       renderArrowPrev={(onClickHandler, hasNext, label) =>
         hasNext && (
-          <div onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 15 }}>
+          <div onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 10 }}>
             <ArrowLeftOutlined style={{ fontSize: '28rem', color: '#FFFFFF' }} />
           </div>
         )
       }
       renderArrowNext={(onClickHandler, hasNext, label) =>
         hasNext && (
-          <div onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 15 }}>
+          <div onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 10 }}>
             <ArrowRightOutlined style={{ fontSize: '28rem', color: '#FFFFFF' }} />
           </div>
         )
