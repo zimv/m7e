@@ -28,25 +28,32 @@ export default function partnersPartners() {
   const cls = classnames('flex justify-between items-center flex-wrap', styles.container);
 
   return (
-    <div className="relative flex justify-center items-center w-screen h-screen bg-black">
-      <PartersBG className={pbCls} />
-      <PageTitle title="Partners" />
-      <div className={cls}>
-        <PartnerCard logo={avatar} link={''} name="logo" />
-        <PartnerCard logo={avatar1} link={''} name="logo" />
-        <PartnerCard logo={avatar2} link={''} name="logo" />
-        <PartnerCard logo={avatar3} link={''} name="logo" />
-        <PartnerCard logo={avatar4} link={''} name="logo" />
-        <PartnerCard logo={avatar5} link={''} name="logo" />
-        <PartnerCard logo={avatar6} link={''} name="logo" />
-        <PartnerCard logo={avatar7} link={''} name="logo" />
-        <PartnerCard logo={avatar8} link={''} name="logo" />
-        <PartnerCard logo={avatar9} link={''} name="logo" />
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
+    <div className="relative w-screen h-screen bg-black">
+      <div style={{ background: `url(/images/partners-bg-01.png)` }}>
+        {/* <PartersBG className={pbCls} /> */}
+        <div className={cls}>
+          <PageTitle title="Partners" />
+          <h4 style={{ fontSize: '30rem' }} className="text-white fonts-kumar-one mt-40">
+            Event Owner
+          </h4>
+          <div className="flex justify-center items-center">
+            <PartnerCard logo={avatar} link={''} name="logo" />
+            <PartnerCard logo={avatar1} link={''} name="logo" />
+            <PartnerCard logo={avatar2} link={''} name="logo" />
+            <PartnerCard logo={avatar3} link={''} name="logo" />
+            <PartnerCard logo={avatar4} link={''} name="logo" />
+            <PartnerCard logo={avatar5} link={''} name="logo" />
+            <PartnerCard logo={avatar6} link={''} name="logo" />
+            <PartnerCard logo={avatar7} link={''} name="logo" />
+            <PartnerCard logo={avatar8} link={''} name="logo" />
+            <PartnerCard logo={avatar9} link={''} name="logo" />
+          </div>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
       </div>
     </div>
   );

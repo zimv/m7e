@@ -109,7 +109,7 @@ export default function Home() {
 
   const Text1 = <span className={styles.nav1}>Videos</span>;
   const Text2 = <span className={styles.nav1}>MOCA Exhibition</span>;
-  const Text3 = <span className={styles.nav2}>Speakers</span>;
+  const Text3 = <span className={styles.nav2}>VIPs</span>;
   const Text4 = <span className={styles.nav2}>Partners</span>;
 
   const menuItem1 = (
