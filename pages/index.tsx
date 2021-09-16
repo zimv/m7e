@@ -19,7 +19,7 @@ import Icon3 from '../public/images/icon_3.svg';
 import Icon4 from '../public/images/icon_4.svg';
 import Flower1 from '../public/images/flower1.svg';
 import Flower2 from '../public/images/flower2.svg';
-import HomeBg from '../public/images/homeBg.svg';
+import HomeBg from '../public/images/home-bg.svg';
 import Ball2 from '../public/images/ball2.svg';
 
 import styles from '../styles/index.module.less';

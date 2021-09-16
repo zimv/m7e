@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import Image from 'next/image';
-import LogoBg from '../../public/images/logoBg.svg';
+import LogoBg from '../../public/images/logo-bg.svg';
 import styles from './styles.module.less';
 
 interface Props {

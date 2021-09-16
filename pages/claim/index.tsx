@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
-import VideoBg from '../../public/images/videoBg.svg';
+import VideoBg from '../../public/images/videos-bg.svg';
 
 import styles from './index.module.less';
 
