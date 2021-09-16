@@ -13,7 +13,7 @@ export default function Pre() {
       <div className={cls}>
         <div className={styles.title}>
           <Yellow />
-          NFT Avatar Carnival
+          MOCA Exhibition: Self Awakened
         </div>
         <div className={styles.description}>
           <div className={styles.group}>
