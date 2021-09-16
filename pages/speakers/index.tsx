@@ -21,6 +21,7 @@ import avatar15 from '../../public/speakers-logo/unnamed15.jpeg';
 import avatar16 from '../../public/speakers-logo/unnamed16.jpeg';
 import avatar17 from '../../public/speakers-logo/unnamed17.png';
 import avatar18 from '../../public/speakers-logo/unnamed18.jpeg';
+import avatar19 from '../../public/speakers-logo/unnamed19.png';
 
 import styles from './index.module.less';
 
@@ -30,25 +31,26 @@ export default function Speakers() {
     <div className="relative flex justify-center items-center w-screen h-screen bg-black">
       <PageTitle title="VIPs" />
       <div className={cls}>
-        <SpeakerCard avatar={avatar} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar1} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar2} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar3} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar4} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar5} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar6} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar7} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar8} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar9} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar10} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar11} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar12} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar13} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar14} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar15} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar16} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar17} name="加拿大 CXX @ 元宇宙特攻队" />
-        <SpeakerCard avatar={avatar18} name="加拿大 CXX @ 元宇宙特攻队" />
+        <SpeakerCard avatar={avatar} name="Fabin Rasheed" />
+        <SpeakerCard avatar={avatar1} name="Niq" />
+        <SpeakerCard avatar={avatar2} name="IOYOI" />
+        <SpeakerCard avatar={avatar3} name="Sleepy" />
+        <SpeakerCard avatar={avatar4} name="Reva" />
+        <SpeakerCard avatar={avatar5} name="TingSong" />
+        <SpeakerCard avatar={avatar6} name="metaSynth" />
+        <SpeakerCard avatar={avatar7} name="XIx" />
+        <SpeakerCard avatar={avatar8} name="Baiwei" />
+        <SpeakerCard avatar={avatar9} name="Rinii fish" />
+        <SpeakerCard avatar={avatar10} name="Ton ran" />
+        <SpeakerCard avatar={avatar11} name="Rutger Van Der Tas" />
+        <SpeakerCard avatar={avatar12} name="Arc4g" />
+        <SpeakerCard avatar={avatar13} name="Sparrow" />
+        <SpeakerCard avatar={avatar14} name="Debbie Digital" />
+        <SpeakerCard avatar={avatar15} name="Olive Allen" />
+        <SpeakerCard avatar={avatar16} name="Facu" />
+        <SpeakerCard avatar={avatar17} name="Skygolpe" />
+        <SpeakerCard avatar={avatar18} name="Luluxx" />
+        <SpeakerCard avatar={avatar19} name="Milton Sanz" />
         <i></i>
         <i></i>
         <i></i>
