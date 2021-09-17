@@ -53,7 +53,8 @@ export default function Home() {
     // TODO: redirect
     // window.alert('Comming soon');
     // Airdrop 1
-    window.open('https://magic.goatnft.io');
+    // window.open('https://magic.goatnft.io');
+    setActiveFun('block5');
   }, [connect, data]);
 
   useEffect(() => {
@@ -258,7 +259,7 @@ export default function Home() {
               })}
               onClick={() => setActiveFun('block3')}
             >
-              SPEAKER
+              VIPs
             </div>
             <div
               className={classnames({
@@ -276,7 +277,7 @@ export default function Home() {
               })}
               onClick={() => setActiveFun('block5')}
             >
-              MOCA
+              AIRDROP
             </div>
           </>
         ) : (
@@ -319,7 +320,7 @@ export default function Home() {
                 <div className={styles['home-top']}>
                   <HomeBg className={styles.homeBg} />
                   <div className={styles['home-button']} onClick={onClaim}>
-                    {data.address ? 'Airdrop(01)' : 'Connect'}
+                    {data.address ? 'Airdrop' : 'Connect'}
                   </div>
                   <Flower1 className={styles.flower1} />
                   <div className="flex flex-col items-end">
