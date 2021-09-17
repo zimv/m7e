@@ -35,7 +35,7 @@ const videoList = [
 export default function Videos() {
   const cls = classnames('flex flex-col justify-center items-start', styles.container);
   return (
-    <div className="relative flex justify-center items-center w-screen h-screen bg-black">
+    <div className="relative flex justify-center items-center w-screen h-screen bg-black" id="video">
       <div className={styles.box}>
         <div className="relative">
           <Bg2 className={styles.bg2} />
@@ -66,7 +66,7 @@ export default function Videos() {
           </div>
         </div>
       </div>
-      <div className={styles.screen} id="video"></div>
+      {/* <div className={styles.screen}></div> */}
       <Bullet channel="video" domId="video" />
     </div>
   );
