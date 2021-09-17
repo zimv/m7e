@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PageTitle from '../../components/page-title';
 import PartnerCard from '../../components/partner-card';
 import PartersBG from '../../public/images/partners-bg-01.svg';
-import avatar from '../../public/partners-logo/unnamed.jpeg';
+import avatar from '../../public/partners-logo/unnamed.png';
 import avatar1 from '../../public/partners-logo/unnamed1.png';
 import avatar2 from '../../public/partners-logo/unnamed2.png';
 import avatar3 from '../../public/partners-logo/unnamed3.png';
@@ -70,15 +70,15 @@ export default function partnersPartners() {
               Event Owner
             </h4>
             <div className="flex flex-wrap justify-between items-center">
-              <PartnerCard logo={avatar} link={''} name="logo" />
-              <PartnerCard logo={avatar1} link={''} name="logo" />
-              <PartnerCard logo={avatar2} link={''} name="logo" />
               <PartnerCard logo={avatar3} link={''} name="logo" />
+              <PartnerCard logo={avatar2} link={''} name="logo" />
               <PartnerCard logo={avatar4} link={''} name="logo" />
               <PartnerCard logo={avatar5} link={''} name="logo" />
               <PartnerCard logo={avatar6} link={''} name="logo" />
+              <PartnerCard logo={avatar1} link={''} name="logo" />
               <PartnerCard logo={avatar7} link={''} name="logo" />
               <PartnerCard logo={avatar8} link={''} name="logo" />
+              <PartnerCard logo={avatar} link={''} name="logo" />
               <PartnerCard logo={avatar9} link={''} name="logo" />
               <i></i>
               <i></i>
@@ -100,17 +100,17 @@ export default function partnersPartners() {
               Event Sponsors
             </h4>
             <div className="flex flex-wrap justify-between items-center">
-              <PartnerCard logo={sponsors} link={''} name="logo" />
-              <PartnerCard logo={sponsors1} link={''} name="logo" />
-              <PartnerCard logo={sponsors2} link={''} name="logo" />
-              <PartnerCard logo={sponsors3} link={''} name="logo" />
-              <PartnerCard logo={sponsors4} link={''} name="logo" />
               <PartnerCard logo={sponsors5} link={''} name="logo" />
-              <PartnerCard logo={sponsors6} link={''} name="logo" />
-              <PartnerCard logo={sponsors7} link={''} name="logo" />
+              <PartnerCard logo={sponsors3} link={''} name="logo" />
+              <PartnerCard logo={sponsors} link={''} name="logo" />
               <PartnerCard logo={sponsors8} link={''} name="logo" />
+              <PartnerCard logo={sponsors7} link={''} name="logo" />
+              <PartnerCard logo={sponsors4} link={''} name="logo" />
+              <PartnerCard logo={sponsors2} link={''} name="logo" />
               <PartnerCard logo={sponsors9} link={''} name="logo" />
+              <PartnerCard logo={sponsors1} link={''} name="logo" />
               <PartnerCard logo={sponsors10} link={''} name="logo" />
+              <PartnerCard logo={sponsors6} link={''} name="logo" />
               <i></i>
               <i></i>
               <i></i>
@@ -131,25 +131,25 @@ export default function partnersPartners() {
               Event Support
             </h4>
             <div className="flex flex-wrap justify-between items-center">
-              <PartnerCard logo={support} link={''} name="logo" />
-              <PartnerCard logo={support1} link={''} name="logo" />
-              <PartnerCard logo={support2} link={''} name="logo" />
-              <PartnerCard logo={support3} link={''} name="logo" />
-              <PartnerCard logo={support4} link={''} name="logo" />
-              <PartnerCard logo={support5} link={''} name="logo" />
-              <PartnerCard logo={support6} link={''} name="logo" />
-              <PartnerCard logo={support7} link={''} name="logo" />
-              <PartnerCard logo={support8} link={''} name="logo" />
-              <PartnerCard logo={support9} link={''} name="logo" />
-              <PartnerCard logo={support10} link={''} name="logo" />
-              <PartnerCard logo={support11} link={''} name="logo" />
               <PartnerCard logo={support12} link={''} name="logo" />
+              <PartnerCard logo={support} link={''} name="logo" />
+              <PartnerCard logo={support4} link={''} name="logo" />
               <PartnerCard logo={support13} link={''} name="logo" />
-              <PartnerCard logo={support14} link={''} name="logo" />
-              <PartnerCard logo={support15} link={''} name="logo" />
-              <PartnerCard logo={support16} link={''} name="logo" />
-              <PartnerCard logo={support17} link={''} name="logo" />
+              <PartnerCard logo={support8} link={''} name="logo" />
               <PartnerCard logo={support18} link={''} name="logo" />
+              <PartnerCard logo={support16} link={''} name="logo" />
+              <PartnerCard logo={support2} link={''} name="logo" />
+              <PartnerCard logo={support7} link={''} name="logo" />
+              <PartnerCard logo={support9} link={''} name="logo" />
+              <PartnerCard logo={support3} link={''} name="logo" />
+              <PartnerCard logo={support6} link={''} name="logo" />
+              <PartnerCard logo={support1} link={''} name="logo" />
+              <PartnerCard logo={support11} link={''} name="logo" />
+              <PartnerCard logo={support15} link={''} name="logo" />
+              <PartnerCard logo={support14} link={''} name="logo" />
+              <PartnerCard logo={support5} link={''} name="logo" />
+              <PartnerCard logo={support17} link={''} name="logo" />
+              <PartnerCard logo={support10} link={''} name="logo" />
               <i></i>
               <i></i>
               <i></i>
@@ -161,6 +161,10 @@ export default function partnersPartners() {
               <i></i>
               <i></i>
             </div>
+          </div>
+          <div className={styles.text}>
+            <div>*The above partners are in alphabetical order and are being added...</div>
+            <div>* 以上伙伴 按字母排序，并正在不断增加……</div>
           </div>
         </div>
       </div>
