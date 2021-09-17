@@ -28,6 +28,11 @@ export default function Home() {
   const tNavigation = useTranslations('navigation');
   const { connect, data } = useWalletProvider();
 
+  const meta = {
+    title: `${tNavigation('home')} - ${SITE_NAME}`,
+    description: META_DESCRIPTION,
+  };
+
   const [isMobile, setMobile] = useState(false);
   const [mobileStyle, setMobileStyle] = useState(false);
   const [tab, setTab] = useState(false);
@@ -39,23 +44,6 @@ export default function Home() {
     if (tab) return styles.tab;
     return '';
   };
-
-  const onClaim = React.useCallback(() => {
-    if (!data.address) {
-      if (connect) {
-        connect();
-      }
-
-      // eslint-disable-next-line no-useless-return
-      return;
-    }
-
-    // TODO: redirect
-    // window.alert('Comming soon');
-    // Airdrop 1
-    // window.open('https://magic.goatnft.io');
-    setActiveFun('block5');
-  }, [connect, data]);
 
   useEffect(() => {
     const mobile = (window.innerWidth || document.body.clientWidth) < 640;
@@ -74,10 +62,22 @@ export default function Home() {
     }
   };
 
-  const meta = {
-    title: `${tNavigation('home')} - ${SITE_NAME}`,
-    description: META_DESCRIPTION,
-  };
+  const onClaim = React.useCallback(() => {
+    if (!data.address) {
+      if (connect) {
+        connect();
+      }
+
+      // eslint-disable-next-line no-useless-return
+      return;
+    }
+
+    // TODO: redirect
+    // window.alert('Comming soon');
+    // Airdrop 1
+    // window.open('https://magic.goatnft.io');
+    setActiveFun('block5');
+  }, [connect, data]);
 
   const backCall = () => {
     if (isMobile) {
