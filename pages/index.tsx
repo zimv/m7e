@@ -76,6 +76,7 @@ export default function Home() {
     // window.alert('Comming soon');
     // Airdrop 1
     // window.open('https://magic.goatnft.io');
+    setTab(true);
     setActiveFun('block5');
   }, [connect, data]);
 
