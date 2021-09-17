@@ -35,7 +35,10 @@ const videoList = [
 export default function Videos() {
   const cls = classnames('flex flex-col justify-center items-start', styles.container);
   return (
-    <div className="relative flex justify-center items-center w-screen h-screen bg-black" id="video">
+    <div
+      className="relative flex justify-center items-center w-screen h-screen bg-black"
+      id="video"
+    >
       <div className={styles.box}>
         <div className="relative">
           <Bg2 className={styles.bg2} />
