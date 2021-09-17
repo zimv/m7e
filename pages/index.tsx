@@ -51,7 +51,9 @@ export default function Home() {
     }
 
     // TODO: redirect
-    window.alert('Comming soon');
+    // window.alert('Comming soon');
+    // Airdrop 1
+    window.open('https://magic.goatnft.io');
   }, [connect, data]);
 
   useEffect(() => {
@@ -317,7 +319,7 @@ export default function Home() {
                 <div className={styles['home-top']}>
                   <HomeBg className={styles.homeBg} />
                   <div className={styles['home-button']} onClick={onClaim}>
-                    {data.address ? 'Claim NFT' : 'Connect'}
+                    {data.address ? 'Airdrop(01)' : 'Connect'}
                   </div>
                   <Flower1 className={styles.flower1} />
                   <div className="flex flex-col items-end">
