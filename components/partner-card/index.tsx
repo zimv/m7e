@@ -15,7 +15,7 @@ export default function PartnerCard({ logo, link, name, className, ...props }: P
   return (
     <div {...props} className={cls}>
       <a href={link || '/'}>
-        <Image src={logo} alt={name || 'logo'} layout="fill" object-fit="scale-down" />
+        <Image src={logo} alt={name || 'logo'} object-fit="scale-down" />
       </a>
     </div>
   );
