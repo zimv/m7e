@@ -115,11 +115,19 @@ export default function Home() {
   const Text3 = <span className={styles.nav2}>VIPs</span>;
   const Text4 = <span className={styles.nav2}>Partners</span>;
 
-  const menuItem1 = (
+  const menuItem = (
     <>
       <div className={styles['menu-title']}>Sept 15 ~ Oct 28</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         NFT Airdrop & Claim on M7E.SH
+      </div>
+    </>
+  );
+  const menuItem1 = (
+    <>
+      <div className={styles['menu-title']}>Sept 29 ~ Nov 21</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Suzhou Hanshan Art Museum Exhibition：Avatar,My Metaverse
       </div>
     </>
   );
@@ -393,6 +401,7 @@ export default function Home() {
           >
             <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <Menu>
+                <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem1}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem2}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem3}</Menu.CarouselItem>
