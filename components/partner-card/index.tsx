@@ -14,8 +14,11 @@ export default function PartnerCard({ logo, link, name, className, ...props }: P
   const cls = classnames(styles['partner-card'], className);
   return (
     <div {...props} className={cls}>
-      <a href={link || '/'}>
+      <a href={link || '/'} className="flex flex-col justify-center">
         <Image src={logo} alt={name || 'logo'} object-fit="scale-down" />
+        <span className="mt-4" style={{ fontSize: '16rem' }}>
+          {name}
+        </span>
       </a>
     </div>
   );
