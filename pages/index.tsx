@@ -33,7 +33,6 @@ export default function Home() {
     description: META_DESCRIPTION,
   };
 
-  
   const [menuActive, setMenuActive] = useState(false);
   const [isMobile, setMobile] = useState(false);
   const [mobileStyle, setMobileStyle] = useState(false);
@@ -203,7 +202,7 @@ export default function Home() {
           })}
           onClick={() => setMenuActive(!menuActive)}
         >
-           <div
+          <div
             className={classnames({
               [styles.active]: menuActive,
             })}
@@ -214,19 +213,68 @@ export default function Home() {
           </div>
         </div>
         <div
-            className={classnames({
-              [styles.menuItems]: true,
-              [styles.active]: menuActive,
-            })}
+          className={classnames({
+            [styles.menuItems]: true,
+            [styles.active]: menuActive,
+          })}
+        >
+          <div
+            onClick={() => {
+              setActiveTab('');
+              setMenuActive(false);
+            }}
           >
-            <div onClick={() => {setActiveTab('');setMenuActive(false)}}>Home</div>
-            <div onClick={() => {setActiveTab('block2');setMenuActive(false)}}>MOCA Exhibition</div>
-            <div onClick={() => {setActiveTab('block1');setMenuActive(false)}}>Highlights</div>
-            <div onClick={() => {setActiveTab('');setMenuActive(false)}}>Schedule</div>
-            <div onClick={() => {setActiveTab('block3');setMenuActive(false)}}>VIPs</div>
-            <div onClick={() => {setActiveTab('block4');setMenuActive(false)}}>Partners</div>
-            <div onClick={() => {setActiveTab('block5');setMenuActive(false)}}>Airdrop</div>
+            Home
           </div>
+          <div
+            onClick={() => {
+              setActiveTab('block2');
+              setMenuActive(false);
+            }}
+          >
+            MOCA Exhibition
+          </div>
+          <div
+            onClick={() => {
+              setActiveTab('block1');
+              setMenuActive(false);
+            }}
+          >
+            Highlights
+          </div>
+          <div
+            onClick={() => {
+              setActiveTab('');
+              setMenuActive(false);
+            }}
+          >
+            Schedule
+          </div>
+          <div
+            onClick={() => {
+              setActiveTab('block3');
+              setMenuActive(false);
+            }}
+          >
+            VIPs
+          </div>
+          <div
+            onClick={() => {
+              setActiveTab('block4');
+              setMenuActive(false);
+            }}
+          >
+            Partners
+          </div>
+          <div
+            onClick={() => {
+              setActiveTab('block5');
+              setMenuActive(false);
+            }}
+          >
+            Airdrop
+          </div>
+        </div>
       </div>
       <div className={styles.blockWrap}>
         {tab && activeTab !== '' && !isMobile ? (
@@ -467,7 +515,7 @@ export default function Home() {
               {activeTab === 'block1' ? <Videos /> : ''}
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
-              {activeTab === 'block2' ? <Moca backCall={backCall} />: ''}
+              {activeTab === 'block2' ? <Moca backCall={backCall} /> : ''}
               {/* <PreMoca></PreMoca> */}
             </div>
             <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
