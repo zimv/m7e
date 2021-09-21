@@ -7,6 +7,7 @@ import Bg1 from '../../public/images/videos_bg_1.svg';
 import Bg2 from '../../public/images/videos_bg_2.svg';
 
 import styles from './index.module.less';
+import PageTitle from '../../components/page-title';
 
 const videoList = [
   {
@@ -39,6 +40,7 @@ export default function Videos() {
       className="relative flex justify-center items-center w-screen h-screen bg-black"
       id="video"
     >
+      <PageTitle title="Highlights" subTitle="活动精选" />
       <div className={styles.box}>
         <div className="relative">
           <Bg2 className={styles.bg2} />

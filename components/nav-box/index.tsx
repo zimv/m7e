@@ -12,7 +12,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
 
 export default function NavBox({ className, textComponent, iconComponent, ...props }: Props) {
   const { hoverProps, isHovered } = useHover({});
-  const cls = classnames(styles['nav-box'], className);
+  const cls = classnames(isHovered ? styles['nav-box-text'] : styles['nav-box'], className);
 
   return (
     <div {...props} {...hoverProps} className={cls}>

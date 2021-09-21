@@ -18,7 +18,7 @@ export default function SpeakerCard({ avatar, name, className, ...props }: Props
         <div className={styles.bg1}>
           <LogoBg className={styles['bg1-img']} />
           <div className={styles['avatar-box']}>
-            <Image className={styles.avatar} src={avatar} alt="avatar" width={100} height={100} />
+            <Image className={styles.avatar} src={avatar} alt="avatar" />
           </div>
         </div>
       </div>
