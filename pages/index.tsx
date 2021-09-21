@@ -202,18 +202,17 @@ export default function Home() {
             [styles.icon]: true,
           })}
           onClick={() => {
-            if(menuActive){
-              setMenuActive(!menuActive)
-              setTimeout(()=>{
+            if (menuActive) {
+              setMenuActive(!menuActive);
+              setTimeout(() => {
                 setBlockContro(!blockContro);
-              }, 300)
-            }else{
+              }, 300);
+            } else {
               setBlockContro(!blockContro);
-              setTimeout(()=>{
-                setMenuActive(!menuActive)
-              }, 0)
+              setTimeout(() => {
+                setMenuActive(!menuActive);
+              }, 0);
             }
-            
           }}
         >
           <div
