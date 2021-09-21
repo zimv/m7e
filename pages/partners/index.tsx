@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PageTitle from '../../components/page-title';
-import PartnerCard from '../../components/partner-card';
-import PartersBG from '../../public/images/partners-bg-01.svg';
+import Card from '../../components/logo-card';
 import avatar from '../../public/partners-logo/unnamed.png';
 import avatar1 from '../../public/partners-logo/unnamed1.png';
 import avatar2 from '../../public/partners-logo/unnamed2.png';
@@ -46,126 +45,75 @@ import support18 from '../../public/event-support/unnamed18.png';
 import styles from './index.module.less';
 
 export default function partnersPartners() {
-  const [pbCls, setPbCls] = useState('');
-  useEffect(() => {
-    const newPbCls = classnames(
-      window.screen.width > window.screen.height ? 'w-full' : 'h-full',
-      'absolute',
-    );
-    setPbCls(newPbCls);
-  }, []);
-  const cls = classnames('flex justify-between items-center flex-wrap', styles.container);
-
+  const cls = classnames(styles.container);
   return (
     <div className="relative flex justify-center items-center w-screen h-screen bg-black">
-      <PageTitle title="Partners" />
-      <div style={{ background: `url(/images/partners-bg-01.png)` }}>
-        {/* <PartersBG className={pbCls} /> */}
-        <div className={cls}>
-          <div>
-            <h4
-              style={{ fontSize: '30rem' }}
-              className="text-left text-white fonts-kumar-one mt-40"
-            >
-              Event Owner
-            </h4>
-            <div className="flex flex-wrap justify-between items-center">
-              <PartnerCard logo={avatar3} link={''} name="logo" />
-              <PartnerCard logo={avatar2} link={''} name="logo" />
-              <PartnerCard logo={avatar4} link={''} name="logo" />
-              <PartnerCard logo={avatar5} link={''} name="logo" />
-              <PartnerCard logo={avatar6} link={''} name="logo" />
-              <PartnerCard logo={avatar1} link={''} name="logo" />
-              <PartnerCard logo={avatar7} link={''} name="logo" />
-              <PartnerCard logo={avatar8} link={''} name="logo" />
-              <PartnerCard logo={avatar} link={''} name="logo" />
-              <PartnerCard logo={avatar9} link={''} name="logo" />
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-            </div>
+      <PageTitle title="Partners" subTitle="合作方" />
+      <div className={cls}>
+        <div className={styles.box}>
+          <h4 style={{ fontSize: '30rem' }} className="text-left text-white fonts-kumar-one mt-40">
+            Event Owner
+          </h4>
+          <div className="grid grid-cols-2 lg:grid-cols-5">
+            <Card avatar={avatar3} link={''} name="avatar" />
+            <Card avatar={avatar2} link={''} name="avatar" />
+            <Card avatar={avatar4} link={''} name="avatar" />
+            <Card avatar={avatar5} link={''} name="avatar" />
+            <Card avatar={avatar6} link={''} name="avatar" />
+            <Card avatar={avatar1} link={''} name="avatar" />
+            <Card avatar={avatar7} link={''} name="avatar" />
+            <Card avatar={avatar8} link={''} name="avatar" />
+            <Card avatar={avatar} link={''} name="avatar" />
+            <Card avatar={avatar9} link={''} name="avatar" />
           </div>
-          <div>
-            <h4
-              style={{ fontSize: '30rem' }}
-              className="text-left text-white fonts-kumar-one mt-40"
-            >
-              Event Sponsors
-            </h4>
-            <div className="flex flex-wrap justify-between items-center">
-              <PartnerCard logo={sponsors5} link={''} name="logo" />
-              <PartnerCard logo={sponsors3} link={''} name="logo" />
-              <PartnerCard logo={sponsors} link={''} name="logo" />
-              <PartnerCard logo={sponsors8} link={''} name="logo" />
-              <PartnerCard logo={sponsors7} link={''} name="logo" />
-              <PartnerCard logo={sponsors4} link={''} name="logo" />
-              <PartnerCard logo={sponsors2} link={''} name="logo" />
-              <PartnerCard logo={sponsors9} link={''} name="logo" />
-              <PartnerCard logo={sponsors1} link={''} name="logo" />
-              <PartnerCard logo={sponsors10} link={''} name="logo" />
-              <PartnerCard logo={sponsors6} link={''} name="logo" />
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-            </div>
+        </div>
+        <div className={styles.box}>
+          <h4 style={{ fontSize: '30rem' }} className="text-left text-white fonts-kumar-one mt-40">
+            Event Sponsors
+          </h4>
+          <div className="grid grid-cols-2 lg:grid-cols-5">
+            <Card avatar={sponsors5} link={''} name="avatar" />
+            <Card avatar={sponsors3} link={''} name="avatar" />
+            <Card avatar={sponsors} link={''} name="avatar" />
+            <Card avatar={sponsors8} link={''} name="avatar" />
+            <Card avatar={sponsors7} link={''} name="avatar" />
+            <Card avatar={sponsors4} link={''} name="avatar" />
+            <Card avatar={sponsors2} link={''} name="avatar" />
+            <Card avatar={sponsors9} link={''} name="avatar" />
+            <Card avatar={sponsors1} link={''} name="avatar" />
+            <Card avatar={sponsors10} link={''} name="avatar" />
+            <Card avatar={sponsors6} link={''} name="avatar" />
           </div>
-          <div>
-            <h4
-              style={{ fontSize: '30rem' }}
-              className="text-left text-white fonts-kumar-one mt-40"
-            >
-              Event Support
-            </h4>
-            <div className="flex flex-wrap justify-between items-center">
-              <PartnerCard logo={support12} link={''} name="logo" />
-              <PartnerCard logo={support} link={''} name="logo" />
-              <PartnerCard logo={support4} link={''} name="logo" />
-              <PartnerCard logo={support13} link={''} name="logo" />
-              <PartnerCard logo={support8} link={''} name="logo" />
-              <PartnerCard logo={support18} link={''} name="logo" />
-              <PartnerCard logo={support16} link={''} name="logo" />
-              <PartnerCard logo={support2} link={''} name="logo" />
-              <PartnerCard logo={support7} link={''} name="logo" />
-              <PartnerCard logo={support9} link={''} name="logo" />
-              <PartnerCard logo={support3} link={''} name="logo" />
-              <PartnerCard logo={support6} link={''} name="logo" />
-              <PartnerCard logo={support1} link={''} name="logo" />
-              <PartnerCard logo={support11} link={''} name="logo" />
-              <PartnerCard logo={support15} link={''} name="logo" />
-              <PartnerCard logo={support14} link={''} name="logo" />
-              <PartnerCard logo={support5} link={''} name="logo" />
-              <PartnerCard logo={support17} link={''} name="logo" />
-              <PartnerCard logo={support10} link={''} name="logo" />
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-            </div>
+        </div>
+        <div className={styles.box}>
+          <h4 style={{ fontSize: '30rem' }} className="text-left text-white fonts-kumar-one mt-40">
+            Event Support
+          </h4>
+          <div className="grid grid-cols-2 lg:grid-cols-5">
+            <Card avatar={support12} link={''} name="avatar" />
+            <Card avatar={support} link={''} name="avatar" />
+            <Card avatar={support4} link={''} name="avatar" />
+            <Card avatar={support13} link={''} name="avatar" />
+            <Card avatar={support8} link={''} name="avatar" />
+            <Card avatar={support18} link={''} name="avatar" />
+            <Card avatar={support16} link={''} name="avatar" />
+            <Card avatar={support2} link={''} name="avatar" />
+            <Card avatar={support7} link={''} name="avatar" />
+            <Card avatar={support9} link={''} name="avatar" />
+            <Card avatar={support3} link={''} name="avatar" />
+            <Card avatar={support6} link={''} name="avatar" />
+            <Card avatar={support1} link={''} name="avatar" />
+            <Card avatar={support11} link={''} name="avatar" />
+            <Card avatar={support15} link={''} name="avatar" />
+            <Card avatar={support14} link={''} name="avatar" />
+            <Card avatar={support5} link={''} name="avatar" />
+            <Card avatar={support17} link={''} name="avatar" />
+            <Card avatar={support10} link={''} name="avatar" />
           </div>
-          <div className={styles.text}>
-            <div>*The above partners are in alphabetical order and are being added...</div>
-            <div>* 以上伙伴 按字母排序，并正在不断增加……</div>
-          </div>
+        </div>
+        <div className={styles.text}>
+          <div>*The above partners are in alphabetical order and are being added...</div>
+          <div>* 以上伙伴 按字母排序，并正在不断增加……</div>
         </div>
       </div>
     </div>

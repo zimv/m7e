@@ -20,7 +20,7 @@ export default function PageTitle({ title, subTitle, className, ...props }: Prop
         <TitleStar className={styles.star} />
       </div>
       <span className={styles.line}></span>
-      {subTitle}
+      <span className={styles.sub}>{subTitle}</span>
     </div>
   );
 }

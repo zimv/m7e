@@ -8,10 +8,29 @@ interface Props {
   className?: string;
   avatar: StaticImageData;
   name: string;
+  link?: string;
 }
 
-export default function SpeakerCard({ avatar, name, className, ...props }: Props) {
+export default function Card({ link, avatar, name, className, ...props }: Props) {
   const cls = classnames(styles['speaker-card'], className);
+  if (link) {
+    return (
+      <a href={link} {...props} className={cls}>
+        <div className="flex">
+          <div className={styles.bg1}>
+            <LogoBg className={styles['bg1-img']} />
+            <div className={styles['avatar-box']}>
+              <Image className={styles.avatar} src={avatar} alt="avatar" />
+            </div>
+          </div>
+        </div>
+        <div className={styles.bottom}>
+          <div className={styles.block}></div>
+          <span className={styles.title}>{name}</span>
+        </div>
+      </a>
+    );
+  }
   return (
     <div {...props} className={cls}>
       <div className="flex">
