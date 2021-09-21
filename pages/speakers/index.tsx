@@ -28,11 +28,18 @@ import avatar21 from '../../public/speakers-logo/killer_acid .png';
 import styles from './index.module.less';
 
 export default function Speakers() {
-  const cls = classnames('flex justify-between items-center flex-wrap', styles.container);
+  const cls = classnames('grid grid-cols-2 lg:grid-cols-4', styles.container);
   return (
     <div className="relative flex justify-center items-center w-screen h-screen bg-black">
       <PageTitle title="VIPs" />
       <div className={cls}>
+        <h4
+          style={{ fontSize: '30rem', fontFamily: '"Ginebra", cursive' }}
+          className="text-left text-white fonts-kumar-one mt-40"
+        >
+          Event Owners 项目负责
+        </h4>
+        <span></span>
         <SpeakerCard avatar={avatar8} name="Baiwei" />
         <SpeakerCard avatar={avatar2} name="IOYOI" />
         <SpeakerCard avatar={avatar6} name="metaSynth" />
