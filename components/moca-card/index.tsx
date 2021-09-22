@@ -20,9 +20,7 @@ export default function MocaCard({ avatar, text, className, ...props }: Props) {
         <span className={styles.num}>102</span>
       </div>
       <div className={styles.body}>
-        <div className={styles.tit}>
-          {/* <div className={styles.name}>Self Awakened</div> */}
-        </div>
+        <div className={styles.tit}>{/* <div className={styles.name}>Self Awakened</div> */}</div>
         <div className={styles.prod}>
           <Image src={avatar} alt="production" />
         </div>
@@ -33,8 +31,12 @@ export default function MocaCard({ avatar, text, className, ...props }: Props) {
           <span>Medlo</span>
         </div>
         <div className={styles.r}>
-          <a href="#" className={styles.link}>OPENSEA</a>
-          <a href="#" className={styles.link}>Twitter</a>
+          <a href="#" className={styles.link}>
+            OPENSEA
+          </a>
+          <a href="#" className={styles.link}>
+            Twitter
+          </a>
         </div>
       </div>
       <div className={styles.footer}>{text}</div>
