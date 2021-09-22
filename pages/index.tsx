@@ -9,6 +9,7 @@ import { useWalletProvider } from '../components/web3modal';
 import Videos from './videos';
 import Partners from './partners';
 import Speakers from './speakers';
+import Claim from './claim';
 import Activity1 from './activity1';
 import Activity2 from './activity2';
 import PreMoca from './pre-moca';
@@ -546,7 +547,7 @@ export default function Home() {
               <Partners />
             </div>
             <div className={classnames(styles.page, activeTab === 'block5' ? styles.show : '')}>
-              {renderMenu()}
+              <Claim />
             </div>
           </div>
         ) : (

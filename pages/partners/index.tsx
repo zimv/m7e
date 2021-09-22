@@ -17,7 +17,7 @@ import sponsors1 from '../../public/event-sponsors/new/unnamed1.png';
 import sponsors2 from '../../public/event-sponsors/new/unnamed2.png';
 import sponsors3 from '../../public/event-sponsors/new/unnamed3.png';
 import sponsors4 from '../../public/event-sponsors/new/unnamed4.png';
-// import sponsors5 from '../../public/event-sponsors/new/unnamed5.png';
+import sponsors5 from '../../public/event-sponsors/new/unnamed5.png';
 import sponsors6 from '../../public/event-sponsors/new/unnamed6.png';
 import sponsors7 from '../../public/event-sponsors/new/unnamed7.png';
 import sponsors8 from '../../public/event-sponsors/new/unnamed8.png';
@@ -35,7 +35,7 @@ import support8 from '../../public/event-support/new/unnamed8.png';
 import support9 from '../../public/event-support/new/unnamed9.png';
 import support10 from '../../public/event-support/new/unnamed10.png';
 import support11 from '../../public/event-support/new/unnamed11.png';
-// import support12 from '../../public/event-support/new/unnamed12.png';
+import support12 from '../../public/event-support/new/unnamed12.png';
 // import support13 from '../../public/event-support/new/unnamed13.png';
 import support14 from '../../public/event-support/new/unnamed14.png';
 import support15 from '../../public/event-support/new/unnamed15.png';
@@ -72,7 +72,7 @@ export default function partnersPartners() {
             Event Sponsors
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
-            {/* <Card avatar={sponsors5} link={''} name="DaVinci Gallery" /> */}
+            <Card avatar={sponsors5} link={''} name="DaVinci Gallery" />
             <Card avatar={sponsors3} link={''} name="GoatNFT" />
             <Card avatar={sponsors} link={''} name="Harmony" />
             <Card avatar={sponsors8} link={''} name="Litentry" />
@@ -90,7 +90,7 @@ export default function partnersPartners() {
             Event Support
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
-            {/* <Card avatar={support12} link={''} name="" /> */}
+            <Card avatar={support12} link={''} name="" />
             <Card avatar={support} link={''} name="" />
             <Card avatar={support4} link={''} name="" />
             {/* <Card avatar={support13} link={''} name="" /> */}
