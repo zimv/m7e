@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PageTitle from '../../components/page-title';
-import SpeakerCard from '../../components/speaker-card';
+import Card from '../../components/logo-card';
 import avatar from '../../public/speakers-logo/unnamed.jpeg';
 import avatar1 from '../../public/speakers-logo/unnamed1.png';
 import avatar2 from '../../public/speakers-logo/unnamed2.jpeg';
@@ -28,9 +28,9 @@ import avatar21 from '../../public/speakers-logo/killer_acid .png';
 import styles from './index.module.less';
 
 export default function Speakers() {
-  const cls = classnames('grid grid-cols-2 lg:grid-cols-4', styles.container);
+  const cls = classnames(styles.container);
   return (
-    <div className="relative flex justify-center items-center w-screen h-screen bg-black">
+    <div className="relative flex flex-col justify-center items-center w-screen h-screen bg-black">
       <PageTitle title="VIPs" />
       <div className={cls}>
         <h4
@@ -39,33 +39,30 @@ export default function Speakers() {
         >
           Event Owners 项目负责
         </h4>
-        <span></span>
-        <SpeakerCard avatar={avatar8} name="Baiwei" />
-        <SpeakerCard avatar={avatar2} name="IOYOI" />
-        <SpeakerCard avatar={avatar6} name="metaSynth" />
-        <SpeakerCard avatar={avatar1} name="Niq" />
-        <SpeakerCard avatar={avatar4} name="Reva" />
-        <SpeakerCard avatar={avatar9} name="Rinii fish" />
-        <SpeakerCard avatar={avatar3} name="Sleepy" />
-        <SpeakerCard avatar={avatar5} name="TingSong" />
-        <SpeakerCard avatar={avatar10} name="Ton ran" />
-        <SpeakerCard avatar={avatar7} name="XIx" />
-        <SpeakerCard avatar={avatar12} name="Arc4g" />
-        <SpeakerCard avatar={avatar14} name="Debbie Digital" />
-        <SpeakerCard avatar={avatar} name="Fabin Rasheed" />
-        <SpeakerCard avatar={avatar16} name="Facu" />
-        <SpeakerCard avatar={avatar20} name="Jay Delay" />
-        <SpeakerCard avatar={avatar21} name="Killer Acid" />
-        <SpeakerCard avatar={avatar18} name="Luluxx" />
-        <SpeakerCard avatar={avatar19} name="Milton Sanz" />
-        <SpeakerCard avatar={avatar15} name="Olive Allen" />
-        <SpeakerCard avatar={avatar11} name="Rutger Van Der Tas" />
-        <SpeakerCard avatar={avatar17} name="Skygolpe" />
-        <SpeakerCard avatar={avatar13} name="Sparrow" />
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
+        <div className="grid grid-cols-2 lg:grid-cols-4">
+          <Card avatar={avatar8} name="Baiwei" />
+          <Card avatar={avatar2} name="IOYOI" />
+          <Card avatar={avatar6} name="metaSynth" />
+          <Card avatar={avatar1} name="Niq" />
+          <Card avatar={avatar4} name="Reva" />
+          <Card avatar={avatar9} name="Rinii fish" />
+          <Card avatar={avatar3} name="Sleepy" />
+          <Card avatar={avatar5} name="TingSong" />
+          <Card avatar={avatar10} name="Ton ran" />
+          <Card avatar={avatar7} name="XIx" />
+          <Card avatar={avatar12} name="Arc4g" />
+          <Card avatar={avatar14} name="Debbie Digital" />
+          <Card avatar={avatar} name="Fabin Rasheed" />
+          <Card avatar={avatar16} name="Facu" />
+          <Card avatar={avatar20} name="Jay Delay" />
+          <Card avatar={avatar21} name="Killer Acid" />
+          <Card avatar={avatar18} name="Luluxx" />
+          <Card avatar={avatar19} name="Milton Sanz" />
+          <Card avatar={avatar15} name="Olive Allen" />
+          <Card avatar={avatar11} name="Rutger Van Der Tas" />
+          <Card avatar={avatar17} name="Skygolpe" />
+          <Card avatar={avatar13} name="Sparrow" />
+        </div>
       </div>
     </div>
   );
