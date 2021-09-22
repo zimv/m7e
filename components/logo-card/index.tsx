@@ -26,7 +26,7 @@ export default function Card({ link, avatar, name, className, ...props }: Props)
         </div>
         <div className={styles.bottom}>
           <div className={styles.block}></div>
-          <span className={styles.title}>{name}</span>
+          <div className={styles.title}>{name}</div>
         </div>
       </a>
     );
