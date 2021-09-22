@@ -34,6 +34,7 @@ export default function Home() {
   };
 
   const [menuActive, setMenuActive] = useState(false);
+  const [blockContro, setBlockContro] = useState(false);
   const [isMobile, setMobile] = useState(false);
   const [mobileStyle, setMobileStyle] = useState(false);
   const [tab, setTab] = useState(false);
@@ -200,7 +201,19 @@ export default function Home() {
           className={classnames({
             [styles.icon]: true,
           })}
-          onClick={() => setMenuActive(!menuActive)}
+          onClick={() => {
+            if (menuActive) {
+              setMenuActive(!menuActive);
+              setTimeout(() => {
+                setBlockContro(!blockContro);
+              }, 300);
+            } else {
+              setBlockContro(!blockContro);
+              setTimeout(() => {
+                setMenuActive(!menuActive);
+              }, 0);
+            }
+          }}
         >
           <div
             className={classnames({
@@ -216,12 +229,14 @@ export default function Home() {
           className={classnames({
             [styles.menuItems]: true,
             [styles.active]: menuActive,
+            [styles.blockContro]: blockContro,
           })}
         >
           <div
             onClick={() => {
               setActiveTab('');
               setMenuActive(false);
+              setBlockContro(false);
             }}
           >
             Home
@@ -230,6 +245,7 @@ export default function Home() {
             onClick={() => {
               setActiveTab('block2');
               setMenuActive(false);
+              setBlockContro(false);
             }}
           >
             MOCA Exhibition
@@ -238,6 +254,7 @@ export default function Home() {
             onClick={() => {
               setActiveTab('block1');
               setMenuActive(false);
+              setBlockContro(false);
             }}
           >
             Highlights
@@ -246,6 +263,7 @@ export default function Home() {
             onClick={() => {
               setActiveTab('');
               setMenuActive(false);
+              setBlockContro(false);
             }}
           >
             Schedule
@@ -254,6 +272,7 @@ export default function Home() {
             onClick={() => {
               setActiveTab('block3');
               setMenuActive(false);
+              setBlockContro(false);
             }}
           >
             VIPs
@@ -262,6 +281,7 @@ export default function Home() {
             onClick={() => {
               setActiveTab('block4');
               setMenuActive(false);
+              setBlockContro(false);
             }}
           >
             Partners
@@ -270,6 +290,7 @@ export default function Home() {
             onClick={() => {
               setActiveTab('block5');
               setMenuActive(false);
+              setBlockContro(false);
             }}
           >
             Airdrop
