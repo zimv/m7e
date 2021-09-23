@@ -42,6 +42,8 @@ import support15 from '../../public/event-support/new/unnamed15.png';
 import support16 from '../../public/event-support/new/unnamed16.png';
 import support17 from '../../public/event-support/new/unnamed17.png';
 import support18 from '../../public/event-support/new/unnamed18.png';
+import cryptomondays from '../../public/event-support/new/cryptomondays.jpeg';
+import tianmo from '../../public/event-support/new/tianmo.png';
 import styles from './index.module.less';
 
 export default function partnersPartners() {
@@ -69,7 +71,7 @@ export default function partnersPartners() {
         </div>
         <div className={styles.box}>
           <h4 style={{ fontSize: '30rem' }} className="text-left text-white fonts-kumar-one mt-40">
-            Event Sponsors
+            Top Partners
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
             <Card avatar={sponsors5} link={''} name="DaVinci Gallery" />
@@ -93,7 +95,7 @@ export default function partnersPartners() {
             <Card avatar={support12} link={''} name="Arium" />
             <Card avatar={support} link={''} name="Binance" cnName="币安" />
             <Card avatar={support4} link={''} name="Caotai Music" cnName="草台回声" />
-            {/* <Card avatar={support13} link={''} name="" /> */}
+            <Card avatar={cryptomondays} link={''} name="Crypto Mondays" />
             <Card avatar={support8} link={''} name="Crypto Playground" />
             <Card avatar={support18} link={''} name="Decentraland" />
             <Card
@@ -113,6 +115,7 @@ export default function partnersPartners() {
             <Card avatar={support14} link={''} name="Sound Blanc" cnName="白" />
             <Card avatar={support5} link={''} name="Sssnodes" cnName="超级节点" />
             <Card avatar={support17} link={''} name="Super ACG" cnName="超次元" />
+            <Card avatar={tianmo} link={''} name="Talent mart" cnName="天陌信息科技" />
             <Card avatar={support10} link={''} name="Yuanyuzhou Venture" cnName="元宇宙资本" />
           </div>
         </div>
