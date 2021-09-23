@@ -57,16 +57,16 @@ export default function partnersPartners() {
             Event Owner
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
-            <Card avatar={avatar3} link={''} name="MOCA (Museum of Crypto Art)" />
-            <Card avatar={avatar2} link={''} name="NFT4Metaverse" cnName="元宇宙特攻队" />
-            <Card avatar={avatar4} link={''} name="CryptoC" />
-            <Card avatar={avatar5} link={''} name="Mask Network" />
-            <Card avatar={avatar6} link={''} name="Mynft" />
-            <Card avatar={avatar1} link={''} name="M 360" />
             <Card avatar={avatar7} link={''} name="Blocklike" />
             <Card avatar={avatar8} link={''} name="Cryptoart.ai" />
-            <Card avatar={avatar} link={''} name="Technology Art" cnName="艺数力" />
+            <Card avatar={avatar4} link={''} name="CryptoC" />
             <Card avatar={avatar9} link={''} name="Lying Gallery" cnName="躺平空间" />
+            <Card avatar={avatar5} link={''} name="Mask Network" />
+            <Card avatar={avatar3} link={''} name="MOCA (Museum of Crypto Art)" />
+            <Card avatar={avatar2} link={''} name="NFT4Metaverse" cnName="元宇宙特攻队" />
+            <Card avatar={avatar6} link={''} name="Mynft" />
+            <Card avatar={avatar1} link={''} name="M 360" />
+            <Card avatar={avatar} link={''} name="Technology Art" cnName="艺数力" />
           </div>
         </div>
         <div className={styles.box}>

@@ -442,7 +442,8 @@ export default function Home() {
                 <div className={styles['home-top']}>
                   <HomeBg className={styles.homeBg} />
                   <div className={styles['home-button']} onClick={onClaim}>
-                    {data.address ? 'Airdrop' : 'Connect'}
+                    {/* {data.address ? 'Airdrop' : 'Connect'} */}
+                    Airdrop
                   </div>
                   <Flower1 className={styles.flower1} />
                   <div className="flex flex-col items-end">
@@ -537,8 +538,8 @@ export default function Home() {
               {activeTab === 'block1' ? <Videos /> : ''}
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
-              {activeTab === 'block2' ? <Moca backCall={backCall} /> : ''}
-              {/* <PreMoca></PreMoca> */}
+              {/* {activeTab === 'block2' ? <Moca backCall={backCall} /> : ''} */}
+              <PreMoca></PreMoca>
             </div>
             <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
               <Speakers />
@@ -564,6 +565,10 @@ export default function Home() {
             <NavBox textComponent={Text2} iconComponent={<Icon2 />} />
           </div>
         </div>
+      </div>
+
+      <div className="fixed bottom-60 right-40 text-3xl text-white">
+        Powered by <a href="http://nft4metaverse.io/">NFT4Metaverse</a>
       </div>
     </Page>
   );
