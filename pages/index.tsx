@@ -129,14 +129,6 @@ export default function Home() {
   );
   const menuItem1 = (
     <>
-      <div className={styles['menu-title']}>Sept 29 ~ Nov 21</div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Suzhou Hanshan Art Museum Exhibition：Avatar,My Metaverse
-      </div>
-    </>
-  );
-  const menuItem2 = (
-    <>
       <div className={styles['menu-title']}>Oct 22 ~ 28</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         MOCA Exhibition in Metaverse, M7E.SH, Twittersphere and M50 Shanghai
@@ -146,11 +138,19 @@ export default function Home() {
       </div>
     </>
   );
+  const menuItem2 = (
+    <>
+      <div className={styles['menu-title']}>Oct 24 ~ 28</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        NFT Scavenger Hunt in Shanghai
+      </div>
+    </>
+  );
   const menuItem3 = (
     <>
       <div className={styles['menu-title']}>Oct 22</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        9:30 ~ 16:30 ideaPod the Bund House Shanghai Opening Forum: Quest for Metaverse Identity
+        ideaPod the Bund House Shanghai Opening Forum: Quest for Metaverse Identity
       </div>
     </>
   );
@@ -158,17 +158,14 @@ export default function Home() {
     <>
       <div className={styles['menu-title']}>Oct 23</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        10:00 ~ 12:00 M50 Innovation+ Space Shanghai Harmony Meetup: When Shanghai meets Silicon
-        Valley in Metaverse
+        AM, M50 Innovation+ Space Shanghai Harmony Meetup: When Shanghai meets Silicon Valley in
+        Metaverse
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        13:30 ~ 17:30 M50 Innovation+ Space Shanghai NFT Avatar Carnival
+        PM, M50 Innovation+ Space Shanghai NFT Avatar Carnival
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        18:30 ~ 21:30 M50 Innovation+ Space Shanghai Salon: Polygon and their NFT ecosystem
-      </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        10:00 ~ 18:00 M50 Innovation+ Space Shanghai Nash Metaverse Festival
+        Night, M50 Innovation+ Space Shanghai Polygon Ecosystem Metaverse Night
       </div>
     </>
   );
@@ -177,8 +174,11 @@ export default function Home() {
     <>
       <div className={styles['menu-title']}>Oct 24</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        18:00 ~ 22:00 ideaPod the Bund House Shanghai Metaverse Cocktail: Quest for Metaverse
-        Identity by MyCrptoProfile & Dataverse
+        M50 Innovation+ Space Shanghai Nash Metaverse: 4X-Inception Exhibition
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Night, ideaPod the Bund House Shanghai Metaverse Cocktail: Quest for Metaverse Identity by
+        MyCrptoProfile & Dataverse
       </div>
     </>
   );
@@ -186,7 +186,7 @@ export default function Home() {
     <>
       <div className={styles['menu-title']}>Oct 28</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        19:00 ~ 21:00 Metaverse Closing: Electronic Music Party
+        Night, Metaverse Closing Party
       </div>
     </>
   );

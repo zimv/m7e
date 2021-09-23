@@ -56,15 +56,15 @@ export default function partnersPartners() {
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
             <Card avatar={avatar3} link={''} name="MOCA (Museum of Crypto Art)" />
-            <Card avatar={avatar2} link={''} name="NFT4Metaverse 元宇宙特攻队" />
+            <Card avatar={avatar2} link={''} name="NFT4Metaverse" cnName="元宇宙特攻队" />
             <Card avatar={avatar4} link={''} name="CryptoC" />
             <Card avatar={avatar5} link={''} name="Mask Network" />
             <Card avatar={avatar6} link={''} name="Mynft" />
             <Card avatar={avatar1} link={''} name="M 360" />
             <Card avatar={avatar7} link={''} name="Blocklike" />
             <Card avatar={avatar8} link={''} name="Cryptoart.ai" />
-            <Card avatar={avatar} link={''} name="Technology Art 艺数力" />
-            <Card avatar={avatar9} link={''} name="Lying Gallery 躺平空间" />
+            <Card avatar={avatar} link={''} name="Technology Art" cnName="艺数力" />
+            <Card avatar={avatar9} link={''} name="Lying Gallery" cnName="躺平空间" />
           </div>
         </div>
         <div className={styles.box}>
@@ -90,25 +90,30 @@ export default function partnersPartners() {
             Event Support
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
-            <Card avatar={support12} link={''} name="" />
-            <Card avatar={support} link={''} name="" />
-            <Card avatar={support4} link={''} name="" />
+            <Card avatar={support12} link={''} name="Arium" />
+            <Card avatar={support} link={''} name="Binance" cnName="币安" />
+            <Card avatar={support4} link={''} name="Caotai Music" cnName="草台回声" />
             {/* <Card avatar={support13} link={''} name="" /> */}
-            <Card avatar={support8} link={''} name="" />
-            <Card avatar={support18} link={''} name="" />
-            <Card avatar={support16} link={''} name="" />
-            <Card avatar={support2} link={''} name="" />
-            <Card avatar={support7} link={''} name="" />
-            <Card avatar={support9} link={''} name="" />
-            <Card avatar={support3} link={''} name="" />
-            <Card avatar={support6} link={''} name="" />
-            <Card avatar={support1} link={''} name="" />
-            <Card avatar={support11} link={''} name="" />
-            <Card avatar={support15} link={''} name="" />
-            <Card avatar={support14} link={''} name="" />
-            <Card avatar={support5} link={''} name="" />
-            <Card avatar={support17} link={''} name="" />
-            <Card avatar={support10} link={''} name="" />
+            <Card avatar={support8} link={''} name="Crypto Playground" />
+            <Card avatar={support18} link={''} name="Decentraland" />
+            <Card
+              avatar={support16}
+              link={''}
+              name="Digital Renaissance"
+              cnName="数字文艺复兴基金会"
+            />
+            <Card avatar={support2} link={''} name="Evolution Land" cnName="进化星球" />
+            <Card avatar={support7} link={''} name="Hanshan Art Museum" cnName="寒山美术馆" />
+            <Card avatar={support9} link={''} name="imToken" />
+            <Card avatar={support3} link={''} name="Innovation+ Art" cnName="创+空间" />
+            <Card avatar={support6} link={''} name="MetaVenturer" cnName="元宇宙探险队" />
+            <Card avatar={support1} link={''} name="OG Labs" />
+            <Card avatar={support11} link={''} name="OVR" />
+            <Card avatar={support15} link={''} name="Sandbox" cnName="沙盒" />
+            <Card avatar={support14} link={''} name="Sound Blanc" cnName="白" />
+            <Card avatar={support5} link={''} name="Sssnodes" cnName="超级节点" />
+            <Card avatar={support17} link={''} name="Super ACG" cnName="超次元" />
+            <Card avatar={support10} link={''} name="Yuanyuzhou Venture" cnName="元宇宙资本" />
           </div>
         </div>
         <div className={styles.text}>

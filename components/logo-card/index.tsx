@@ -7,11 +7,12 @@ import styles from './styles.module.less';
 interface Props {
   className?: string;
   avatar: StaticImageData;
-  name: string;
+  name?: string;
+  cnName?: string;
   link?: string;
 }
 
-export default function Card({ link, avatar, name, className, ...props }: Props) {
+export default function Card({ link, avatar, name, cnName, className, ...props }: Props) {
   const cls = classnames(styles['speaker-card'], className);
   if (link) {
     return (
@@ -26,7 +27,10 @@ export default function Card({ link, avatar, name, className, ...props }: Props)
         </div>
         <div className={styles.bottom}>
           <div className={styles.block}></div>
-          <div className={styles.title}>{name}</div>
+          <span className={styles.title}>
+            {name && <span>{name}</span>}
+            {cnName && <span>{cnName}</span>}
+          </span>
         </div>
       </a>
     );
@@ -43,7 +47,10 @@ export default function Card({ link, avatar, name, className, ...props }: Props)
       </div>
       <div className={styles.bottom}>
         <div className={styles.block}></div>
-        <span className={styles.title}>{name}</span>
+        <span className={styles.title}>
+          {name && <span>{name}</span>}
+          {cnName && <span>{cnName}</span>}
+        </span>
       </div>
     </div>
   );
