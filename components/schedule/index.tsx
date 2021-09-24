@@ -14,6 +14,10 @@ export default function Schedule() {
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           NFT Airdrop & Claim on M7E.SH
         </div>
+        <div className={styles['menu-title']}>Sept 29 ~ Nov 21</div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          Suzhou Hanshan Art Museum Exhibition：Avatar, My Metaverse
+        </div>
         <div className={styles['menu-title']}>Oct 22 ~ 28</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           MOCA Exhibition in Metaverse, M7E.SH, Twittersphere and M50 Shanghai
@@ -27,30 +31,42 @@ export default function Schedule() {
         </div>
         <div className={styles['menu-title']}>Oct 22</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          ideaPod the Bund House Shanghai Opening Forum: Quest for Metaverse Identity
+          ideaPod the Bund House Shanghai
+        </div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          Opening Forum: Quest for Metaverse Identity
         </div>
         <div className={styles['menu-title']}>Oct 23</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          AM, M50 Innovation+ Space Shanghai Harmony Meetup: When Shanghai meets Silicon Valley in
-          Metaverse
+          AM, M50 Innovation+ Space Shanghai
         </div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          PM, M50 Innovation+ Space Shanghai NFT Avatar Carnival
+          Harmony Meetup: When Shanghai meets Silicon Valley in Metaverse
         </div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          Night, M50 Innovation+ Space Shanghai Polygon Ecosystem Metaverse Night
+          PM, M50 Innovation+ Space Shanghai
+        </div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          NFT Avatar Carnival
+        </div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          Night, M50 Innovation+ Space Shanghai
+        </div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          Polygon Ecosystem Metaverse Night
         </div>
         <div className={styles['menu-title']}>Oct 24</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          M50 Innovation+ Space Shanghai Nash Metaverse: 4X-Inception Exhibition
+          M50 Innovation+ Space Shanghai
         </div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          Night, ideaPod the Bund House Shanghai Metaverse Cocktail: Quest for Metaverse Identity by
-          MyCrptoProfile & Dataverse
+          Nash Metaverse: 4X-Inception Exhibition
         </div>
-        <div className={styles['menu-title']}>Oct 28</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          Night, Metaverse Closing Party
+          Night, ideaPod the Bund House Shanghai
+        </div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          Metaverse Cocktail: Quest for Metaverse Identity by MyCrptoProfile & Dataverse
         </div>
       </div>
     </div>

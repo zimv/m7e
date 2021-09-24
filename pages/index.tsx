@@ -165,8 +165,10 @@ const Home: NextPage<Props> = ({ userAgent }) => {
     <>
       <div className={styles['menu-title']}>Oct 23</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        AM, M50 Innovation+ Space Shanghai Harmony Meetup: When Shanghai meets Silicon Valley in
-        Metaverse
+        AM, M50 Innovation+ Space Shanghai
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Harmony Meetup: When Shanghai meets Silicon Valley in Metaverse
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         PM, M50 Innovation+ Space Shanghai
@@ -175,7 +177,10 @@ const Home: NextPage<Props> = ({ userAgent }) => {
         NFT Avatar Carnival
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Night, M50 Innovation+ Space Shanghai Polygon Ecosystem Metaverse Night
+        Night, M50 Innovation+ Space Shanghai
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Polygon Ecosystem Metaverse Night
       </div>
     </>
   );
@@ -190,8 +195,10 @@ const Home: NextPage<Props> = ({ userAgent }) => {
         Nash Metaverse: 4X-Inception Exhibition
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Night, ideaPod the Bund House Shanghai Metaverse Cocktail: Quest for Metaverse Identity by
-        MyCrptoProfile & Dataverse
+        Night, ideaPod the Bund House Shanghai
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Metaverse Cocktail: Quest for Metaverse Identity by MyCrptoProfile & Dataverse
       </div>
     </>
   );
