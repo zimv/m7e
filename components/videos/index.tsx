@@ -11,26 +11,27 @@ import PageTitle from '../page-title';
 
 const videoList = [
   {
-    video: '/video/moca.mp4',
+    video:
+      'https://bee-6.gateway.ethswarm.org/bzz/9c0e0d6cbda6a166ac414dc9ebb905a10951cd97fa75b6dd7c364a3aa0c9772d',
     image:
       'https://images.unsplash.com/photo-1614983646436-b3d7a8398b3f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNTU4MTkxNA&ixlib=rb-1.2.1&q=80&w=400&h=600',
     title: 'Colborn',
     description: 'MOCA',
   },
-  {
-    video: '/video/moca.mp4',
-    image:
-      'https://images.unsplash.com/photo-1615421559287-5e6eecec3b80?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNTU4MjAwOQ&ixlib=rb-1.2.1&q=80&w=400&h=600',
-    title: 'Suji',
-    description: 'MASK',
-  },
-  {
-    video: '/video/moca.mp4',
-    image:
-      'https://images.unsplash.com/photo-1615098270177-e2db45986811?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNTU4MjAwOQ&ixlib=rb-1.2.1&q=80&w=400&h=600',
-    title: 'Jean Chen',
-    description: 'NFT4Metaverse',
-  },
+  // {
+  //   video: '/video/moca.mp4',
+  //   image:
+  //     'https://images.unsplash.com/photo-1615421559287-5e6eecec3b80?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNTU4MjAwOQ&ixlib=rb-1.2.1&q=80&w=400&h=600',
+  //   title: 'Suji',
+  //   description: 'MASK',
+  // },
+  // {
+  //   video: '/video/moca.mp4',
+  //   image:
+  //     'https://images.unsplash.com/photo-1615098270177-e2db45986811?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNTU4MjAwOQ&ixlib=rb-1.2.1&q=80&w=400&h=600',
+  //   title: 'Jean Chen',
+  //   description: 'NFT4Metaverse',
+  // },
 ];
 
 export default function Videos() {
@@ -40,7 +41,7 @@ export default function Videos() {
       className="relative flex justify-center items-center w-screen h-screen bg-black"
       id="video"
     >
-      <PageTitle title="Highlights" subTitle="活动精选" />
+      <PageTitle title="Video" subTitle="活动精选" />
       <div className={styles.box}>
         <div className="relative">
           <Bg2 className={styles.bg2} />
