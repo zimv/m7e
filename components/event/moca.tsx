@@ -3,21 +3,21 @@ import classnames from 'classnames';
 import { useTranslations } from 'next-intl';
 import ReactPlayer from 'react-player';
 
-import Page from '../../components/page';
-import Layout from '../../components/layout';
-import Gallery from '../../components/gallery';
+import Page from '../page';
+import Layout from '../layout';
+import Gallery from '../gallery';
 import { SITE_NAME, META_DESCRIPTION } from '../../common/const';
 
-import MagicCard from '../../components/magic-card';
-import Button from '../../components/button';
-import ImageGallery from '../../components/image-gallery';
-import VideoSlider from '../../components/slider';
-import Web3Wallet from '../../components/web3-wallet';
-import CollectWallet from '../../components/web3-wallet/collect-wallet';
+import MagicCard from '../magic-card';
+import Button from '../button';
+import ImageGallery from '../image-gallery';
+import VideoSlider from '../slider';
+import Web3Wallet from '../web3-wallet';
+import CollectWallet from '../web3-wallet/collect-wallet';
 
 import network from '../../biz/event/moca/network.json';
 
-import GlowingButton from '../../components/glowing-button';
+import GlowingButton from '../glowing-button';
 
 import styles from '../../styles/event/moca.module.css';
 
