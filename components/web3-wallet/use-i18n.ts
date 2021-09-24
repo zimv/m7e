@@ -13,5 +13,5 @@ export default function useI18n(locale = 'en-US') {
     }
 
     return id;
-  }
+  };
 }

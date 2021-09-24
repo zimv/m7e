@@ -1,0 +1,52 @@
+.container {
+  padding: 0 90rem;
+  .title {
+    position: relative;
+    font-weight: 400;
+    font-size: 48rem;
+    font-family: 'Kumar One', cursive;
+    line-height: 85px;
+    span {
+      display: inline-block;
+      width: 28rem;
+      min-width: 16px;
+      height: 28rem;
+      min-height: 16px;
+      margin-top: -12rem;
+      margin-right: 6px;
+      background: #79e252;
+      border-radius: 38px;
+    }
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    max-width: 564rem;
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 24rem;
+    font-family: 'Anonymous Pro', cursive;
+    text-align: start;
+    .group {
+      margin: 16px 0;
+    }
+    .long {
+      margin: 4px 0 8px 0;
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  right: -110rem;
+  width: 1000rem;
+  height: 800rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    .description {
+      max-width: 100%;
+    }
+  }
+}

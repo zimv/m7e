@@ -1,0 +1,42 @@
+.page-title {
+  position: absolute;
+  top: 20px;
+  left: 160px;
+  color: #fff;
+  font-size: 40rem;
+  font-family: 'Kumar One', cursive;
+  .star {
+    display: none;
+    width: 18px;
+    height: 18px;
+  }
+  .sub {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-title {
+    position: absolute;
+    top: 80px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    font-size: 56rem;
+    font-family: 'Ginebra', cursive;
+  }
+  .line {
+    width: calc(100vw - 64px);
+    border: 1px #fff;
+    border-style: none none solid none;
+  }
+  .star {
+    display: block !important;
+    margin-left: 8px;
+  }
+  .sub {
+    display: block !important;
+  }
+}

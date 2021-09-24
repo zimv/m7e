@@ -1,0 +1,98 @@
+.container {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 902rem;
+  height: auto;
+  padding: 38px 50rem;
+  background: #dbcae7;
+}
+
+.main {
+  width: 810rem;
+}
+.title {
+  margin-top: 12px;
+  color: #000;
+  font-weight: 400;
+  font-size: 36rem;
+  font-family: 'Kumar One', cursive;
+  line-height: 64px;
+}
+.description {
+  color: #000;
+  font-weight: 200;
+  font-size: 24rem;
+  // font-family: 'Kumar One', cursive;
+}
+
+.dot {
+  top: -18px !important;
+  bottom: auto;
+
+  li {
+    width: 8px;
+    height: 8px;
+
+    button {
+      height: 8px;
+      border-radius: 18px;
+      opacity: 1;
+    }
+  }
+
+  li.slick-active {
+    width: 8px !important;
+    background: #8d53f6 !important;
+  }
+
+  .slick-active {
+    width: 8px !important;
+    background: #8d53f6 !important;
+  }
+}
+
+.box {
+  position: absolute;
+  width: 1122rem;
+  .bg1 {
+    position: absolute;
+    top: -360rem;
+    right: -276rem;
+    width: 1000rem;
+    height: 800rem;
+  }
+  .bg2 {
+    position: absolute;
+    top: -370rem;
+    left: -400rem;
+    width: 1000rem;
+    height: 800rem;
+  }
+}
+.screen {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: calc(100% - 28px);
+    padding: 12px;
+  }
+
+  .main {
+    width: 326px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}

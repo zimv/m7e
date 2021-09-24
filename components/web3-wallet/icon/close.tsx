@@ -3,7 +3,6 @@ import images from '../image/index';
 
 const { close } = images;
 
-
 interface Props extends React.HTMLAttributes<HTMLImageElement> {
   width?: number;
   height?: number;

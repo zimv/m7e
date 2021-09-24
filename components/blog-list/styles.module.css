@@ -1,20 +1,20 @@
 .card {
-  border-radius: var(--space-2x);
-  background: #111111;
   display: flex;
   flex-direction: column;
-  background-clip: content-box, border-box;
-  background-image: linear-gradient(#111111, #111111), linear-gradient(to right, #333333, #333333);
-  padding: 1px;
   margin-bottom: 30px;
+  padding: 1px;
+  background: #111;
+  background-image: linear-gradient(#111, #111), linear-gradient(to right, #333, #333);
+  background-clip: content-box, border-box;
+  border-radius: var(--space-2x);
   cursor: pointer;
 }
 
 .card:hover,
 .card:focus {
-  outline: none;
-  background-image: linear-gradient(#111111, #111111),
+  background-image: linear-gradient(#111, #111),
     linear-gradient(to right, var(--brand), var(--brand));
+  outline: none;
 }
 
 .summary {
@@ -23,18 +23,18 @@
 
 .summary::before {
   float: left;
-  content: '';
   width: 20px;
+  content: '';
   @apply h-10;
 }
 
 .summary::after {
-  float:right;
-  content:'...';
-  width: 20px;
   position: relative;
   left:100%;
+  float:right;
+  width: 20px;
   transform: translate(-100%,-100%);
+  content:'...';
   @apply h-10;
 }
 
@@ -60,37 +60,37 @@
 }
 
 .cardBody {
-  padding: var(--space-4x);
-  color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  padding: var(--space-4x);
+  color: var(--secondary-color);
 }
 
 .imageWrapper {
-  width: 100%;
-  height: 100%;
   position: relative;
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .image {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
 
 .name {
-  font-weight: bold;
-  color: #f1f1f1;
-  font-size: 24px;
   margin: 0;
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 24px;
   line-height: 1.4;
 }
 

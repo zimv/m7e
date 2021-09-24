@@ -1,0 +1,72 @@
+.container {
+  padding: 0 12px;
+  .title {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Kumar One', cursive;
+    line-height: 55px;
+    svg {
+      display: inline-block;
+      width: 24px;
+      min-width: 28px;
+      height: 24px;
+      min-height: 28px;
+      margin-top: -5px;
+      margin-right: 4px;
+    }
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Anonymous Pro', cursive;
+    text-align: end;
+    .group {
+      margin: 8px 0;
+    }
+    .long {
+      margin: 4px 0 8px 0;
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  left: -25px;
+  width: 250px;
+  height: 200px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    .description {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 640px) {
+  .container {
+    .title {
+      font-size: 18px;
+      line-height: 70px;
+      svg {
+        width: 36px;
+        height: 36px;
+        margin-top: -5px;
+        margin-right: 4px;
+      }
+    }
+    .description {
+      font-size: 16px;
+      .group {
+        margin: 12px 0;
+      }
+      .long {
+        margin: 8px 0 12px 0;
+      }
+    }
+  }
+}
