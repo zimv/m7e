@@ -115,7 +115,7 @@ export default function Home() {
     return node;
   }
 
-  const Text1 = <span className={styles.nav1}>Videos</span>;
+  const Text1 = <span className={styles.nav1}>Highlights</span>;
   const Text2 = <span className={styles.nav1}>MOCA Exhibition</span>;
   const Text3 = <span className={styles.nav2}>VIPs</span>;
   const Text4 = <span className={styles.nav2}>Partners</span>;
@@ -134,9 +134,6 @@ export default function Home() {
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         MOCA Exhibition in Metaverse, M7E.SH, Twittersphere and M50 Shanghai
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Pubs in Shanghai NFT Scavenger Hunt
-      </div>
     </>
   );
   const menuItem2 = (
@@ -151,7 +148,10 @@ export default function Home() {
     <>
       <div className={styles['menu-title']}>Oct 22</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        ideaPod the Bund House Shanghai Opening Forum: Quest for Metaverse Identity
+        ideaPod the Bund House Shanghai
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Opening Forum: Quest for Metaverse Identity
       </div>
     </>
   );
@@ -163,7 +163,10 @@ export default function Home() {
         Metaverse
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        PM, M50 Innovation+ Space Shanghai NFT Avatar Carnival
+        PM, M50 Innovation+ Space Shanghai
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        NFT Avatar Carnival
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         Night, M50 Innovation+ Space Shanghai Polygon Ecosystem Metaverse Night
@@ -175,7 +178,10 @@ export default function Home() {
     <>
       <div className={styles['menu-title']}>Oct 24</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        M50 Innovation+ Space Shanghai Nash Metaverse: 4X-Inception Exhibition
+        M50 Innovation+ Space Shanghai
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Nash Metaverse: 4X-Inception Exhibition
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         Night, ideaPod the Bund House Shanghai Metaverse Cocktail: Quest for Metaverse Identity by
@@ -187,7 +193,18 @@ export default function Home() {
     <>
       <div className={styles['menu-title']}>Oct 28</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Night, Metaverse Closing Party
+        Night, Metaverse
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Closing Party
+      </div>
+    </>
+  );
+  const menuItem7 = (
+    <>
+      <div className={styles['menu-title']}>Sept 29 ~ Nov 21</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Suzhou Hanshan Art Museum Exhibition：Avatar, My Metaverse
       </div>
     </>
   );
@@ -364,7 +381,7 @@ export default function Home() {
               })}
               onClick={() => setActiveFun('block1')}
             >
-              VIDEO
+              HIGHLIGHTS
             </div>
             <div
               className={classnames({
@@ -518,6 +535,7 @@ export default function Home() {
             <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <Menu>
                 <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
+                <Menu.CarouselItem>{menuItem7}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem1}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem2}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem3}</Menu.CarouselItem>
