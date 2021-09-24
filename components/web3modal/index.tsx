@@ -29,7 +29,7 @@ interface Options extends IProviderControllerOptions {
 interface IAppState {
   fetching: boolean;
   address: string;
-  web3: any;
+  web3: Web3;
   provider: any;
   connected: boolean;
   chainId: number;
@@ -57,9 +57,9 @@ const INITIAL_STATE: IAppState = {
 const state = new Rekv<IAppState>(INITIAL_STATE);
 
 export const ProviderContext = React.createContext<{
-  data: IAppState;
+  data: IAppState | undefined;
   connect: () => Promise<void>;
-  getAccountAssets: () => Promise<IAssetData[]>;
+  getAccountAssets: () => Promise<IAssetData[] | undefined>;
   resetApp: () => Promise<IAppState>;
   // @ts-ignore
 }>({});
@@ -89,6 +89,7 @@ export default function Web3ModalProvider({
   options?: Options;
 }) {
   const web3ModalRef = React.useRef<Web3Modal>(null);
+  const [a, b] = React.useState();
 
   const value = state.useState(
     'fetching',
@@ -106,23 +107,24 @@ export default function Web3ModalProvider({
 
   const { chainId, web3, address } = value;
 
-  const getNetwork = () => getChainData(chainId).network;
+  const getNetwork = (cid = chainId) => getChainData(cid)?.network;
 
   const resetApp = async () => {
     if (web3 && web3.currentProvider && web3.currentProvider.close) {
       await web3.currentProvider.close();
     }
 
-    await web3ModalRef.current.clearCachedProvider();
+    await web3ModalRef.current?.clearCachedProvider();
     state.setState({ ...INITIAL_STATE });
     return INITIAL_STATE;
   };
 
-  const getAccountAssets = async () => {
+  // eslint-disable-next-line consistent-return
+  const getAccountAssets = async (_address: string, _chainId: number) => {
     state.setState({ fetching: true });
     try {
       // get account balances
-      const assets = await apiGetAccountAssets(address, chainId);
+      const assets = await apiGetAccountAssets(_address, _chainId);
 
       state.setState({ fetching: false, assets });
       return assets;
@@ -138,51 +140,76 @@ export default function Web3ModalProvider({
     }
     provider.on('close', () => resetApp());
     provider.on('accountsChanged', async (accounts: string[]) => {
-      await state.setState({ address: accounts[0] });
-      await getAccountAssets();
+      // eslint-disable-next-line no-underscore-dangle
+      const _address = accounts[0];
+      await state.setState({ address: _address });
+      await getAccountAssets(_address, chainId);
     });
     provider.on('chainChanged', async (cid: number) => {
-      const networkId = await web3.eth.net.getId();
-      state.setState({ chainId: cid, networkId });
-      await getAccountAssets();
+      const id = +cid;
+      // const networkId = await web3.eth.net.getId();
+      if (!getNetwork(id)) return;
+      state.setState({ chainId: id, networkId: id });
+      await getAccountAssets(address, id);
     });
 
     provider.on('networkChanged', async (networkId: number) => {
-      const cid = await web3.eth.chainId();
-      state.setState({ chainId: cid, networkId });
-      await getAccountAssets();
+      // const cid = await web3.eth.getChainId();
+      const id = +networkId;
+
+      if (!getNetwork(+id)) return;
+      state.setState({ chainId: +id, networkId: id });
+      await getAccountAssets(address, id);
     });
   };
 
   const onConnect = async () => {
-    const provider = await web3ModalRef.current.connect();
+    if (!window.web3 || !window.ethereum) {
+      const modalDom = document.querySelector('.web3modal-modal-card');
+      if (!modalDom) return;
 
-    await subscribeProvider(provider);
+      modalDom.innerHTML =
+        '<div id="installMetaMask" class="p-10 web3modal-provider-wrapper"><a href="https://metamask.io/" target="_blank" class="cjAFRf web3modal-provider-container"><div class="jMhaxE web3modal-provider-icon"><img src="https://metamask.io/images/mm-logo.svg" alt="MetaMask"></div><div class="bktcUM sc-web3modal-provider-name mt-0">Install MetaMask</div><div class="eFHlqH web3modal-provider-description">Connect using browser wallet</div></a></div>';
+    }
 
-    const w3 = initWeb3(provider);
+    try {
+      const provider = await web3ModalRef.current?.connect();
 
-    const accounts = await w3.eth.getAccounts();
+      await subscribeProvider(provider);
 
-    const addr = accounts[0];
+      const w3 = initWeb3(provider);
 
-    const networkId = await w3.eth.net.getId();
+      const accounts = await w3.eth.getAccounts();
 
-    const cid = await w3.eth.getChainId();
+      const addr = accounts[0];
 
-    state.setState({
-      web3: w3,
-      provider,
-      connected: true,
-      address: addr,
-      chainId: cid,
-      networkId,
-    });
-    await getAccountAssets();
+      const networkId = await w3.eth.net.getId();
+
+      const cid = await w3.eth.getChainId();
+
+      if (!getNetwork(+cid)) return;
+
+      state.setState({
+        web3: w3,
+        provider,
+        connected: true,
+        address: addr,
+        chainId: cid,
+        networkId,
+      });
+
+      return getAccountAssets(addr, cid);
+    } catch (err) {
+      console.log('onConnect error: ', err);
+    }
   };
 
   React.useEffect(() => {
+    // eslint-disable-next-line prefer-object-spread
     const params = Object.assign(
-      {},
+      {
+        disableInjectedProvider: false,
+      },
       {
         network: getNetwork(), // optional
         cacheProvider: true, // optional
@@ -199,6 +226,7 @@ export default function Web3ModalProvider({
     );
 
     const w3Modal = new Web3Modal(params);
+    // @ts-ignore
     web3ModalRef.current = w3Modal;
 
     if (w3Modal.cachedProvider) {

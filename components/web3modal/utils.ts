@@ -1,11 +1,23 @@
+import { toast } from 'react-toastify';
+
 import { IChainData } from './interface';
 import supportedChains from './chains';
 
-export function getChainData(chainId: number): IChainData {
+export function getChainData(chainId: number): IChainData | null {
   const chainData = supportedChains.filter((chain: any) => chain.chain_id === chainId)[0];
 
   if (!chainData) {
-    throw new Error('ChainId missing or not supported');
+    toast.warn('Sorry, Please connect to Ethereum Mainnet.', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+
+    return null;
   }
 
   const API_KEY = process.env.REACT_APP_INFURA_ID;

@@ -12,59 +12,60 @@
       opacity: 1;
     }
   }
-  .arrow {
-    position: absolute;
-    top: calc(50% - 15px);
-    z-index: 2;
-    width: 110px;
-    cursor: pointer;
-    opacity: 0.6;
-  }
-  .item {
+}
+
+.arrow {
+  position: absolute;
+  top: calc(50% - 15px);
+  z-index: 2;
+  width: 110px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  margin: 8px 0;
+  font-weight: 400;
+  font-size: 20rem;
+  font-family: 'anonymous pro', cursive;
+  text-align: center;
+}
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 288px;
+  height: 377px;
+  border: 8px solid transparent;
+  border-image: linear-gradient(45deg, #1c6f50, #0f0d71) 1;
+  .slide {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    .text {
-      margin: 8px 0;
-      font-weight: 400;
-      font-size: 20rem;
-      font-family: 'anonymous pro', cursive;
-      text-align: center;
-    }
-    .video {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 288px;
-      height: 377px;
-      border: 8px solid transparent;
-      border-image: linear-gradient(45deg, #1c6f50, #0f0d71) 1;
-      .slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
   }
 }
 
 @media (max-width: 640px) {
   .container {
-    width: 95%;
-    height: auto;
+    display: none;
   }
   .carousel {
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 96%;
     .arrow {
       position: absolute;
       top: calc(50% - 15px);
       z-index: 2;
-      width: 58px;
+      width: 100px;
       cursor: pointer;
     }
     .item {
@@ -72,8 +73,8 @@
       align-items: center;
       justify-content: center;
       .video {
-        width: 104px;
-        height: 136px;
+        width: 189px;
+        height: 243px;
         border: 8px solid transparent;
         border-image: linear-gradient(45deg, #1c6f50, #0f0d71) 1;
         .slide {
@@ -83,5 +84,9 @@
         }
       }
     }
+  }
+
+  .text {
+    font-size: 20px;
   }
 }

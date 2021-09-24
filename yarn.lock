@@ -10280,6 +10280,11 @@ react-aria@^3.6.0:
     "@react-aria/utils" "^3.8.2"
     "@react-aria/visually-hidden" "^3.2.3"
 
+react-collapsible@^2.8.4:
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.8.4.tgz#319ff7471138c4381ce0afa3ac308ccde7f4e09f"
+  integrity sha512-oG4yOk6AGKswe0OD/8t3/nf4Rgj4UhlZUUvqL5jop0/ez02B3dBDmNvs3sQz0PcTpJvt0ai8zF7Atd1SzN/UNw==
+
 react-dom@17.x:
   version "17.0.2"
   resolved "https://registry.nlark.com/react-dom/download/react-dom-17.0.2.tgz"
@@ -10380,6 +10385,13 @@ react-social-plugins@^2.1.0:
   dependencies:
     prop-types "^15.7.2"
     react "^16.13.1"
+
+react-toastify@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-8.0.2.tgz#11f73b3a847fcffeb47b1823e8974e9895f98fae"
+  integrity sha512-0Nud2d0VD4LIevgkB4L8NYoQ5plTpfqgj2CRVxs58SGA/TTO+2Ojz4C1bLUdGUWsw0zuWqd4GJqxNuMIv0cXMw==
+  dependencies:
+    clsx "^1.1.1"
 
 react-twitter-widgets@^1.10.0:
   version "1.10.0"

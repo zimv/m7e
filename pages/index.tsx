@@ -22,9 +22,9 @@ import Icon2 from '../public/images/icon_2.svg';
 import Icon3 from '../public/images/icon_3.svg';
 import Icon4 from '../public/images/icon_4.svg';
 import Flower1 from '../public/images/flower1.svg';
-import Flower2 from '../public/images/flower2.svg';
+// import Flower2 from '../public/images/flower.png';
 import HomeBg from '../public/images/home-bg.svg';
-import Ball2 from '../public/images/ball2.svg';
+import Ball2 from '../public/images/ball3.svg';
 import styles from '../styles/index.module.less';
 
 interface Props {
@@ -477,7 +477,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
                     Airdrop
                   </div>
                   <Flower1 className={styles.flower1} />
-                  <div className="flex flex-col items-end">
+                  <div className="flex flex-col items-end flex-1">
                     <div className={styles['home-text1']}>Shanghai Metaverse Week</div>
                     <div className={styles['home-text2']}>上海元宇宙文化周</div>
                     <div className={styles['home-text2']}>10.22 - 10.28</div>
@@ -486,7 +486,8 @@ const Home: NextPage<Props> = ({ userAgent }) => {
                 <div className={styles['home-middle']}>
                   <div className={styles['home-text3']}>Self Awakened</div>
                   <div className={styles['home-text4']}>
-                    <Flower2 className={styles.flower2} />
+                    <img src="/images/flower.png" className={styles.flower2} />
+                    {/* <Flower2 className={styles.flower2} /> */}
                     Quest for Metaverse Identity
                   </div>
                 </div>
@@ -603,7 +604,10 @@ const Home: NextPage<Props> = ({ userAgent }) => {
       </div>
 
       <div className="fixed text-3xl text-white" style={{ bottom: 24, right: 24 }}>
-        Powered by <a href="http://nft4metaverse.io/">NFT4Metaverse</a>
+        Powered by{' '}
+        <a href="http://nft4metaverse.io/" className="underline">
+          NFT4Metaverse
+        </a>
       </div>
     </Page>
   );
