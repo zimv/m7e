@@ -1,4 +1,5 @@
 import { NextIntlProvider } from 'next-intl';
+import Script from 'next/script';
 import Web3ModalProvider from '../components/web3modal';
 
 import 'tailwindcss/tailwind.css';
@@ -29,6 +30,16 @@ function MyApp({ Component, pageProps }) {
       timeZone="Asia/ShangHai"
     >
       <Web3ModalProvider>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-N79EFJ7LL1" />
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-N79EFJ7LL1'); `,
+          }}
+        ></Script>
         <Component {...pageProps} />
       </Web3ModalProvider>
     </NextIntlProvider>
