@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { NextPage } from 'next';
+import MobileDetect from 'mobile-detect';
 import classnames from 'classnames';
 import { useTranslations } from 'next-intl';
 import Page from '../components/page';
@@ -23,10 +25,14 @@ import Flower1 from '../public/images/flower1.svg';
 import Flower2 from '../public/images/flower2.svg';
 import HomeBg from '../public/images/home-bg.svg';
 import Ball2 from '../public/images/ball2.svg';
-
 import styles from '../styles/index.module.less';
 
-export default function Home() {
+interface Props {
+  userAgent?: string;
+}
+const Home: NextPage<Props> = ({ userAgent }) => {
+  const md = new MobileDetect(userAgent);
+  const isM = !!md.mobile();
   const tNavigation = useTranslations('navigation');
   const { connect, data } = useWalletProvider();
 
@@ -37,9 +43,9 @@ export default function Home() {
 
   const [menuActive, setMenuActive] = useState(false);
   const [blockContro, setBlockContro] = useState(false);
-  const [isMobile, setMobile] = useState(false);
-  const [mobileStyle, setMobileStyle] = useState(false);
-  const [tab, setTab] = useState(false);
+  const [isMobile, setMobile] = useState(isM);
+  const [mobileStyle, setMobileStyle] = useState(isM);
+  const [tab, setTab] = useState(isM);
   const [activeTab, setActiveTab] = useState('');
   const [menuLinkIndex, setMenuLinkIndex] = useState(0);
   const getStyle = (block) => {
@@ -594,17 +600,33 @@ export default function Home() {
       </div>
     </Page>
   );
-}
+};
 
-export async function getStaticProps({ locale = 'zh-CN' }) {
+// export async function getStaticProps({ locale = 'zh-CN' }) {
+//   return {
+//     props: {
+//       messages: {
+//         ...require(`../messages/common/${locale}.json`),
+//         ...require(`../messages/index/${locale}.json`),
+//       },
+//       now: new Date().getTime(),
+//       locale,
+//     },
+//   };
+// }
+
+Home.getInitialProps = async ({ req }) => {
+  const locale = 'zh-CN';
+  const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
   return {
-    props: {
-      messages: {
-        ...require(`../messages/common/${locale}.json`),
-        ...require(`../messages/index/${locale}.json`),
-      },
-      now: new Date().getTime(),
-      locale,
+    userAgent,
+    messages: {
+      ...require(`../messages/common/${locale}.json`),
+      ...require(`../messages/index/${locale}.json`),
     },
+    now: new Date().getTime(),
+    locale,
   };
-}
+};
+
+export default Home;

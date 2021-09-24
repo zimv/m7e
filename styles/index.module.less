@@ -1,4 +1,10 @@
 .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   background: #2a2b44;
 }
 
@@ -341,7 +347,9 @@
   text-align: center;
   cursor: pointer;
   &.tab {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .tag1 {

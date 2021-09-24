@@ -9,6 +9,7 @@ import styles from './index.module.less';
 const headUrl = 'https://zerosoul.github.io/rc-bullets/assets/img/heads/girl.jpg';
 export default function Bullet({ channel, domId }) {
   const { connect, data: walletData } = useWalletProvider();
+  const inputRef = React.useRef<any>(null);
   const [sending, setSending] = useState(false);
   const lastMsgId = useRef(null);
   const sendLock = useRef(false);
@@ -159,9 +160,26 @@ export default function Bullet({ channel, domId }) {
         onChange={handleChange}
         onPressEnter={handleSend}
         onFocus={() => setFocus(true)}
-        onBlur={() => setFocus(false)}
+        onBlur={() => {
+          setTimeout(() => {
+            setFocus(false);
+          }, 300);
+        }}
+        ref={inputRef}
       ></Input>
-      <img src="/images/input_icon.png" className={styles.ic} onClick={handleSend} />
+      {focus ? (
+        <img src="/images/input_icon.png" className={styles.ic} onClick={handleSend} />
+      ) : (
+        <img
+          src="/images/input_icon.png"
+          className={styles.ic}
+          onClick={() => {
+            inputRef.current!.focus({
+              cursor: 'start',
+            });
+          }}
+        />
+      )}
     </div>
   );
 }
