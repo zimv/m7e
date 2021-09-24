@@ -66,14 +66,14 @@ export default function Home() {
   };
 
   const onClaim = React.useCallback(() => {
-    if (!data.address) {
-      if (connect) {
-        connect();
-      }
+    // if (!data.address) {
+    //   if (connect) {
+    //     connect();
+    //   }
 
-      // eslint-disable-next-line no-useless-return
-      return;
-    }
+    //   // eslint-disable-next-line no-useless-return
+    //   return;
+    // }
 
     // TODO: redirect
     // window.alert('Comming soon');
