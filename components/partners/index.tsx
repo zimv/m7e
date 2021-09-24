@@ -183,8 +183,8 @@ export default function partnersPartners() {
             <Card avatar={media21} link={''} name="TMTPOST" cnName="钛媒体" />
             <Card avatar={media4} link={''} name="" cnName="陀螺财经" />
             <Card avatar={media24} link={''} name="" cnName="五六财经" />
-            <Card avatar={media3} link={''} name="" cnName="" />
-            <Card avatar={media29} link={''} name="" cnName="" />
+            <Card avatar={media3} link={''} name="NFTGO" cnName="" />
+            <Card avatar={media29} link={''} name="" cnName="火鸟" />
           </div>
         </div>
         <div className={styles.text}>

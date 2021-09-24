@@ -24,6 +24,13 @@ const videoList = [
     link: 'https://www.evolution.land/land/5/sign-in?invite=196b6f235f',
     linkString: 'Evolution Land',
   },
+  {
+    type: 'image',
+    image: '/images/mirror-world.png',
+    title: '9.24',
+    link: 'https://forms.gle/a47psKUcrSSiVveS6',
+    linkString: 'Mirror World',
+  },
   // {
   //   type: 'video',
   //   video: '/video/moca.mp4',
