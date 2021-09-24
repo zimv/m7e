@@ -7,17 +7,31 @@
   align-items: center;
   justify-content: center;
   width: 50%;
+  &:hover {
+    .arrow {
+      opacity: 1;
+    }
+  }
   .arrow {
     position: absolute;
     top: calc(50% - 15px);
     z-index: 2;
     width: 110px;
     cursor: pointer;
+    opacity: 0.6;
   }
   .item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    .text {
+      margin: 8px 0;
+      font-weight: 400;
+      font-size: 20rem;
+      font-family: 'Kumar One', cursive;
+      text-align: center;
+    }
     .video {
       width: 288px;
       height: 377px;

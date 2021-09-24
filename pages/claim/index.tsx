@@ -14,22 +14,25 @@ const videoList = [
     type: 'video',
     video: '/video/moca.mp4',
     image: '/image/logo2.png',
-    title: 'Colborn',
-    description: 'MOCA',
+    title: '9.15',
+    link: '/',
+    linkString: 'GOAT NFT',
   },
   {
     type: 'video',
     video: '/video/moca.mp4',
     image: '/image/logo2.png',
-    title: 'Suji',
-    description: 'MASK',
+    title: '9.15',
+    link: '/',
+    linkString: 'GOAT NFT',
   },
   {
     type: 'video',
     video: '/video/moca.mp4',
     image: '/image/logo2.png',
-    title: 'Jean Chen',
-    description: 'NFT4Metaverse',
+    title: '9.15',
+    link: '/',
+    linkString: 'GOAT NFT',
   },
 ];
 
@@ -70,6 +73,7 @@ export default function Claim() {
         {videoList.map((item) => {
           return (
             <div className={styles.item}>
+              <span className={styles.text}>{item.title}</span>
               {item.type === 'video' ? (
                 <div className={styles.video}>
                   <ReactPlayer
@@ -85,6 +89,9 @@ export default function Claim() {
                   <Image width="100%" height="100%" src={item.image} alt={item.title} />
                 </div>
               )}
+              <a className={styles.text} style={{ textDecoration: 'underline' }} href={item.link}>
+                {item.linkString}
+              </a>
             </div>
           );
         })}
