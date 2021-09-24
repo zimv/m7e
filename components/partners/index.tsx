@@ -165,7 +165,7 @@ export default function partnersPartners() {
             <Card avatar={media13} link={''} name="BroadChain Finance" cnName="博链财经" />
             <Card avatar={media12} link={''} name="CHAINDD" cnName="链得得" />
             <Card avatar={media15} link={''} name="CHAIN NEWS" cnName="链闻" />
-            <Card avatar={media22} link={''} name="CHNINCATCHER" cnName="链捕手" />
+            <Card avatar={media22} link={''} name="CHAINCATCHER" cnName="链捕手" />
             <Card avatar={media23} link={''} name="COINVOICE" cnName="" />
             <Card avatar={media28} link={''} name="" cnName="创业邦" />
             <Card avatar={media30} link={''} name="FEI NIAO COMMUNITY" cnName="飞鸟社区" />
@@ -174,7 +174,7 @@ export default function partnersPartners() {
             <Card avatar={media6} link={''} name="JAZZYEAR" cnName="甲子光年" />
             <Card avatar={media5} link={''} name="" cnName="金色财经" />
             <Card avatar={media25} link={''} name="" cnName="零壹财经" />
-            <Card avatar={media10} link={''} name="ORANGEPAPER" cnName="橙皮书" />
+            <Card avatar={media10} link={''} name="orangepaper" cnName="橙皮书" />
             <Card avatar={media18} link={''} name="PANews" cnName="" />
             <Card avatar={media14} link={''} name="" cnName="sina新浪" />
             <Card avatar={media17} link={''} name="" cnName="深链财经" />
