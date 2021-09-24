@@ -1,0 +1,36 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 130px);
+  margin-top: 130px;
+  padding: 0 30px;
+  overflow-y: auto;
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-track {
+    width: 0;
+    height: 0;
+    background: #000;
+  }
+}
+
+.menu-title {
+  display: flex;
+  justify-content: flex-start;
+  margin: 14px 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Kumar One', cursive;
+  text-align: left;
+}
+
+.menu-item {
+  margin-bottom: 26px;
+  margin-left: 42px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Kumar One', cursive;
+  text-align: left;
+  cursor: pointer;
+}

@@ -13,6 +13,7 @@ import Claim from '../components/claim';
 import Activity1 from '../components/activity1';
 import Activity2 from '../components/activity2';
 import PreMoca from '../components/pre-moca';
+import Schedule from '../components/schedule';
 import { SITE_NAME, META_DESCRIPTION } from '../common/const';
 import Icon1 from '../public/images/icon_1.svg';
 import Icon2 from '../public/images/icon_2.svg';
@@ -262,7 +263,7 @@ export default function Home() {
           </div>
           <div
             onClick={() => {
-              setActiveTab('');
+              setActiveTab('block6');
               setMenuActive(false);
               setBlockContro(false);
             }}
@@ -549,6 +550,9 @@ export default function Home() {
             </div>
             <div className={classnames(styles.page, activeTab === 'block5' ? styles.show : '')}>
               <Claim />
+            </div>
+            <div className={classnames(styles.page, activeTab === 'block6' ? styles.show : '')}>
+              <Schedule />
             </div>
           </div>
         ) : (
