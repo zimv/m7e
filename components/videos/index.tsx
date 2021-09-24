@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import classnames from 'classnames';
 import { Carousel } from 'antd';
 import ReactPlayer from 'react-player';
-import Bullet from '../../components/moca/Bullet';
+import Bullet from '../moca/Bullet';
 import Bg1 from '../../public/images/videos_bg_1.svg';
 import Bg2 from '../../public/images/videos_bg_2.svg';
 
 import styles from './index.module.less';
-import PageTitle from '../../components/page-title';
+import PageTitle from '../page-title';
 
 const videoList = [
   {
