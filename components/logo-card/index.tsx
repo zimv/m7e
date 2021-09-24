@@ -17,12 +17,10 @@ export default function Card({ link, avatar, name, cnName, className, ...props }
   if (link) {
     return (
       <a href={link} {...props} className={cls}>
-        <div className="flex">
-          <div className={styles.bg1}>
-            <LogoBg className={styles['bg1-img']} />
-            <div className={styles['avatar-box']}>
-              <Image className={styles.avatar} src={avatar} alt="avatar" />
-            </div>
+        <div className={styles.bg1}>
+          <LogoBg className={styles['bg1-img']} />
+          <div className={styles['avatar-box']}>
+            <Image className={styles.avatar} src={avatar} layout="fill" alt="avatar" />
           </div>
         </div>
         <div className={styles.bottom}>
@@ -37,12 +35,10 @@ export default function Card({ link, avatar, name, cnName, className, ...props }
   }
   return (
     <div {...props} className={cls}>
-      <div className="flex">
-        <div className={styles.bg1}>
-          <LogoBg className={styles['bg1-img']} />
-          <div className={styles['avatar-box']}>
-            <Image className={styles.avatar} src={avatar} alt="avatar" />
-          </div>
+      <div className={styles.bg1}>
+        <LogoBg className={styles['bg1-img']} />
+        <div className={styles['avatar-box']}>
+          <Image className={styles.avatar} src={avatar} layout="fill" alt="avatar" />
         </div>
       </div>
       <div className={styles.bottom}>
