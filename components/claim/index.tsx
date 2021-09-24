@@ -11,29 +11,27 @@ import styles from './index.module.less';
 
 const videoList = [
   {
-    type: 'video',
-    video: '/video/moca.mp4',
-    image: '/image/logo2.png',
+    type: 'image',
+    image: '/images/goatnft-blind-box.jpeg',
     title: '9.15',
-    link: '/',
-    linkString: 'GOAT NFT',
+    link: 'https://magic.goatnft.io/',
+    linkString: 'MagicGOAT',
   },
   {
-    type: 'video',
-    video: '/video/moca.mp4',
-    image: '/image/logo2.png',
-    title: '9.15',
-    link: '/',
-    linkString: 'GOAT NFT',
+    type: 'image',
+    image: '/images/jhxq.png',
+    title: '9.24',
+    link: 'https://www.evolution.land/land/5/sign-in?invite=196b6f235f',
+    linkString: 'Evolution Land',
   },
-  {
-    type: 'video',
-    video: '/video/moca.mp4',
-    image: '/image/logo2.png',
-    title: '9.15',
-    link: '/',
-    linkString: 'GOAT NFT',
-  },
+  // {
+  //   type: 'video',
+  //   video: '/video/moca.mp4',
+  //   image: '/image/logo2.png',
+  //   title: '9.15',
+  //   link: '/',
+  //   linkString: 'GOAT NFT',
+  // },
 ];
 
 export default function Claim() {
@@ -86,10 +84,15 @@ export default function Claim() {
                 </div>
               ) : (
                 <div className={styles.video}>
-                  <Image width="100%" height="100%" src={item.image} alt={item.title} />
+                  <img width="100%" height="100" src={item.image} alt={item.title} />
                 </div>
               )}
-              <a className={styles.text} style={{ textDecoration: 'underline' }} href={item.link}>
+              <a
+                target="_blank"
+                className={styles.text}
+                style={{ textDecoration: 'underline' }}
+                href={item.link}
+              >
                 {item.linkString}
               </a>
             </div>

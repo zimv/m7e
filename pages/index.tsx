@@ -567,7 +567,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="fixed bottom-60 right-40 text-3xl text-white">
+      <div className="fixed text-3xl text-white" style={{ bottom: 24, right: 24 }}>
         Powered by <a href="http://nft4metaverse.io/">NFT4Metaverse</a>
       </div>
     </Page>
