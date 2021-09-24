@@ -36,14 +36,14 @@ export default function MenuCarousel({ className, children }: CarouselProps) {
       renderArrowPrev={(onClickHandler, hasNext, label) =>
         hasNext && (
           <div onClick={onClickHandler} title={label} style={{ ...arrowStyles, left: 10 }}>
-            <ArrowLeftOutlined style={{ fontSize: '28rem', color: '#FFFFFF' }} />
+            <ArrowLeftOutlined style={{ fontSize: '0.28rem', color: '#FFFFFF' }} />
           </div>
         )
       }
       renderArrowNext={(onClickHandler, hasNext, label) =>
         hasNext && (
           <div onClick={onClickHandler} title={label} style={{ ...arrowStyles, right: 10 }}>
-            <ArrowRightOutlined style={{ fontSize: '28rem', color: '#FFFFFF' }} />
+            <ArrowRightOutlined style={{ fontSize: '0.28rem', color: '#FFFFFF' }} />
           </div>
         )
       }

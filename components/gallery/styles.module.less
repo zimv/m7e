@@ -199,7 +199,7 @@
 
       .slider__controls {
         position: absolute;
-        top: calc(100% + 1rem);
+        top: calc(100% + (1/100rem));
         display: flex;
         justify-content: center;
         width: 100%;
@@ -208,8 +208,8 @@
       .slider__controls .btn {
         display: flex;
         align-items: center;
-        width: 3rem;
-        height: 3rem;
+        width: (3/100rem);
+        height: (3/100rem);
         padding: 0;
         background-color: transparent;
         border: 3px solid transparent;
@@ -359,7 +359,7 @@
       }
 
       .slide__content > * + * {
-        margin-top: 2rem;
+        margin-top: (2/100rem);
       }
 
       @keyframes fade-in {

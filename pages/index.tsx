@@ -441,7 +441,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
             <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <NavBox
                 textComponent={Text1}
-                iconComponent={<Icon3 width="120rem" height="120rem" />}
+                iconComponent={<Icon3 width="1.2rem" height="1.2rem" />}
               />
             </div>
           </div>
@@ -499,7 +499,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
             <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <NavBox
                 textComponent={Text2}
-                iconComponent={<Icon2 width="150rem" height="160rem" />}
+                iconComponent={<Icon2 width="1.5rem" height="1.6rem" />}
               />
             </div>
           </div>
@@ -513,7 +513,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
             <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <NavBox
                 textComponent={Text3}
-                iconComponent={<Icon4 width="40rem" height="40rem" />}
+                iconComponent={<Icon4 width="0.4rem" height="0.4rem" />}
               />
             </div>
           </div>
@@ -527,7 +527,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
             <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <NavBox
                 textComponent={Text4}
-                iconComponent={<Icon1 width="50rem" height="50rem" />}
+                iconComponent={<Icon1 width="0.5rem" height="0.5rem" />}
               />
             </div>
           </div>
@@ -588,7 +588,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
         <div className="flex-col">
           <div
             className="flex"
-            style={{ width: '528rem', height: '476rem', background: '#A06CD5' }}
+            style={{ width: '5.28rem', height: '4.76rem', background: '#A06CD5' }}
           >
             <NavBox textComponent={Text2} iconComponent={<Icon2 />} />
           </div>

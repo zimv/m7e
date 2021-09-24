@@ -84,7 +84,7 @@ export default function partnersPartners() {
       <PageTitle title="Partners" subTitle="合作方" />
       <div className={cls}>
         <div className={styles.box}>
-          <h4 style={{ fontSize: '30rem' }} className="text-left text-white fonts-kumar-one mt-40">
+          <h4 style={{ fontSize: '0.3rem' }} className="text-left text-white fonts-kumar-one mt-40">
             Event Owners
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
@@ -101,7 +101,7 @@ export default function partnersPartners() {
           </div>
         </div>
         <div className={styles.box}>
-          <h4 style={{ fontSize: '30rem' }} className="text-left text-white fonts-kumar-one mt-40">
+          <h4 style={{ fontSize: '0.3rem' }} className="text-left text-white fonts-kumar-one mt-40">
             Top Partners
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
@@ -120,7 +120,7 @@ export default function partnersPartners() {
           </div>
         </div>
         <div className={styles.box}>
-          <h4 style={{ fontSize: '30rem' }} className="text-left text-white fonts-kumar-one mt-40">
+          <h4 style={{ fontSize: '0.3rem' }} className="text-left text-white fonts-kumar-one mt-40">
             Event Support
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
@@ -153,7 +153,7 @@ export default function partnersPartners() {
           </div>
         </div>
         <div className={styles.box}>
-          <h4 style={{ fontSize: '30rem' }} className="text-left text-white fonts-kumar-one mt-40">
+          <h4 style={{ fontSize: '0.3rem' }} className="text-left text-white fonts-kumar-one mt-40">
             Media Support
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">

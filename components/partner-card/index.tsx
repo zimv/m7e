@@ -16,7 +16,7 @@ export default function PartnerCard({ logo, link, name, className, ...props }: P
     <div {...props} className={cls}>
       <a href={link || '/'} className="flex flex-col justify-center">
         <Image src={logo} alt={name || 'logo'} object-fit="scale-down" />
-        <span className="mt-4" style={{ fontSize: '16rem' }}>
+        <span className="mt-4" style={{ fontSize: '0.16rem' }}>
           {name}
         </span>
       </a>
