@@ -78,6 +78,7 @@ export default function Claim() {
                     controls
                     width="100%"
                     height="100%"
+                    // @ts-ignore
                     url={item.video}
                     className="w-full h-full rounded-2xl overflow-hidden"
                   />
