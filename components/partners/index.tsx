@@ -85,13 +85,13 @@ export default function partnersPartners() {
       <div className={cls}>
         <div className={styles.box}>
           <h4 style={{ fontSize: '30rem' }} className="text-left text-white fonts-kumar-one mt-40">
-            Event Owner
+            Event Owners
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
             <Card avatar={avatar7} link={''} name="Blocklike" />
-            <Card avatar={avatar8} link={''} name="Cryptoart.ai" />
-            <Card avatar={avatar9} link={''} name="CryptoC" />
-            <Card avatar={avatar4} link={''} name="Lying Gallery" cnName="躺平空间" />
+            <Card avatar={avatar9} link={''} name="Cryptoart.ai" />
+            <Card avatar={avatar4} link={''} name="CryptoC" />
+            <Card avatar={avatar8} link={''} name="Lying Gallery" cnName="躺平空间" />
             <Card avatar={avatar5} link={''} name="Mask Network" />
             <Card avatar={avatar3} link={''} name="MOCA (Museum of Crypto Art)" />
             <Card avatar={avatar6} link={''} name="Mynft" />
@@ -109,7 +109,6 @@ export default function partnersPartners() {
             <Card avatar={sponsors3} link={''} name="GoatNFT" />
             <Card avatar={sponsors} link={''} name="Harmony" />
             <Card avatar={sponsors8} link={''} name="Litentry" />
-            <Card avatar={sponsors11} link={''} name="MetaV" />
             <Card avatar={sponsors7} link={''} name="My Crypto Profile" />
             <Card avatar={sponsors4} link={''} name="MixMarvel" />
             <Card avatar={sponsors2} link={''} name="NASH Metaverse" />
@@ -141,6 +140,7 @@ export default function partnersPartners() {
             <Card avatar={support7} link={''} name="Hanshan Art Museum" cnName="寒山美术馆" />
             <Card avatar={support9} link={''} name="imToken" />
             <Card avatar={support3} link={''} name="Innovation+ Art" cnName="创+空间" />
+            <Card avatar={sponsors11} link={''} name="MetaV" />
             <Card avatar={support6} link={''} name="MetaVenturer" cnName="元宇宙探险队" />
             <Card avatar={support1} link={''} name="OG Labs" />
             <Card avatar={support11} link={''} name="OVR" />

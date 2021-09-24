@@ -538,8 +538,8 @@ export default function Home() {
               {activeTab === 'block1' ? <Videos /> : ''}
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
-              {activeTab === 'block2' ? <Moca backCall={backCall} /> : ''}
-              {/* <PreMoca></PreMoca> */}
+              {/* {activeTab === 'block2' ? <Moca backCall={backCall} /> : ''} */}
+              <PreMoca></PreMoca>
             </div>
             <div className={classnames(styles.page, activeTab === 'block3' ? styles.show : '')}>
               <Speakers />
