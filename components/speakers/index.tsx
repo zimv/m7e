@@ -61,8 +61,8 @@ export default function Speakers() {
           <Card avatar={avatar13} name="Sparrow" />
         </div>
         <div className={styles.text}>
-          <div>The above VIP list will be updated at any time</div>
-          <div>以上嘉宾名单将随时更新</div>
+          <div>* The above VIP list will be updated at any time</div>
+          <div>* 以上嘉宾名单将随时更新</div>
         </div>
       </div>
     </div>
