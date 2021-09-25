@@ -42,7 +42,7 @@ export default function Videos() {
       className="relative flex justify-center items-center w-screen h-screen bg-black"
       id="video"
     >
-      <PageTitle title="Highlights" subTitle="活动精选" />
+      {/* <PageTitle title="Highlights" subTitle="活动精选" /> */}
       <div className={styles.box}>
         <div className="relative">
           <Bg2 className={styles.bg2} />

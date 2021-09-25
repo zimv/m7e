@@ -7,7 +7,10 @@ export default function Schedule() {
     //
   }
   return (
-    <div className="relative flex flex-col justify-center items-center w-screen h-screen bg-black">
+    <div
+      className="relative flex flex-col justify-center items-center w-screen h-screen bg-black"
+      style={{ paddingBottom: 50 }}
+    >
       <PageTitle title="Schedule" />
       <div className={styles.container}>
         <div className={styles['menu-title']}>Sept 15 ~ Oct 28</div>
@@ -71,6 +74,13 @@ export default function Schedule() {
         </div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           Metaverse Cocktail: Quest for Metaverse Identity by MyCrptoProfile & Dataverse
+        </div>
+        <div className={styles['menu-title']}>Oct 28</div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          Night, Metaverse
+        </div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          Closing Party
         </div>
       </div>
     </div>

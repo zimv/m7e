@@ -45,9 +45,9 @@ export default function MocaCard({
               height="100%"
               url={url}
               loop
-              playing
-              muted
-              className="w-full h-full rounded-2xl overflow-hidden"
+              // playing
+              // muted
+              className="w-full h-full rounded-2xl overflow-hidden justify-center items-center"
             />
           )}
         </div>

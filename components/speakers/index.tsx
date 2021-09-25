@@ -30,7 +30,10 @@ import styles from './index.module.less';
 export default function Speakers() {
   const cls = classnames(styles.container);
   return (
-    <div className="relative flex flex-col justify-center items-center w-screen h-screen bg-black">
+    <div
+      className="relative flex flex-col justify-center items-center w-screen h-screen bg-black"
+      style={{ paddingBottom: 50 }}
+    >
       <PageTitle title="VIPs" />
       <div className={cls}>
         <div className="grid grid-cols-2 lg:grid-cols-4">
@@ -56,6 +59,10 @@ export default function Speakers() {
           <Card avatar={avatar11} name="Rutger Van Der Tas" />
           <Card avatar={avatar17} name="Skygolpe" />
           <Card avatar={avatar13} name="Sparrow" />
+        </div>
+        <div className={styles.text}>
+          <div>The above VIP list will be updated at any time</div>
+          <div>以上嘉宾名单将随时更新</div>
         </div>
       </div>
     </div>

@@ -18,6 +18,10 @@ a {
   box-sizing: border-box;
 }
 
+video {
+  display: initial;
+}
+
 .content-container {
   width: 90%;
   max-width: 1200px;

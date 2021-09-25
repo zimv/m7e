@@ -174,22 +174,22 @@ const Home: NextPage<Props> = ({ userAgent }) => {
   const menuItem4 = (
     <>
       <div className={styles['menu-title']}>Oct 23</div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         AM, M50 Innovation+ Space Shanghai
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         Harmony Meetup: When Shanghai meets Silicon Valley in Metaverse
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         PM, M50 Innovation+ Space Shanghai
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         NFT Avatar Carnival
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         Night, M50 Innovation+ Space Shanghai
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         Polygon Ecosystem Metaverse Night
       </div>
     </>
@@ -492,17 +492,19 @@ const Home: NextPage<Props> = ({ userAgent }) => {
                   <Flower1 className={styles.flower1} />
                   <div className="flex flex-col items-end flex-1">
                     <div className={styles['home-text1']}>Shanghai Metaverse Week</div>
-                    <div className={styles['home-text2']}>上海元宇宙文化周</div>
+                    <div style={{ transform: 'translateY(-15%)' }} className={styles['home-text2']}>
+                      上海元宇宙文化周
+                    </div>
                     <div className={styles['home-text2']}>10.22 - 10.28</div>
                   </div>
                 </div>
                 <div className={styles['home-middle']}>
                   <div className={styles['home-text3']}>Self Awakened</div>
-                  <div className={styles['home-text4']}>
+                  <a className={styles['home-text4']} target="_blank" href="https://join.m7e.sh">
                     <img src="/images/flower.png" className={styles.flower2} />
                     {/* <Flower2 className={styles.flower2} /> */}
                     Quest for Metaverse Identity
-                  </div>
+                  </a>
                 </div>
               </div>
               <div
