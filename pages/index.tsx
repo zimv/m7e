@@ -155,7 +155,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
     <>
       <div className={styles['menu-title']}>Oct 23 ~ 24</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        M50 Innovation+ Space Shanghai Super ACG Idol Live Experience
+        M50 Innovation+ Space Shanghai Super ACG Avatar Live Experience
       </div>
     </>
   );
