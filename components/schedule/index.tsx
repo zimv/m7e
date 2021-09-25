@@ -16,14 +16,18 @@ export default function Schedule() {
         </div>
         <div className={styles['menu-title']}>Sept 29 ~ Nov 21</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          Suzhou Hanshan Art Museum Exhibition：Avatar, My Metaverse
+          Suzhou Hanshan Art Museum
+        </div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          Exhibition：Avatar, My Metaverse
         </div>
         <div className={styles['menu-title']}>Oct 22 ~ 28</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           MOCA Exhibition in Metaverse, M7E.SH, Twittersphere and M50 Shanghai
         </div>
+        <div className={styles['menu-title']}>Oct 23 ~ 24</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          Pubs in Shanghai NFT Scavenger Hunt
+          M50 Innovation+ Space Shanghai Super ACG Idol Live Experience
         </div>
         <div className={styles['menu-title']}>Oct 24 ~ 28</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
