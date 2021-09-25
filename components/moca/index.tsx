@@ -6,6 +6,15 @@ import avatar1 from '../../public/images/avatar1.png';
 
 import styles from './index.module.less';
 
+interface DataItem {
+  url: string;
+  author: string | string[];
+  twitter: string | string[];
+  platform: string;
+  platformLink: string;
+  title: string;
+}
+
 const generText = (n) => {
   const list = [];
   for (let i = 0; i < n; i = i + 1) {
