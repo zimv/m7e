@@ -36,6 +36,7 @@ const videoList = [
 
 export default function Videos() {
   const cls = classnames('flex flex-col justify-center items-start', styles.container);
+  const shdowCls = classnames('flex flex-col justify-center items-start hidden', styles.container);
   return (
     <div
       className="relative flex justify-center items-center w-screen h-screen bg-black"
@@ -46,6 +47,30 @@ export default function Videos() {
         <div className="relative">
           <Bg2 className={styles.bg2} />
           <Bg1 className={styles.bg1} />
+          <div className={shdowCls}>
+            <Carousel className={styles.main} dotPosition="top" dots={{ className: styles.dot }}>
+              {videoList.map((item) => {
+                return (
+                  <div className={styles.video}>
+                    <ReactPlayer
+                      controls
+                      width="100%"
+                      height="100%"
+                      url={item.video}
+                      className="w-full h-full rounded-2xl overflow-hidden"
+                    />
+                  </div>
+                );
+              })}
+            </Carousel>
+            <div className="flex flex-col text-left w-full">
+              <div className={styles.title}>Shanghai Metaverse Week</div>
+              <div className={styles.description}>
+                Self-sovereign identities and avatars are the prerequisites and first-class assets
+                for people to enter the metaverse to work, live and play freely in future…
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className={cls}>
