@@ -236,7 +236,7 @@ const dataList = [
     title: 'Overthinking',
     platform: 'superrare',
     platformLink: 'https://superrare.com/artwork-v2/overthinking-10659',
-    type: 'video',
+    type: 'image',
     desc: 'The mind is a complex system that controls our thoughts and emotions. External pressures that modern society places on us as individuals can quickly become internalized to morph into mental millstones. This artwork captures the essence of our inability to rid ourselves of these issues. The background of the artwork first provides us with this view of this world. The coarse red texture is reminiscent of the external pressures that exist within society; dark, negative clouds are never too far from us. The textural qualities of the paint on the digital canvas help to reinforce the suggestion of the duality of the artwork; existing both physically and mentally. We see a subject silhouetted in this universe, struggling to avoid these mental stresses. The nondescript form tells us that this could be anyone. We can see that avoidance of these external factors is impossible as the built-up red-colored pressure spills inwards through the subject’s ears. Soundwaves soon become thoughts that take on gloomy green and grey tones. The face is obscured by these thoughts as if consuming and overwhelming the subject. An artist alone, in the solitude of their mind, alienated from anything other than thoughts of creation; a mind saturated like their paint-soaked sponge. Thought upon thought; nothing else; overthinking, until a zenith is finally reached to repeat through an infinite cycle. Puffin@Cent',
   },
   {

@@ -37,8 +37,8 @@ export default function MocaCard({
       <div className={styles.body}>
         <div className={styles.tit}>{/* <div className={styles.name}>Self Awakened</div> */}</div>
         <div className={styles.prod}>
-          {type === 'image' ? <img src={url} alt="production" /> : <div></div>}
-          {type === 'video' ? (
+          {type === 'image' && <img src={url} alt="production" />}
+          {type === 'video' && (
             <ReactPlayer
               controls
               width="100%"
@@ -49,8 +49,6 @@ export default function MocaCard({
               muted
               className="w-full h-full rounded-2xl overflow-hidden"
             />
-          ) : (
-            <div></div>
           )}
         </div>
       </div>
@@ -91,7 +89,7 @@ export default function MocaCard({
           </a>
           {author.length === 1 ? (
             <a href={twitter[0]} className={styles.link}>
-              Twitter
+              TWITTER
             </a>
           ) : (
             ''
