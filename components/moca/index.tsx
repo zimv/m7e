@@ -164,7 +164,7 @@ const generText = (n) => {
   });
   return list;
 };
-const lists = dataList;//generText(20);
+const lists = dataList; // generText(20);
 
 export default function Moca({ backCall }) {
   const wrap = classnames('flex w-screen min-h-screen bg-black justify-center', styles.wrap);

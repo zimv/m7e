@@ -11,10 +11,19 @@ export interface DataItem {
   platformLink: string;
   title: string;
   type: string;
-  desc: string
+  desc: string;
 }
 
-export default function MocaCard({ url, desc, type, title, author, platform, platformLink, twitter }: DataItem) {
+export default function MocaCard({
+  url,
+  desc,
+  type,
+  title,
+  author,
+  platform,
+  platformLink,
+  twitter,
+}: DataItem) {
   const cls = classnames(styles['moca-card']);
   return (
     <div className={cls}>
@@ -31,41 +40,50 @@ export default function MocaCard({ url, desc, type, title, author, platform, pla
         </div>
       </div>
       <div className={styles.hip}>
-        <div className={classnames({
+        <div
+          className={classnames({
             [styles.l]: true,
-            [styles.more]: author.length>1,
-          })}>
-          <img src="/images/moca-smile.png" className={styles.smile}></img>
-          {author.map((item,i)=>{
-            if(i===1) {
-              return (<>
-                <span className={styles.x}>x</span>
-                <a href={twitter[i]} className={styles.link}>
-                  {item}
-                </a>
-              </>)
-            }
-            return <a href={twitter[i]} className={styles.link}>
-            {item}
-          </a>
+            [styles.more]: author.length > 1,
           })}
-          
+        >
+          <img src="/images/moca-smile.png" className={styles.smile}></img>
+          {author.map((item, i) => {
+            if (i === 1) {
+              return (
+                <>
+                  <span className={styles.x}>x</span>
+                  <a href={twitter[i]} className={styles.link}>
+                    {item}
+                  </a>
+                </>
+              );
+            }
+            return (
+              <a href={twitter[i]} className={styles.link}>
+                {item}
+              </a>
+            );
+          })}
         </div>
-        <div className={classnames({
+        <div
+          className={classnames({
             [styles.r]: true,
-            [styles.more]: author.length>1,
-          })}>
+            [styles.more]: author.length > 1,
+          })}
+        >
           <a href={platformLink} className={styles.link}>
             {platform.toLocaleUpperCase()}
           </a>
-          {
-          author.length===1 ? <a href={twitter[0]} className={styles.link}>
-            Twitter
-          </a> : ''
-          }
+          {author.length === 1 ? (
+            <a href={twitter[0]} className={styles.link}>
+              Twitter
+            </a>
+          ) : (
+            ''
+          )}
         </div>
       </div>
-      
+
       <div className={styles.footer}>{desc}</div>
     </div>
   );
