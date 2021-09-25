@@ -6,9 +6,9 @@ import Yellow from '../../public/images/yellow_1.svg';
 import styles from './index.module.less';
 
 export default function Pre() {
-  const cls = classnames('flex flex-col justify-center items-end', styles.container);
+  const cls = classnames('flex flex-col justify-end items-end', styles.container);
   return (
-    <div className="relative flex justify-end items-center w-screen h-screen bg-black">
+    <div className="relative flex justify-end items-start w-screen h-screen bg-black">
       <Circle className={styles.circle} />
       <div className={cls}>
         <div className={styles.title}>
