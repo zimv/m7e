@@ -12,6 +12,7 @@ import avatar6 from '../../public/partners-logo/new/unnamed6.png';
 import avatar7 from '../../public/partners-logo/new/unnamed7.png';
 import avatar8 from '../../public/partners-logo/new/unnamed8.png';
 import avatar9 from '../../public/partners-logo/new/unnamed9.png';
+import avatar10 from '../../public/partners-logo/new/mirror-world.png';
 import sponsors from '../../public/event-sponsors/new/unnamed.png';
 import sponsors1 from '../../public/event-sponsors/new/unnamed1.png';
 import sponsors2 from '../../public/event-sponsors/new/unnamed2.png';
@@ -110,6 +111,7 @@ export default function partnersPartners() {
             <Card avatar={sponsors} link={''} name="Harmony" />
             <Card avatar={sponsors8} link={''} name="Litentry" />
             <Card avatar={sponsors7} link={''} name="My Crypto Profile" />
+            <Card avatar={avatar10} link={''} name="Mirror World" />
             <Card avatar={sponsors4} link={''} name="MixMarvel" />
             <Card avatar={sponsors2} link={''} name="NASH Metaverse" />
             <Card avatar={sponsors9} link={''} name="Ownership Labs" />
