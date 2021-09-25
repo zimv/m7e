@@ -1,5 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
+import ReactPlayer from 'react-player';
+
 // import Image from 'next/image';
 import styles from './styles.module.less';
 
@@ -36,7 +38,20 @@ export default function MocaCard({
         <div className={styles.tit}>{/* <div className={styles.name}>Self Awakened</div> */}</div>
         <div className={styles.prod}>
           {type === 'image' ? <img src={url} alt="production" /> : <div></div>}
-          {type === 'video' ? <video src={url} /> : <div></div>}
+          {type === 'video' ? (
+            <ReactPlayer
+              controls
+              width="100%"
+              height="100%"
+              url={url}
+              loop
+              playing
+              muted
+              className="w-full h-full rounded-2xl overflow-hidden"
+            />
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
       <div className={styles.hip}>

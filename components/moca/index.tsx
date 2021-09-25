@@ -136,7 +136,7 @@ const dataList = [
     title: 'Ignite',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -146,7 +146,7 @@ const dataList = [
     title: 'TBD',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -156,7 +156,7 @@ const dataList = [
     title: 'TBD',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -176,7 +176,7 @@ const dataList = [
     title: 'TBD',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -196,7 +196,7 @@ const dataList = [
     title: 'TBD',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -206,7 +206,7 @@ const dataList = [
     title: 'TBD',
     platform: 'superrare',
     platformLink: 'https://superrare.com/artwork-v2/submerged-27100',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -216,7 +216,7 @@ const dataList = [
     title: 'TBD',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -226,7 +226,7 @@ const dataList = [
     title: 'TBD',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -246,7 +246,7 @@ const dataList = [
     title: 'TBD',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -272,7 +272,7 @@ const dataList = [
     title: '',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -282,7 +282,7 @@ const dataList = [
     title: '',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
   {
@@ -292,7 +292,7 @@ const dataList = [
     title: '',
     platform: 'TBD',
     platformLink: '',
-    type: 'video',
+    type: '',
     desc: '',
   },
 ];
