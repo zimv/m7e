@@ -1,31 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
-import MocaCard from '../moca-card';
+import MocaCard, { DataItem } from '../moca-card';
 import Bullet from './Bullet';
 import avatar1 from '../../public/images/avatar1.png';
 
 import styles from './index.module.less';
 
-interface DataItem {
-  url: string;
-  author: string | string[];
-  twitter: string | string[];
-  platform: string;
-  platformLink: string;
-  title: string;
-}
-
 const generText = (n) => {
   const list = [];
   for (let i = 0; i < n; i = i + 1) {
     list.push({
-      text: `Time Currents is created amid musings: life unfolds itself in a patterned manner, yet we
+      desc: `Time Currents is created amid musings: life unfolds itself in a patterned manner, yet we
       hold the power to choose how to ride waves of time. The pixels, which represent time units,
       are liquified and reborn into new shades and shapes.`.slice(0, Math.random() * 300),
+      title: 'title',
+      author: ['author'],
+      twitter: ['baidu.com'],
+      platform: 'plat',
+      platformLink: 'baidu.com',
+      type: 'img',
+      url: avatar1,
+    });
+    list.push({
+      desc: `Time Currents is created amid musings: life unfolds itself in a patterned manner, yet we
+      hold the power to choose how to ride waves of time. The pixels, which represent time units,
+      are liquified and reborn into new shades and shapes.`.slice(0, Math.random() * 300),
+      title: 'title',
+      author: ['author1', 'author2'],
+      twitter: ['baidu.com', 'bing.com'],
+      platform: 'plat',
+      platformLink: 'baidu.com',
+      type: 'img',
+      url: avatar1,
     });
   }
   list.sort((a, b) => {
-    return a.text.length - b.text.length;
+    return a.desc.length - b.desc.length;
   });
   return list;
 };
@@ -82,7 +92,7 @@ export default function Moca({ backCall }) {
               }}
             >
               {lists.map((item, index) => {
-                return <MocaCard avatar={avatar1} name="Max Mara" text={item.text} key={index} />;
+                return <MocaCard {...item} key={index} />;
               })}
             </div>
 
