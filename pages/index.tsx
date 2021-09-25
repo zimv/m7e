@@ -150,6 +150,16 @@ const Home: NextPage<Props> = ({ userAgent }) => {
       </div>
     </>
   );
+
+  const menuItem8 = (
+    <>
+      <div className={styles['menu-title']}>Oct 23 ~ 24</div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        M50 Innovation+ Space Shanghai Super ACG Idol Live Experience
+      </div>
+    </>
+  );
+
   const menuItem3 = (
     <>
       <div className={styles['menu-title']}>Oct 22</div>
@@ -217,7 +227,10 @@ const Home: NextPage<Props> = ({ userAgent }) => {
     <>
       <div className={styles['menu-title']}>Sept 29 ~ Nov 21</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Suzhou Hanshan Art Museum Exhibition：Avatar, My Metaverse
+        Suzhou Hanshan Art Museum
+      </div>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Exhibition：Avatar, My Metaverse
       </div>
     </>
   );
@@ -551,6 +564,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
                 <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem7}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem1}</Menu.CarouselItem>
+                <Menu.CarouselItem>{menuItem8}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem2}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem3}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem4}</Menu.CarouselItem>
@@ -603,7 +617,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
         </div>
       </div>
 
-      <div className="fixed text-3xl text-white" style={{ bottom: 24, right: 24 }}>
+      <div className="fixed text-white" style={{ bottom: 12, right: 12, fontSize: 12 }}>
         Powered by{' '}
         <a href="http://nft4metaverse.io/" className="underline">
           NFT4Metaverse

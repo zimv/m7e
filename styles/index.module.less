@@ -50,7 +50,7 @@
 .menu-item {
   display: flex;
   justify-content: flex-start;
-  margin-right: 14px;
+  margin-right: 40px;
   margin-bottom: 26px;
   margin-left: 82rem;
   color: #fff;
@@ -584,6 +584,28 @@
         margin-left: -23px;
         background: #fff;
         content: ' ';
+      }
+    }
+  }
+}
+
+.page {
+  :global div[data-track] {
+    & > div {
+      border: 1px solid rgb(255, 255, 255) !important;
+      div {
+        font-weight: 300 !important;
+      }
+    }
+  }
+}
+@media (max-width: 640px) {
+  .page {
+    :global div[data-track] {
+      & > div {
+        div {
+          font-size: 1.2em !important;
+        }
       }
     }
   }
