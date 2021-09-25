@@ -603,7 +603,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
         </div>
       </div>
 
-      <div className="fixed text-3xl text-white" style={{ bottom: 24, right: 24 }}>
+      <div className="fixed text-white" style={{ bottom: 12, right: 12, fontSize: 12 }}>
         Powered by{' '}
         <a href="http://nft4metaverse.io/" className="underline">
           NFT4Metaverse
