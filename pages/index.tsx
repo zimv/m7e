@@ -595,7 +595,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
               <Partners />
             </div>
             <div className={classnames(styles.page, activeTab === 'block5' ? styles.show : '')}>
-              <Claim />
+              <Claim isMobile={isMobile} />
             </div>
             <div className={classnames(styles.page, activeTab === 'block6' ? styles.show : '')}>
               <Schedule />
@@ -617,7 +617,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
         </div>
       </div>
 
-      <div className="fixed text-white" style={{ bottom: 12, right: 12, fontSize: 12 }}>
+      <div className="fixed text-3xl text-white" style={{ bottom: 24, right: 24 }}>
         Powered by{' '}
         <a href="http://nft4metaverse.io/" className="underline">
           NFT4Metaverse
