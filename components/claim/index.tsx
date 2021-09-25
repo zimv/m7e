@@ -14,7 +14,7 @@ import styles from './index.module.less';
 const videoList = [
   {
     type: 'image',
-    image: '/images/goatnft-blind-box.jpeg',
+    image: '/images/goatnft-blind-box.png',
     title: '9.15',
     link: 'https://magic.goatnft.io/',
     linkString: 'MagicGOAT',
@@ -95,7 +95,13 @@ export default function Claim({ isMobile }) {
                 </div>
               ) : (
                 <div className={styles.video}>
-                  <img width="100%" height="100" src={item.image} alt={item.title} />
+                  <img
+                    // width="100%"
+                    // height="100"
+                    style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto' }}
+                    src={item.image}
+                    alt={item.title}
+                  />
                 </div>
               )}
               <a
