@@ -80,7 +80,7 @@ export default function Claim({ isMobile }) {
       >
         {videoList.map((item) => {
           return (
-            <div className={styles.item}>
+            <div className={styles.item} key={item.link}>
               <span className={styles.text}>{item.title}</span>
               {item.type === 'video' ? (
                 <div className={styles.video}>

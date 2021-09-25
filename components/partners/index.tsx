@@ -111,7 +111,6 @@ export default function partnersPartners() {
             <Card avatar={sponsors} link={''} name="Harmony" />
             <Card avatar={sponsors8} link={''} name="Litentry" />
             <Card avatar={sponsors7} link={''} name="My Crypto Profile" />
-            <Card avatar={avatar10} link={''} name="Mirror World" />
             <Card avatar={sponsors4} link={''} name="MixMarvel" />
             <Card avatar={sponsors2} link={''} name="NASH Metaverse" />
             <Card avatar={sponsors9} link={''} name="Ownership Labs" />
@@ -144,6 +143,7 @@ export default function partnersPartners() {
             <Card avatar={support3} link={''} name="Innovation+ Art" cnName="创+空间" />
             <Card avatar={sponsors11} link={''} name="MetaV" />
             <Card avatar={support6} link={''} name="MetaVenturer" cnName="元宇宙探险队" />
+            <Card avatar={avatar10} link={''} name="Mirror World" />
             <Card avatar={support1} link={''} name="OG Labs" />
             <Card avatar={support11} link={''} name="OVR" />
             <Card avatar={support15} link={''} name="Sandbox" cnName="沙盒" />
