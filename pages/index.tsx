@@ -505,6 +505,12 @@ const Home: NextPage<Props> = ({ userAgent }) => {
                   </div>
                 </div>
               </div>
+              <div className="fixed text-3xl text-white" style={{ bottom: 24, right: 24 }}>
+                Powered by{' '}
+                <a href="http://nft4metaverse.io/" className="underline">
+                  NFT4Metaverse
+                </a>
+              </div>
               <div className={styles['home-bottom']}>
                 <Ball2 className={styles.ball} />
               </div>
@@ -615,13 +621,6 @@ const Home: NextPage<Props> = ({ userAgent }) => {
             <NavBox textComponent={Text2} iconComponent={<Icon2 />} />
           </div>
         </div>
-      </div>
-
-      <div className="fixed text-3xl text-white" style={{ bottom: 24, right: 24 }}>
-        Powered by{' '}
-        <a href="http://nft4metaverse.io/" className="underline">
-          NFT4Metaverse
-        </a>
       </div>
     </Page>
   );

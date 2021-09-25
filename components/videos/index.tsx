@@ -54,6 +54,9 @@ export default function Videos() {
                   <div className={styles.video}>
                     <ReactPlayer
                       controls
+                      loop
+                      playing
+                      muted
                       width="100%"
                       height="100%"
                       url={item.video}
