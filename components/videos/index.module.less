@@ -55,20 +55,19 @@
 
 .box {
   position: absolute;
-  width: 1122rem;
   .bg1 {
     position: absolute;
-    top: -360rem;
-    right: -276rem;
-    width: 1000rem;
-    height: 800rem;
+    top: 50rem;
+    right: -132rem;
+    width: auto;
+    height: 100%;
   }
   .bg2 {
     position: absolute;
-    top: -370rem;
-    left: -400rem;
-    width: 1000rem;
-    height: 800rem;
+    top: -14rem;
+    left: -194rem;
+    width: auto;
+    height: 100%;
   }
 }
 .screen {
@@ -80,19 +79,46 @@
 
 @media screen and (max-width: 768px) {
   .container {
-    width: calc(100% - 28px);
-    padding: 12px;
+    width: calc(100vw - 28px);
+    padding: 14px;
   }
 
   .main {
-    width: 326px;
+    width: calc(100vw - 28px - 14px);
   }
 
   .description {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .title {
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .box {
+    position: absolute;
+    .bg1 {
+      position: absolute;
+      top: 226rem;
+      right: -164rem;
+      width: auto;
+      height: 100%;
+      transform: rotate(79deg);
+    }
+    .bg2 {
+      position: absolute;
+      top: -490rem;
+      left: 8rem;
+      width: auto;
+      height: 100%;
+      transform: rotate(68deg);
+    }
+  }
+  .screen {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
   }
 }
