@@ -43,6 +43,9 @@ export default function Schedule() {
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           Opening Forum: Quest for Metaverse Identity
         </div>
+        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+          Polygon & FileCoin MetaVerse 酒会 @ 上海Dream Reality空间
+        </div>
         <div className={styles['menu-title']}>Oct 23</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           AM, M50 Innovation+ Space Shanghai
