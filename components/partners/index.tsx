@@ -157,7 +157,7 @@ export default function partnersPartners() {
             Media Support
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
-            <Card avatar={media1} link={''} name="" cnName="巴特比" />
+            <Card avatar={media1} link={''} name="" cnName="巴比特" />
             <Card avatar={media9} link={''} name="" cnName="币乎" />
             <Card avatar={media26} link={''} name="" cnName="币牛牛" />
             <Card avatar={media16} link={''} name="BlockBeats" cnName="区块律动" />
