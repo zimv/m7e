@@ -1,45 +1,90 @@
 import React from 'react';
 import classnames from 'classnames';
-import Image from 'next/image';
+// import Image from 'next/image';
 import styles from './styles.module.less';
 
-interface Props {
-  className?: string;
-  avatar: StaticImageData;
-  name: string;
-  text: string;
+export interface DataItem {
+  url: string;
+  author: string[];
+  twitter: string[];
+  platform: string;
+  platformLink: string;
+  title: string;
+  type: string;
+  desc: string;
 }
 
-export default function MocaCard({ avatar, text, className, ...props }: Props) {
-  const cls = classnames(styles['moca-card'], className);
+export default function MocaCard({
+  url,
+  desc,
+  type,
+  title,
+  author,
+  platform,
+  platformLink,
+  twitter,
+}: DataItem) {
+  const cls = classnames(styles['moca-card']);
   return (
-    <div {...props} className={cls}>
+    <div className={cls}>
       <div className={styles.header}>
-        <div className={styles.name}>Self Awakened</div>
+        <div className={styles.name}>{title}</div>
         <img src="/images/like.png" className={styles.like}></img>
         <span className={styles.num}>102</span>
       </div>
       <div className={styles.body}>
         <div className={styles.tit}>{/* <div className={styles.name}>Self Awakened</div> */}</div>
         <div className={styles.prod}>
-          <Image src={avatar} alt="production" />
+          {type === 'image' ? <img src={url} alt="production" /> : <div></div>}
+          {type === 'video' ? <video src={url} /> : <div></div>}
         </div>
       </div>
       <div className={styles.hip}>
-        <div className={styles.l}>
+        <div
+          className={classnames({
+            [styles.l]: true,
+            [styles.more]: author.length > 1,
+          })}
+        >
           <img src="/images/moca-smile.png" className={styles.smile}></img>
-          <span>Medlo</span>
+          {author.map((item, i) => {
+            if (i === 1) {
+              return (
+                <>
+                  <span className={styles.x}>x</span>
+                  <a href={twitter[i]} className={styles.link}>
+                    {item}
+                  </a>
+                </>
+              );
+            }
+            return (
+              <a href={twitter[i]} className={styles.link}>
+                {item}
+              </a>
+            );
+          })}
         </div>
-        <div className={styles.r}>
-          <a href="#" className={styles.link}>
-            OPENSEA
+        <div
+          className={classnames({
+            [styles.r]: true,
+            [styles.more]: author.length > 1,
+          })}
+        >
+          <a href={platformLink} className={styles.link}>
+            {platform.toLocaleUpperCase()}
           </a>
-          <a href="#" className={styles.link}>
-            Twitter
-          </a>
+          {author.length === 1 ? (
+            <a href={twitter[0]} className={styles.link}>
+              Twitter
+            </a>
+          ) : (
+            ''
+          )}
         </div>
       </div>
-      <div className={styles.footer}>{text}</div>
+
+      <div className={styles.footer}>{desc}</div>
     </div>
   );
 }
