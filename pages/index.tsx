@@ -202,7 +202,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
         M50 Innovation+ Space Shanghai
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Nash Metaverse: 4X-Inception Exhibition
+        Partners Meetups
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         Night, ideaPod the Bund House Shanghai
@@ -598,7 +598,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
             )}
           >
             <div className={classnames(styles.page, activeTab === 'block1' ? styles.show : '')}>
-              {activeTab === 'block1' ? <Videos /> : ''}
+              {activeTab === 'block1' ? <Videos userAgent={userAgent} /> : ''}
             </div>
             <div className={classnames(styles.page, activeTab === 'block2' ? styles.show : '')}>
               {activeTab === 'block2' ? <Moca backCall={backCall} /> : ''}

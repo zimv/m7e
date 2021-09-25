@@ -67,7 +67,7 @@ export default function Schedule() {
           M50 Innovation+ Space Shanghai
         </div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          Nash Metaverse: 4X-Inception Exhibition
+          Partners Meetups
         </div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           Night, ideaPod the Bund House Shanghai

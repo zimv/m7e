@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
+import MobileDetect from 'mobile-detect';
+
 import { Carousel } from 'antd';
 import ReactPlayer from 'react-player';
 import PageTitle from '../page-title';
@@ -34,7 +36,9 @@ const videoList = [
   // },
 ];
 
-export default function Videos() {
+export default function Videos({ userAgent }) {
+  const md = new MobileDetect(userAgent);
+  const isM = !!md.mobile();
   const cls = classnames('flex flex-col justify-center items-start', styles.container);
   const shdowCls = classnames('flex flex-col justify-center items-start hidden', styles.container);
   return (
@@ -42,7 +46,7 @@ export default function Videos() {
       className="relative flex justify-center items-center w-screen h-screen bg-black"
       id="video"
     >
-      {/* <PageTitle title="Highlights" subTitle="活动精选" /> */}
+      {isM && <PageTitle title="Highlights" subTitle="活动精选" />}
       <div className={styles.box}>
         <div className="relative">
           <Bg2 className={styles.bg2} />
