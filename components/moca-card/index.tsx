@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import Image from 'next/image';
+// import Image from 'next/image';
 import styles from './styles.module.less';
 
 export interface DataItem {
@@ -26,7 +26,8 @@ export default function MocaCard({ url, desc, type, title, author, platform, pla
       <div className={styles.body}>
         <div className={styles.tit}>{/* <div className={styles.name}>Self Awakened</div> */}</div>
         <div className={styles.prod}>
-          {type === 'img' ? <Image src={url} alt="production" /> : <div></div>}
+          {type === 'image' ? <img src={url} alt="production" /> : <div></div>}
+          {type === 'video' ? <video src={url} /> : <div></div>}
         </div>
       </div>
       <div className={styles.hip}>
