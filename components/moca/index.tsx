@@ -386,6 +386,10 @@ export default function Moca({ backCall }) {
                 return <MocaCard {...item} key={index} />;
               })}
             </div>
+            <div className={styles.text}>
+              <div>*以上艺术作品将在10月22日之前全部更新展示</div>
+              <div>*All the above artworks will be updated and displayed by October 22nd</div>
+            </div>
 
             <Bullet channel="moca" domId="screen" />
           </div>

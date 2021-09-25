@@ -198,16 +198,16 @@ const Home: NextPage<Props> = ({ userAgent }) => {
   const menuItem5 = (
     <>
       <div className={styles['menu-title']}>Oct 24</div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         M50 Innovation+ Space Shanghai
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         Partners Meetups
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         Night, ideaPod the Bund House Shanghai
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
         Metaverse Cocktail: Quest for Metaverse Identity by MyCrptoProfile & Dataverse
       </div>
     </>
