@@ -117,7 +117,7 @@ const dataList = [
   },
   {
     url: 'https://assets.foundation.app/Er/1U/QmdKnHMGp1f3c8UY18ZbnVP5VH1A7po8HK3ZRM6hNTEr1U/nft_q4.mp4',
-    author: ['Xix'],
+    author: ['XI'],
     twitter: ['https://twitter.com/xix2033'],
     title: `Avatar's way of death`,
     platform: 'Foundation',

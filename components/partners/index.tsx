@@ -20,7 +20,7 @@ import sponsors3 from '../../public/event-sponsors/new/unnamed3.png';
 import sponsors4 from '../../public/event-sponsors/new/unnamed4.png';
 import sponsors5 from '../../public/event-sponsors/new/unnamed5.png';
 import sponsors6 from '../../public/event-sponsors/new/unnamed6.png';
-import sponsors7 from '../../public/event-sponsors/new/unnamed7.png';
+import sponsors7 from '../../public/event-sponsors/new/mcp.png';
 import sponsors8 from '../../public/event-sponsors/new/unnamed8.png';
 import sponsors9 from '../../public/event-sponsors/new/unnamed9.png';
 import sponsors10 from '../../public/event-sponsors/new/unnamed10.png';
