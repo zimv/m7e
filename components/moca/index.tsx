@@ -121,7 +121,7 @@ const dataList = [
     twitter: ['https://twitter.com/xix2033'],
     title: `Avatar's way of death`,
     platform: 'Foundation',
-    platformLink: 'https://foundation.app/@xix/r-avatar-s-way-of-death-r-86959',
+    platformLink: 'https://foundation.app/@xix/l-avatar-s-way-of-death-l-86967',
     type: 'video',
     desc: `Zhuangzi sleeps with the skull is a story from "Zhuangzi · Outer chapters". The artist quoted this story to discuss the relationship between the diversity of Avatar and the death of virtual identities.
     The work will be sold in two editions. Artists confuse the value of groups and individuals by bidding greatly differently.
