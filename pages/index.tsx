@@ -138,7 +138,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
     <>
       <div className={styles['menu-title']}>Oct 22 ~ 28</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        MOCA Exhibition in Metaverse adn M50 Shanghai
+        MOCA Exhibition in Metaverse and M50 Shanghai
       </div>
     </>
   );
