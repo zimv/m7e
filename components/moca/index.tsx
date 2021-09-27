@@ -180,7 +180,7 @@ const dataList = [
   //   desc: '',
   // },
   {
-    url: 'https://uc2dd2dd1b40f643c25c7834791e.previews.dropboxusercontent.com/p/thumb/ABRLo3P7MlMSdORd0Bd-b_x1wtGvpBb0r9yd_zRvw7bKMXj1_kyAEFcPeu8vv0F_j1NAZokruT4F28eDMXjUXF1GxSIBhoPoM9LZqH0pOB99I_JAbbeBhp8TA5Gmx4MCjILIv8bzfG1ipFcdgr78WDT6h9qdM_-tG8EIF7S4yTa1VZTCgvQiuEurYDQ1ATdFM9oWj20w-0aikE5pgKniBOQ_6UIQuXDxRLVyLHiOHepbEh_s-MkoR5YuJVrY4hjf9AltHSVThMIAFcJ250PTBNWwspN6-QkJxioA39pdkg8rlG2XQoNpmi3yKBoVbduBOb-euGaIxc8TBFRyDr0E8H8u0ja1R-Ozw27CpmXv_-RTseq5DspF8BE7syFWrrmTA3Hfqxb3hcK18Wck3NvXf34SyxHBf8_FIpDsjoMuQZo-D_JjO5ARdM_3ErcHKl5gbp2Xsns1uWL3bwpqGgYQgWggq7rKtMijhoyQUoRIlwRG6IelXpx1U2uueidALWSx_aP2TE9ieP7U27JNaK_S4yqZ/p.jpeg?fv_content=true&size_mode=5',
+    url: 'https://bee-6.gateway.ethswarm.org/bzz/96d04a22f6a12f213df1b954fac388f4d151b7dbe252c47bb25951e09d61956a',
     author: ['Killer Acid'],
     twitter: ['https://twitter.com/killeracid'],
     title: 'Ancient Gallery',
