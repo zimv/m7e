@@ -185,10 +185,10 @@ const Home: NextPage<Props> = ({ userAgent }) => {
         M50 Innovation+ Space Shanghai
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        MyCryptoProfile Meetups
+        MyCryptoProfile Meetup
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Dataverse Meetups
+        Dataverse Meetup
       </div>
     </>
   );

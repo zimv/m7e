@@ -54,10 +54,10 @@ export default function Schedule() {
         </div>
         <div className={styles['menu-title']}>Oct 24</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          MyCryptoProfile Meetups
+          MyCryptoProfile Meetup
         </div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          Dataverse Meetups
+          Dataverse Meetup
         </div>
         <div className={styles['menu-title']}>Oct 28</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
