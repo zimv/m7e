@@ -95,7 +95,7 @@ const dataList = [
     `,
   },
   {
-    url: 'https://storage.opensea.io/files/b631caa78c71bd963f331d7f34eef6bf.png',
+    url: 'https://bee-5.gateway.ethswarm.org/bzz/738979070073d6727872a3e786e4930d2e2014a76ca54db6292beff5d5b61158',
     author: ['TingSong'],
     twitter: ['https://twitter.com/Song11Ting'],
     title: 'Cyber Wonder Woman',

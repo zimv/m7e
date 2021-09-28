@@ -14,13 +14,6 @@ import styles from './index.module.less';
 const videoList = [
   {
     type: 'image',
-    image: '/images/goatnft-blind-box.png',
-    title: '9.15',
-    link: 'https://magic.goatnft.io/',
-    linkString: 'MagicGOAT',
-  },
-  {
-    type: 'image',
     image: '/images/mirror-world.png',
     title: '9.25',
     link: 'https://forms.gle/a47psKUcrSSiVveS6',
