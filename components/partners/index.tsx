@@ -16,7 +16,7 @@ import avatar10 from '../../public/partners-logo/new/mirror-world.png';
 import sponsors from '../../public/event-sponsors/new/unnamed.png';
 import sponsors1 from '../../public/event-sponsors/new/unnamed1.png';
 import sponsors2 from '../../public/event-sponsors/new/unnamed2.png';
-import sponsors3 from '../../public/event-sponsors/new/unnamed3.png';
+import sponsors3 from '../../public/event-sponsors/new/follow.top.png';
 import sponsors4 from '../../public/event-sponsors/new/unnamed4.png';
 import sponsors5 from '../../public/event-sponsors/new/unnamed5.png';
 import sponsors6 from '../../public/event-sponsors/new/unnamed6.png';
@@ -78,6 +78,7 @@ export default function partnersPartners() {
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
             <Card avatar={sponsors5} link={''} name="DaVinci Gallery" />
+            <Card avatar={sponsors3} link={''} name="Follow.top" />
             <Card avatar={sponsors} link={''} name="Harmony" />
             <Card avatar={sponsors4} link={''} name="MixMarvel" />
             <Card avatar={sponsors2} link={''} name="NASH Metaverse" />

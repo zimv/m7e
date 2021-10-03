@@ -35,7 +35,14 @@ export default function MocaCard({
         <span className={styles.num}>102</span>
       </div>
       <div className={styles.body}>
-        <div className={styles.tit}>{/* <div className={styles.name}>Self Awakened</div> */}</div>
+        <div className={styles.tit}>
+          <div className={styles.name}>
+            Powered by{' '}
+            <a className="underline" target="_blank" href="https://mycryptoprofile.io/">
+              MyCryptoProfile
+            </a>
+          </div>
+        </div>
         <div className={styles.prod}>
           {type === 'image' && <img src={url} alt="production" />}
           {type === 'video' && (
@@ -59,7 +66,9 @@ export default function MocaCard({
             [styles.more]: author.length > 1,
           })}
         >
-          <img src="/images/moca-smile.png" className={styles.smile}></img>
+          <a href="https://mycryptoprofile.io/" target="_blank">
+            <img src="/event-sponsors/new/mcp.png" className={styles.smile}></img>
+          </a>
           {author.map((item, i) => {
             if (i === 1) {
               return (
