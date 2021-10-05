@@ -134,14 +134,14 @@ const Home: NextPage<Props> = ({ userAgent }) => {
       </div>
     </>
   );
-  const menuItem2 = (
-    <>
-      <div className={styles['menu-title']}>Oct 24 ~ 28</div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Scavenger Hunt in Shanghai
-      </div>
-    </>
-  );
+  // const menuItem2 = (
+  //   <>
+  //     <div className={styles['menu-title']}>Oct 24 ~ 28</div>
+  //     <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+  //       Scavenger Hunt in Shanghai
+  //     </div>
+  //   </>
+  // );
 
   const menuItem8 = (
     <>
@@ -557,7 +557,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
                 <Menu.CarouselItem>{menuItem7}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem1}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem8}</Menu.CarouselItem>
-                <Menu.CarouselItem>{menuItem2}</Menu.CarouselItem>
+                {/* <Menu.CarouselItem>{menuItem2}</Menu.CarouselItem> */}
                 <Menu.CarouselItem>{menuItem3}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem4}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem5}</Menu.CarouselItem>

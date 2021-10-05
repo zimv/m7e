@@ -28,10 +28,6 @@ export default function Schedule() {
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           M50 Innovation+ Space Shanghai Super ACG Avatar Live Experience
         </div>
-        <div className={styles['menu-title']}>Oct 24 ~ 28</div>
-        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          Scavenger Hunt in Shanghai
-        </div>
         <div className={styles['menu-title']}>Oct 22</div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           ideaPod the Bund House Shanghai

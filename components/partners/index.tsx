@@ -12,6 +12,7 @@ import avatar6 from '../../public/partners-logo/new/unnamed6.png';
 import avatar7 from '../../public/partners-logo/new/unnamed7.png';
 import avatar8 from '../../public/partners-logo/new/unnamed8.png';
 import avatar9 from '../../public/partners-logo/new/unnamed9.png';
+import avatar11 from '../../public/partners-logo/new/next-scene.jpeg';
 import avatar10 from '../../public/partners-logo/new/mirror-world.png';
 import sponsors from '../../public/event-sponsors/new/unnamed.png';
 import sponsors1 from '../../public/event-sponsors/new/unnamed1.png';
@@ -26,6 +27,7 @@ import sponsors9 from '../../public/event-sponsors/new/unnamed9.png';
 import sponsors10 from '../../public/event-sponsors/new/unnamed10.png';
 import sponsors11 from '../../public/event-sponsors/new/unnamed11.png';
 import sponsors12 from '../../public/event-sponsors/new/unnamed12.png';
+import sponsors13 from '../../public/event-sponsors/new/utuone.png';
 import support from '../../public/event-support/new/unnamed.png';
 import support1 from '../../public/event-support/new/unnamed1.png';
 import support2 from '../../public/event-support/new/unnamed2.png';
@@ -68,6 +70,7 @@ export default function partnersPartners() {
             <Card avatar={avatar3} link={''} name="MOCA (Museum of Crypto Art)" />
             <Card avatar={sponsors7} link={''} name="My Crypto Profile" />
             <Card avatar={avatar6} link={''} name="Mynft" />
+            <Card avatar={avatar11} link={''} name="NeXT SCENE" />
             <Card avatar={avatar2} link={''} name="NFT4Metaverse" />
             <Card avatar={avatar} link={''} name="Technology Art" />
           </div>
@@ -87,6 +90,7 @@ export default function partnersPartners() {
             <Card avatar={sponsors10} link={''} name="RMRK" />
             <Card avatar={sponsors12} link={''} name="Social Future" />
             <Card avatar={sponsors6} link={''} name="Tezos" />
+            <Card avatar={sponsors13} link={''} name="utu.one" />
           </div>
         </div>
         <div className={styles.box}>
