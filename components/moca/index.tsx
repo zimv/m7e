@@ -251,16 +251,17 @@ const dataList = [
     
     The background music created by baiwei is also encrypted with Chinese calligraphy for "self-awakening".`,
   },
-  // {
-  //   url: '',
-  //   author: ['Rutger Van Der Tas', 'IOYOI'],
-  //   twitter: ['https://twitter.com/rutgervandertas', 'https://twitter.com/ioyoiioaoi'],
-  //   title: '',
-  //   platform: 'TBD',
-  //   platformLink: '',
-  //   type: '',
-  //   desc: '',
-  // },
+  {
+    url: '',
+    author: ['Rutger Van Der Tas', 'IOYOI'],
+    twitter: ['https://twitter.com/rutgervandertas', 'https://twitter.com/ioyoiioaoi'],
+    title: 'Crashing into Motherboard',
+    platform: 'superrare',
+    platformLink:
+      'https://superrare.com/artwork-v2/crashing-into-motherboard---%E6%92%9E%E4%B8%8A%E4%B8%BB%E6%A9%9F%E6%9D%BF-28937',
+    type: 'image',
+    desc: 'The Motherboard is the backbone of the computer. Without it, none of the computer pieces, such as the CPU, GPU, or hard drive, could interact.The Internet and blockchain are becoming the backbone of our society. The devices in our lives are connected to our neural system. We indulge ourselves in the digital highway escapades, disconnecting ourselves from the direct touchable world around us. We as humans need to find the right balance between online and offline time. We are waking up to our new self. While the Old World still reigns over our heads. ',
+  },
   {
     url: 'https://lh3.googleusercontent.com/JNF63vC9DLy5aOsxHVdcLhuSjF3S1575f55yx1yd1CVY-X3qng5IYt5ASZgeLT8brurAfKSW-pr_D1daNVpZpp8BhOACYLLordDlvw=w600',
     author: ['LuluxXX', 'Riniifish'],
@@ -274,16 +275,18 @@ const dataList = [
     "Self-sovereign identities, independent personalities, and creative avatars are the prerequisites and assets for people to enter the metaverse to work, live and play freely in future"
     `,
   },
-  // {
-  //   url: '',
-  //   author: ['Debbie Digital', 'Reva'],
-  //   twitter: ['', 'https://twitter.com/Reva_fyw'],
-  //   title: '',
-  //   platform: 'TBD',
-  //   platformLink: '',
-  //   type: '',
-  //   desc: '',
-  // },
+  {
+    url: 'https://mkpcdn.com/videos/563c5e505f1b9500444f662fb8a0e3e4_331482.mp4',
+    author: ['Debbie Digital', 'Reva'],
+    twitter: ['', 'https://twitter.com/Reva_fyw'],
+    title: 'Self-Recognition',
+    platform: 'makersplace',
+    platformLink: 'https://makersplace.com/debbiehdigital/self-recognition-1-of-1-80749/',
+    type: 'video',
+    desc: `"Self-recognition leads to self-awakening. Everyone can be as bright as stars, as gorgeous as flowers."
+    This is a collaboration piece created by Debbie H Digital and Reva for Metaverse exhibition. Debbie's portrait and the geometric background of Reva have well balanced together and achieved to make a great depth and intricacy. The image of the portrait helped to balance the detailed effects of Reva's moving parts.¸
+    `,
+  },
 ];
 
 const generText = (n) => {
