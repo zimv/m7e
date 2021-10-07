@@ -28,6 +28,7 @@ import sponsors10 from '../../public/event-sponsors/new/unnamed10.png';
 import sponsors11 from '../../public/event-sponsors/new/unnamed11.png';
 import sponsors12 from '../../public/event-sponsors/new/unnamed12.png';
 import sponsors13 from '../../public/event-sponsors/new/utuone.png';
+import sponsors14 from '../../public/event-sponsors/new/flow.png';
 import support from '../../public/event-support/new/unnamed.png';
 import support1 from '../../public/event-support/new/unnamed1.png';
 import support2 from '../../public/event-support/new/unnamed2.png';
@@ -81,6 +82,7 @@ export default function partnersPartners() {
           </h4>
           <div className="grid grid-cols-2 lg:grid-cols-5">
             <Card avatar={sponsors5} link={''} name="DaVinci Gallery" />
+            <Card avatar={sponsors14} link={''} name="Flow" />
             <Card avatar={sponsors3} link={''} name="Follow.top" />
             <Card avatar={sponsors} link={''} name="Harmony" />
             <Card avatar={sponsors4} link={''} name="MixMarvel" />
