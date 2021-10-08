@@ -248,6 +248,18 @@ const dataList = [
     `,
   },
   {
+    url: 'https://koda-image-service-gp2s5beobq-uc.a.run.app/cdn/images/network/1/edition/2343000',
+    author: ['LuluxXX', 'Riniifish'],
+    twitter: ['https://twitter.com/luluixixix', 'https://twitter.com/riniifish'],
+    title: '闯入元宇宙世界的女孩',
+    platform: 'knownorigin',
+    platformLink: 'https://knownorigin.io/gallery/2343000-rin-ii-luluxxx',
+    type: 'image',
+    desc: `“collaboration with chinese cryptoartist @riniifish . created as our contribution to the "Metaverse Week 2021" in Shangai . big thanks to MOCA (Museum of Crypto Art) for the invitation and introduction. 感谢MOCA :)
+    "Self-sovereign identities, independent personalities, and creative avatars are the prerequisites and assets for people to enter the metaverse to work, live and play freely in future"
+    `,
+  },
+  {
     url: 'https://mkpcdn.com/videos/563c5e505f1b9500444f662fb8a0e3e4_331482.mp4',
     author: ['Debbie Digital', 'Reva'],
     twitter: ['https://twitter.com/DebbieHdigital', 'https://twitter.com/Reva_fyw'],
