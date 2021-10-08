@@ -238,7 +238,7 @@ const dataList = [
     url: 'https://lh3.googleusercontent.com/JNF63vC9DLy5aOsxHVdcLhuSjF3S1575f55yx1yd1CVY-X3qng5IYt5ASZgeLT8brurAfKSW-pr_D1daNVpZpp8BhOACYLLordDlvw=w600',
     author: ['LuluxXX', 'Riniifish'],
     twitter: ['https://twitter.com/luluixixix', 'https://twitter.com/riniifish'],
-    title: 'rin(ii). 闯入元宇宙世界的女孩 . luluxxx',
+    title: '闯入元宇宙世界的女孩',
     platform: 'knownorigin',
     platformLink:
       'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/52976075206626058040109150762651901835369219567962475591099848262217222848513',
