@@ -172,9 +172,6 @@ const Home: NextPage<Props> = ({ userAgent }) => {
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         Harmony Meetup: When Shanghai meets Silicon Valley in Metaverse
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Metaverse Avatar Carnival
-      </div>
     </>
   );
 

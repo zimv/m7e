@@ -43,9 +43,6 @@ export default function Schedule() {
           Harmony Meetup: When Shanghai meets Silicon Valley in Metaverse
         </div>
         <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-          Metaverse Avatar Carnival
-        </div>
-        <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
           M50 Innovation+ Space Shanghai
         </div>
         <div className={styles['menu-title']}>Oct 24</div>
