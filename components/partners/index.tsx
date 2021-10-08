@@ -48,6 +48,7 @@ import support15 from '../../public/event-support/new/unnamed15.png';
 import support16 from '../../public/event-support/new/unnamed16.png';
 import support17 from '../../public/event-support/new/unnamed17.png';
 import support18 from '../../public/event-support/new/unnamed18.png';
+import dg from '../../public/event-support/new/dg.png';
 import cryptomondays from '../../public/event-support/new/cryptomondays.jpeg';
 import tianmo from '../../public/event-support/new/tianmo.png';
 
@@ -107,6 +108,7 @@ export default function partnersPartners() {
             <Card avatar={cryptomondays} link={''} name="Crypto Mondays" />
             <Card avatar={support8} link={''} name="Crypto Playground" />
             <Card avatar={support18} link={''} name="Decentraland" />
+            <Card avatar={dg} link={''} name="Decentral Games" />
             <Card avatar={support16} link={''} name="Digital Renaissance" />
             <Card avatar={support2} link={''} name="Evolution Land" />
             <Card avatar={support7} link={''} name="Hanshan Art Museum" />

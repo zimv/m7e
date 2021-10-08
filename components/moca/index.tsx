@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
+
 import MocaCard, { DataItem } from '../moca-card';
 import Bullet from './Bullet';
 import avatar1 from '../../public/images/avatar1.png';
@@ -129,16 +130,6 @@ const dataList = [
     庄子叹骷髅是出自《庄子·外篇》的一个故事，艺术家引用这个故事旨在探讨Avatar身份的多样性和虚拟身份死亡的关系。
     作品将会有两个版本出售，艺术家通过差异极大出价，混淆群体价值和个人价值。`,
   },
-  // {
-  //   url: '',
-  //   author: ['Arc4g'],
-  //   twitter: ['https://twitter.com/arc4g'],
-  //   title: 'Ignite',
-  //   platform: 'TBD',
-  //   platformLink: '',
-  //   type: '',
-  //   desc: '',
-  // },
   {
     url: 'https://mkpcdn.com/1000x/314198c652390f01cd4147a2c0cf2035_236718.jpg',
     author: ['Debbie Digital'],
@@ -190,26 +181,6 @@ const dataList = [
     type: 'image',
     desc: '',
   },
-  // {
-  //   url: '',
-  //   author: ['Olive Allen'],
-  //   twitter: ['https://twitter.com/IamOliveAllen'],
-  //   title: 'TBD',
-  //   platform: 'TBD',
-  //   platformLink: '',
-  //   type: '',
-  //   desc: '',
-  // },
-  // {
-  //   url: '',
-  //   author: ['Rutger Van Der Tas'],
-  //   twitter: ['https://twitter.com/rutgervandertas'],
-  //   title: 'TBD',
-  //   platform: 'TBD',
-  //   platformLink: '',
-  //   type: '',
-  //   desc: '',
-  // },
   {
     url: 'https://ipfs.pixura.io/ipfs/QmR52y7dSwB16G4DyVyG4FmYJ9fd2gmqqj9Xza3ZKP48kn/Overthinking.gif',
     author: ['Skygolpe'],
@@ -252,14 +223,14 @@ const dataList = [
     The background music created by baiwei is also encrypted with Chinese calligraphy for "self-awakening".`,
   },
   {
-    url: '',
+    url: 'https://ipfs.pixura.io/ipfs/QmdBjsyWhVxCpYAk6RZHUEw6wbEw1s771yZ3ksp2gDkk5M/crashingintoMotherBoardplainwhiteSUPERRARE.glb',
     author: ['Rutger Van Der Tas', 'IOYOI'],
     twitter: ['https://twitter.com/rutgervandertas', 'https://twitter.com/ioyoiioaoi'],
     title: 'Crashing into Motherboard',
     platform: 'superrare',
     platformLink:
       'https://superrare.com/artwork-v2/crashing-into-motherboard---%E6%92%9E%E4%B8%8A%E4%B8%BB%E6%A9%9F%E6%9D%BF-28937',
-    type: 'image',
+    type: '3d',
     desc: 'The Motherboard is the backbone of the computer. Without it, none of the computer pieces, such as the CPU, GPU, or hard drive, could interact.The Internet and blockchain are becoming the backbone of our society. The devices in our lives are connected to our neural system. We indulge ourselves in the digital highway escapades, disconnecting ourselves from the direct touchable world around us. We as humans need to find the right balance between online and offline time. We are waking up to our new self. While the Old World still reigns over our heads. ',
   },
   {
@@ -278,7 +249,7 @@ const dataList = [
   {
     url: 'https://mkpcdn.com/videos/563c5e505f1b9500444f662fb8a0e3e4_331482.mp4',
     author: ['Debbie Digital', 'Reva'],
-    twitter: ['', 'https://twitter.com/Reva_fyw'],
+    twitter: ['https://twitter.com/DebbieHdigital', 'https://twitter.com/Reva_fyw'],
     title: 'Self-Recognition',
     platform: 'makersplace',
     platformLink: 'https://makersplace.com/debbiehdigital/self-recognition-1-of-1-80749/',

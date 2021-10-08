@@ -20,6 +20,26 @@ const videoList = [
     title: 'Colborn',
     description: 'MOCA',
   },
+  {
+    video:
+      'http://1500006270.vod2.myqcloud.com/6c9ac477vodcq1500006270/9c51ac823701925925598037101/playlist.f9.mp4',
+    title: "What's the magic between data and NFT?",
+    description:
+      "@JESSCATE93 @meta_Synth will share their insights and showcase Dataverse, a new #NFT curation product developed by @OwnershipLabs. Let's enjoy the 2nd talkshow on @binance live host by @cryptoroaming tonight for #ShanghaiMetaverseWeek 2021",
+  },
+  {
+    video:
+      'http://1500006270.vod2.myqcloud.com/6c9ac477vodcq1500006270/08f0c0fa3701925925300544730/playlist.f5.mp4',
+    title: 'What kind of infrastructure will the Metaverse need in the future?',
+    description: 'MOCA',
+  },
+  {
+    video:
+      'http://1500006270.vod2.myqcloud.com/6c9ac477vodcq1500006270/14a7ff843701925924372545542/playlist.f9.mp4',
+    title: '自我的觉醒',
+    description:
+      "Welcome to @binance live in 30 minutes to learn what #Metaverse is and what #ShanghaiMetaverseWeek 2021 will offer. Let's scan the QR code to enjoy the interview with @cryptoroaming by @kaylawangnow CMO of @litentry @Web3Mcp!",
+  },
   // {
   //   video: '/video/moca.mp4',
   //   image:

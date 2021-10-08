@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import ReactPlayer from 'react-player';
+import Head from 'next/head';
 
 // import Image from 'next/image';
 import styles from './styles.module.less';
@@ -29,6 +30,12 @@ export default function MocaCard({
   const cls = classnames(styles['moca-card']);
   return (
     <div className={cls}>
+      <Head>
+        <script
+          type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+        ></script>
+      </Head>
       <div className={styles.header}>
         <div className={styles.name}>{title}</div>
         <img src="/images/like.png" className={styles.like}></img>
@@ -57,6 +64,8 @@ export default function MocaCard({
               className="w-full h-full rounded-2xl overflow-hidden justify-center items-center"
             />
           )}
+          {/* @ts-ignore */}
+          {type === '3d' && <model-viewer src={url} auto-rotate camera-controls />}
         </div>
       </div>
       <div className={styles.hip}>
@@ -74,14 +83,14 @@ export default function MocaCard({
               return (
                 <>
                   <span className={styles.x}>x</span>
-                  <a href={twitter[i]} className={styles.link}>
+                  <a href={twitter[i]} className={styles.link} target="_blank">
                     {item}
                   </a>
                 </>
               );
             }
             return (
-              <a href={twitter[i]} className={styles.link}>
+              <a href={twitter[i]} className={styles.link} target="_blank">
                 {item}
               </a>
             );
