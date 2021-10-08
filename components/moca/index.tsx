@@ -88,6 +88,7 @@ const dataList = [
     author: ['Sleepy'],
     twitter: ['https://twitter.com/0x13BlockBeats'],
     title: 'The Flower',
+    mcp: 'https://mycryptoprofile.io/profile/@0x13blockbeats',
     platform: 'OpenSea',
     platformLink:
       'https://opensea.io/assets/0x495f947276749ce646f68ac8c248420045cb7b5e/30133713994736285132554688158522241961977932724826138760527358180941444939777?assetContractAddress=0x495f947276749ce646f68ac8c248420045cb7b5e&tokenId=30133713994736285132554688158522241961977932724826138760527358180941444939777',

@@ -15,6 +15,7 @@ export interface DataItem {
   title: string;
   type: string;
   desc: string;
+  mcp?: string;
 }
 
 export default function MocaCard({
@@ -26,6 +27,7 @@ export default function MocaCard({
   platform,
   platformLink,
   twitter,
+  mcp,
 }: DataItem) {
   const cls = classnames(styles['moca-card']);
   return (
@@ -105,13 +107,16 @@ export default function MocaCard({
           <a href={platformLink} className={styles.link}>
             {platform.toLocaleUpperCase()}
           </a>
-          {author.length === 1 ? (
-            <a href={twitter[0]} className={styles.link}>
-              TWITTER
-            </a>
-          ) : (
-            ''
-          )}
+          {author.length === 1 &&
+            (mcp ? (
+              <a href={mcp} className={styles.link} target="_blank">
+                PROOF
+              </a>
+            ) : (
+              <a href={twitter[0]} className={styles.link} target="_blank">
+                TWITTER
+              </a>
+            ))}
         </div>
       </div>
 
