@@ -126,30 +126,22 @@ const Home: NextPage<Props> = ({ userAgent }) => {
   const Text3 = <span className={styles.nav2}>VIPs</span>;
   const Text4 = <span className={styles.nav2}>Partners</span>;
 
-  const menuItem = (
-    <>
-      <div className={styles['menu-title']}>Sept 15 ~ Oct 28</div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        NFT Airdrop & Claim on M7E.SH
-      </div>
-    </>
-  );
   const menuItem1 = (
     <>
       <div className={styles['menu-title']}>Oct 22 ~ 28</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        MOCA Exhibition in Metaverse adn M50 Shanghai
+        MOCA Exhibition in Metaverse and M50 Shanghai
       </div>
     </>
   );
-  const menuItem2 = (
-    <>
-      <div className={styles['menu-title']}>Oct 24 ~ 28</div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        NFT Scavenger Hunt in Shanghai
-      </div>
-    </>
-  );
+  // const menuItem2 = (
+  //   <>
+  //     <div className={styles['menu-title']}>Oct 24 ~ 28</div>
+  //     <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+  //       Scavenger Hunt in Shanghai
+  //     </div>
+  //   </>
+  // );
 
   const menuItem8 = (
     <>
@@ -169,31 +161,16 @@ const Home: NextPage<Props> = ({ userAgent }) => {
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         Opening Forum: Quest for Metaverse Identity
       </div>
-      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Polygon & FileCoin MetaVerse 酒会 @ 上海Dream Reality空间
-      </div>
     </>
   );
   const menuItem4 = (
     <>
       <div className={styles['menu-title']}>Oct 23</div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
-        AM, M50 Innovation+ Space Shanghai
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        M50 Innovation+ Space Shanghai
       </div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         Harmony Meetup: When Shanghai meets Silicon Valley in Metaverse
-      </div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
-        PM, M50 Innovation+ Space Shanghai
-      </div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
-        NFT Avatar Carnival
-      </div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
-        Night, M50 Innovation+ Space Shanghai
-      </div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
-        Polygon Ecosystem Metaverse Night
       </div>
     </>
   );
@@ -201,17 +178,14 @@ const Home: NextPage<Props> = ({ userAgent }) => {
   const menuItem5 = (
     <>
       <div className={styles['menu-title']}>Oct 24</div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         M50 Innovation+ Space Shanghai
       </div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
-        Partners Meetups
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        MyCryptoProfile Meetup
       </div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
-        Night, ideaPod the Bund House Shanghai
-      </div>
-      <div className={styles['menu-item-23']} onClick={() => menuItemClick(0)}>
-        Metaverse Cocktail: Quest for Metaverse Identity by MyCrptoProfile & Dataverse
+      <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
+        Dataverse Meetup
       </div>
     </>
   );
@@ -219,7 +193,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
     <>
       <div className={styles['menu-title']}>Oct 28</div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
-        Night, Metaverse
+        Metaverse
       </div>
       <div className={styles['menu-item']} onClick={() => menuItemClick(0)}>
         Closing Party
@@ -495,9 +469,6 @@ const Home: NextPage<Props> = ({ userAgent }) => {
                   <Flower1 className={styles.flower1} />
                   <div className="flex flex-col items-end flex-1">
                     <div className={styles['home-text1']}>Shanghai Metaverse Week</div>
-                    <div style={{ transform: 'translateY(-15%)' }} className={styles['home-text2']}>
-                      上海元宇宙文化周
-                    </div>
                     <div className={styles['home-text2']}>10.22 - 10.28</div>
                   </div>
                 </div>
@@ -580,11 +551,10 @@ const Home: NextPage<Props> = ({ userAgent }) => {
           >
             <div className={styles.mini} style={{ width: '100%', height: '100%' }}>
               <Menu>
-                <Menu.CarouselItem>{menuItem}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem7}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem1}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem8}</Menu.CarouselItem>
-                <Menu.CarouselItem>{menuItem2}</Menu.CarouselItem>
+                {/* <Menu.CarouselItem>{menuItem2}</Menu.CarouselItem> */}
                 <Menu.CarouselItem>{menuItem3}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem4}</Menu.CarouselItem>
                 <Menu.CarouselItem>{menuItem5}</Menu.CarouselItem>

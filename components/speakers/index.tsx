@@ -62,7 +62,6 @@ export default function Speakers() {
         </div>
         <div className={styles.text}>
           <div>* The above VIP list will be updated at any time</div>
-          <div>* 以上嘉宾名单将随时更新</div>
         </div>
       </div>
     </div>

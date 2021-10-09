@@ -14,10 +14,10 @@ import styles from './index.module.less';
 const videoList = [
   {
     type: 'image',
-    image: '/images/goatnft-blind-box.png',
-    title: '9.15',
-    link: 'https://magic.goatnft.io/',
-    linkString: 'MagicGOAT',
+    image: '/images/jhxq.png',
+    title: '9.26',
+    link: 'https://www.evolution.land/land/5/sign-in?invite=196b6f235f',
+    linkString: 'Evolution Land',
   },
   {
     type: 'image',
@@ -25,13 +25,6 @@ const videoList = [
     title: '9.25',
     link: 'https://forms.gle/a47psKUcrSSiVveS6',
     linkString: 'Mirror World',
-  },
-  {
-    type: 'image',
-    image: '/images/jhxq.png',
-    title: '9.26',
-    link: 'https://www.evolution.land/land/5/sign-in?invite=196b6f235f',
-    linkString: 'Evolution Land',
   },
   // {
   //   type: 'video',

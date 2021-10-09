@@ -33,6 +33,7 @@ export default function Bullet({ channel, domId }) {
   };
 
   useEffect(() => {
+    console.log('bullet');
     // 给页面中某个元素初始化弹幕屏幕，一般为一个大区块。此处的配置项全局生效
     const s = new BulletScreen(`#${domId}`, { duration: 20 });
     setScreen(s);
@@ -144,6 +145,9 @@ export default function Bullet({ channel, domId }) {
       setBullet('');
     }
   };
+
+  console.log('--------------------------------');
+
   return (
     <div
       data-bulles={bulletRender}
