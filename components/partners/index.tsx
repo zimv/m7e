@@ -14,6 +14,7 @@ import avatar8 from '../../public/partners-logo/new/unnamed8.png';
 import avatar9 from '../../public/partners-logo/new/unnamed9.png';
 import avatar11 from '../../public/partners-logo/new/next-scene.jpeg';
 import avatar10 from '../../public/partners-logo/new/mirror-world.png';
+import bonnybb from '../../public/event-support/new/bonnybb.png';
 import sponsors from '../../public/event-sponsors/new/unnamed.png';
 import sponsors1 from '../../public/event-sponsors/new/unnamed1.png';
 import sponsors2 from '../../public/event-sponsors/new/unnamed2.png';
@@ -104,6 +105,7 @@ export default function partnersPartners() {
             <Card avatar={support12} link={''} name="Arium" />
             <Card avatar={support} link={''} name="Binance" />
             <Card avatar={avatar7} link={''} name="Blocklike" />
+            <Card avatar={bonnybb} link={''} name="Bonnybb.eth" />
             <Card avatar={support4} link={''} name="Caotai Music" />
             <Card avatar={cryptomondays} link={''} name="Crypto Mondays" />
             <Card avatar={support8} link={''} name="Crypto Playground" />
