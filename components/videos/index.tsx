@@ -109,17 +109,14 @@ export default function Videos({ userAgent }) {
                   url={item.video}
                   className="w-full h-full rounded-2xl overflow-hidden"
                 />
+                <div className="flex flex-col text-left w-full">
+                  <div className={styles.title}>{item.title}</div>
+                  <div className={styles.description}>{item.description}</div>
+                </div>
               </div>
             );
           })}
         </Carousel>
-        <div className="flex flex-col text-left w-full">
-          <div className={styles.title}>Shanghai Metaverse Week</div>
-          <div className={styles.description}>
-            Self-sovereign identities and avatars are the prerequisites and first-class assets for
-            people to enter the metaverse to work, live and play freely in future…
-          </div>
-        </div>
       </div>
       {/* <div className={styles.screen}></div> */}
       <Bullet channel="video" domId="video" />
