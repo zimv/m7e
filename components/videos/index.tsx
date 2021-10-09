@@ -32,7 +32,8 @@ const videoList = [
     video:
       'http://1500006270.vod2.myqcloud.com/6c9ac477vodcq1500006270/08f0c0fa3701925925300544730/playlist.f5.mp4',
     title: 'What kind of infrastructure will the Metaverse need in the future?',
-    description: 'MOCA',
+    description:
+      '@rangersprotocol cofounder @marymamamama1 will give you the whole picture of Metaverse infrastructure in tonight’s talkshow hosted by @litentry CMO @kaylawangnow. #ShanghaiMetaverseWeek',
   },
   {
     video:
@@ -40,20 +41,6 @@ const videoList = [
     title: '自我的觉醒',
     description:
       "Welcome to @binance live in 30 minutes to learn what #Metaverse is and what #ShanghaiMetaverseWeek 2021 will offer. Let's scan the QR code to enjoy the interview with @cryptoroaming by @kaylawangnow CMO of @litentry @Web3Mcp!",
-  },
-  {
-    video: '/video/moca.mp4',
-    image:
-      'https://images.unsplash.com/photo-1615421559287-5e6eecec3b80?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNTU4MjAwOQ&ixlib=rb-1.2.1&q=80&w=400&h=600',
-    title: 'Suji',
-    description: 'MASK',
-  },
-  {
-    video: '/video/moca.mp4',
-    image:
-      'https://images.unsplash.com/photo-1615098270177-e2db45986811?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNTU4MjAwOQ&ixlib=rb-1.2.1&q=80&w=400&h=600',
-    title: 'Jean Chen',
-    description: 'NFT4Metaverse',
   },
 ];
 
