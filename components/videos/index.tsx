@@ -101,15 +101,15 @@ export default function Videos({ userAgent }) {
         <Carousel className={styles.main} dotPosition="top" dots={{ className: styles.dot }}>
           {videoList.map((item) => {
             return (
-              <div className={styles.video}>
+              <div>
                 <ReactPlayer
                   controls
                   width="100%"
-                  height="100%"
+                  height="480rem"
                   url={item.video}
                   className="w-full h-full rounded-2xl overflow-hidden"
                 />
-                <div className="flex flex-col text-left w-full">
+                <div className="flex flex-col text-left w-full mt-2">
                   <div className={styles.title}>{item.title}</div>
                   <div className={styles.description}>{item.description}</div>
                 </div>
