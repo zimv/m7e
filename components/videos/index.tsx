@@ -75,11 +75,8 @@ export default function Videos({ userAgent }) {
               </div>
             </Carousel>
             <div className="flex flex-col text-left w-full">
-              <div className={styles.title}>Shanghai Metaverse Week</div>
-              <div className={styles.description}>
-                Self-sovereign identities and avatars are the prerequisites and first-class assets
-                for people to enter the metaverse to work, live and play freely in future…
-              </div>
+              <div className={styles.title}>{videoList[1].title}</div>
+              <div className={styles.description}>{videoList[1].description}</div>
             </div>
           </div>
         </div>
@@ -89,13 +86,15 @@ export default function Videos({ userAgent }) {
           {videoList.map((item) => {
             return (
               <div>
-                <ReactPlayer
-                  controls
-                  width="100%"
-                  height="480rem"
-                  url={item.video}
-                  className="w-full h-full rounded-2xl overflow-hidden"
-                />
+                <div className={styles.video}>
+                  <ReactPlayer
+                    controls
+                    width="100%"
+                    height="100%"
+                    url={item.video}
+                    className="w-full h-full rounded-2xl overflow-hidden"
+                  />
+                </div>
                 <div className="flex flex-col text-left w-full mt-2">
                   <div className={styles.title}>{item.title}</div>
                   <div className={styles.description}>{item.description}</div>
