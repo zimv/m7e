@@ -172,17 +172,21 @@ export default function Bullet({ channel, domId }) {
         ref={inputRef}
       ></Input>
       {focus ? (
-        <img src="/images/input_icon.png" className={styles.ic} onClick={handleSend} />
+        <a href="https://mycryptoprofile.io/" target="_blank">
+          <img src="/images/input_icon2.png" className={styles.ic} onClick={handleSend} />
+        </a>
       ) : (
-        <img
-          src="/images/input_icon.png"
-          className={styles.ic}
-          onClick={() => {
-            inputRef.current!.focus({
-              cursor: 'start',
-            });
-          }}
-        />
+        <a href="https://mycryptoprofile.io/" target="_blank">
+          <img
+            src="/images/input_icon2.png"
+            className={styles.ic}
+            onClick={() => {
+              inputRef.current!.focus({
+                cursor: 'start',
+              });
+            }}
+          />
+        </a>
       )}
     </div>
   );
